@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) =>{
         let end = pg * 10;
         let start = (pg * 10) - 10;
 
-        if(res,length === 0){
+        if(res.length === 0){
             embed.addField("Error", "No pages found!");
         } else if (res.length <= start){
             embed.addField("Error","Page not found!");
