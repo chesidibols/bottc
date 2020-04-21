@@ -3,18 +3,11 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) =>{
 
-    if(!message.member.roles.cache.get("334327971194077196")) return message.send({embed:{color:'a20a28', description:"*You don't have the permission to this"}});
-    let rMember = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-    if(!rMember) return message.channel.send({embed:{color:'a20a28', description:"Couldn't find that user, please specify"}});
-    let role = args.join("").slice(22);
-    if(!role) return message.channel.send({embed:{color:'a20a28', description:"Specify a Role!"}});
-    let gRole = message.guild.roles.cache.find(guild =>guild.name === role);
-    if(!gRole) return message.channel.send({embed:{color:'a20a28', description:"Couldn't find that role."}});
-
-    if(rMember.roles.has(gRole.id));
-    await(rMember.addRole(gRole.id));
-
-    message.channel.send({embed:{color:'a20a28', description:`Congrats to <@${rMember.id}>, they have been given role ${gRole.name}. wushuu!`}});
+    let myRole = message.guild.roles.find(role => role.name === "Board Of Directors");
+    if(!myRole) return message.channel.send("you dont have permissions");
+    let user = message.mentions.members.first() || bot.users.cache.get(args[0]);
+    let role = message.guild.roles.find(r => r.name === user);
+    if(role) return message.channel.send("congrats!");
 
 }
 
