@@ -14,9 +14,8 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
     message.delete({timeout: 10000})
     if(message.channel.id !='701993773554597929' , '701993793838252103') {
-        message.delete({timeout: 10000})
-        message.channel.send({embed:{color:'a20a28', description:`**Please use ATM channels!** `}});
-    } else{return}
+        return message.channel.send({embed:{color:'a20a28', description:`**Please use ATM channels!** `}});
+    }
 
     if(!args[0]){
         var user = message.author;
