@@ -41,6 +41,16 @@ bot.on("message" , async message => {
     // SET PREFIX
     let prefix = botconfig.prefix;
 
+    //NO COMMAND IN LOBBY CHANNEL
+    if(message.channel.id === LOBBY_CHANNEL_ID){
+        if(message.content.startsWith("tc."))
+        {
+            message.delete({timeout: 10000})
+            message.channel.send({embed:{color:'a20a28', description:"**PLEASE USE <#♚bots >"}});
+            return;
+        }
+    }
+
     // CHECK PREFIX, DEFINE ARGS & COMMAND
     if(!message.content.startsWith(prefix)) return;
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
