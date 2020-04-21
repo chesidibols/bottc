@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "repository":{
-    "type":"git",
-    "url":"git+https://github.com/chesidibols/bottc.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chesidibols/bottc.git"
   },
   "author": "",
   "license": "ISC",
