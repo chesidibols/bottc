@@ -12,7 +12,7 @@ mongoose.connect(botconfig.mongoPass, {
 const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
-    if(!message.channel.id ==='698536543350161448') {
+    if(!message.channel.id ==='699367732923203616') {
         //message.author.delete();
         return message.channel.send({embed:{description:`**Please use ATM channels!** `}});
     }
