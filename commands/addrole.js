@@ -1,11 +1,5 @@
-const Discord =require("discord.js");
-const botconfig = require("../botconfig.json");
+const Discord = require("discord.js");
 
-//Connect to database
-mongoose.connect(botconfig.mongoPass, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
 
 module.exports.run = async (bot, message, args) =>{
 
