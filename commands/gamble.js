@@ -48,7 +48,7 @@ module.exports.run = async (bot, message, args) =>{
   
             if(bet > maxBet) return message.channel.send({embed:{color:'a20a28',description:`the maximum bet is ${maxBet.toLocaleString()} <:coinns:699944502856646716>`}});
 
-            let chances = ["win" , "lose"];
+            let chances = ["win", "win","win","lose", "lose", "lose", "lose", "lose"];
             var pick = chances[Math.floor(Math.random() * chances.length )];
 
             if(pick == "lose"){
@@ -56,7 +56,7 @@ module.exports.run = async (bot, message, args) =>{
              data.save().catch(err => console.log(err));
             return message.channel.send({embed:{color:'a20a28',description:`You lose. New balance: ${data.money} <:coinns:699944502856646716>`}});
         }else{
-                data.money *= 2;
+                data.money += bet+bet;
                 data.save().catch(err => console.log(err));
             return message.channel.send({embed:{color:'a20a28',description:`**You win!. New balance: ${data.money}** <:coinns:699944502856646716>`}});
     }
