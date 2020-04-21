@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) =>{
     var atm1 = message.guild.channels.cache.get('701993773554597929').toString();
     var atm2 = message.guild.channels.cache.get('701993793838252103').toString();
     var atm3 = message.guild.channels.cache.get('701994012285992990').toString();
-    if(message.channel.id ==='698536543350161448') {
+    if(!message.channel.id ==='698536543350161448') {
         //message.author.delete();
         return message.channel.send({embed:{description:`**Please use ATM channel ${atm1} ${atm2} ${atm3} ** `}});
     }
