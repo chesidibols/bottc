@@ -13,7 +13,7 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
     
-    if(!message.member.roles.cache.get('702226762787979275') || message.user.cache.get('594243987900989452')) {
+    if(!message.member.roles.cache.get('702226762787979275') || essage.member.roles.cache.get('701904860848586803')) {
 
         return message.channel.send({embed:{color:'a20a28', description:"**You don't have the permission to this command**"}});
 
