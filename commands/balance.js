@@ -13,7 +13,7 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
     message.delete({timeout: 10000})
-    if(!message.guild.channel.id('701993773554597929' , '701993793838252103')) {
+    if(!message.guild.channel.get('701993773554597929' , '701993793838252103')) {
         return message.channel.send({embed:{color:'a20a28', description:`**Please use ATM channels!** `}});
     }
 
