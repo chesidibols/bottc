@@ -13,8 +13,7 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
     if(message.channel.id !='699367732923203616') {
-        message.delete();
-        return message.channel.send({embed:{description:`**Please use ATM channels!** `}});
+        return message.channel.send({embed:{color:'a20a28', description:`**Please use ATM channels!** `}});
     }
 
     if(!args[0]){
