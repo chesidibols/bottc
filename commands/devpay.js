@@ -14,12 +14,12 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
     
     if(!message.member.roles.cache.get('701904860848586803')) {
-
+    
         return message.channel.send({embed:{color:'a20a28', description:"**You don't have the permission to this command**"}});
-
+    
     }
     let user = message.mentions.members.first() || bot.users.cache.get(args[0]);
-    if(!user) return message.send({embed:{color:'a20a28', description:"**Sorry, couldn't find that user.**"}});
+    if(!user) return message.channel.send({embed:{color:'a20a28', description:"**Sorry, couldn't find that user.**"}});
 
 
     Data.findOne({
