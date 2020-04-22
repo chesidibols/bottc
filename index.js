@@ -50,6 +50,17 @@ bot.on("message" , async message => {
             return;
         }
     }
+    let pangetChance = ["Oo", "Oo","Hindi","Oo", "Hindi", "Hindi", "Oo", "Oo"];
+    var chancePanget = chancePanget[Math.floor(Math.random() * pangetChance.length )];
+    if(message.content.startsWith("panget ba si"))
+    {
+        if(pick == "Hindi"){
+            message.channel.send("Hindi");
+        }
+        else{
+            message.channel.send("Oo");
+        } return;
+    }
 
     // CHECK PREFIX, DEFINE ARGS & COMMAND
     if(!message.content.startsWith(prefix)) return;
