@@ -51,7 +51,7 @@ bot.on("message" , async message => {
         }
     }
     let pangetChance = ["Oo", "Oo","Hindi","Oo", "Hindi", "Hindi", "Oo", "Oo"];
-    var chancePanget = chances[Math.floor(Math.random() * pangetChance.length )];
+    var chancePanget =pangetChance[Math.floor(Math.random() * pangetChance.length )];
     if(message.content.startsWith("panget ba si"))
     {
         if(chancePanget == "Hindi"){
