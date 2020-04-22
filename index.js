@@ -64,11 +64,11 @@ bot.on("message" , async message => {
         } return;
     }
     //naliligo
-    let pangetChance = ["Oo", "Oo","Hindi","Oo", "Hindi", "Hindi", "Oo", "Oo"];
-    var chancePanget =pangetChance[Math.floor(Math.random() * pangetChance.length )];
+    let ligoChance = ["Oo", "Oo","Hindi","Oo", "Hindi", "Hindi", "Oo", "Oo"];
+    var chanceLigo =ligoChance[Math.floor(Math.random() * ligoChance.length )];
     if(message.content.startsWith("naliligo ba si"))
     {
-        if(chancePanget == "Hindi"){
+        if(chanceLigo == "Hindi"){
             message.channel.send("Hindi");
         }
         else{
