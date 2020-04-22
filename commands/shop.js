@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) =>{
 
 
     let embed = new Discord.MessageEmbed();
-        embed.setTitle("SHOP");
+        embed.setTitle("WAG ATAT");
         embed.setColor("a20a28");
         embed.addField("tae");
 
