@@ -57,6 +57,7 @@ bot.on("message" , async message => {
     {
         message.delete({timeout: 10000})
         message.channel.send({embed:{color:'a20a28', description:"**BAD!**"}})
+        return;
     }
 
     // CHECK PREFIX, DEFINE ARGS & COMMAND
