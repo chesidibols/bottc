@@ -42,8 +42,7 @@ bot.on("message" , async message => {
     let prefix = botconfig.prefix;
 
     //NO COMMAND IN LOBBY CHANNEL
-    var cHannels = ['699367732923203616','699368083428474880', '699367732923203616'];
-    if(message.channel.id === cHannels){
+    if(message.channel.id === "698536543350161448"){
         if(message.content.startsWith("tc."))
         {
             message.delete({timeout: 10000})
