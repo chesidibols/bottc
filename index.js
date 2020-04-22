@@ -50,9 +50,23 @@ bot.on("message" , async message => {
             return;
         }
     }
+
+    //panget ba
     let pangetChance = ["Oo", "Oo","Hindi","Oo", "Hindi", "Hindi", "Oo", "Oo"];
     var chancePanget =pangetChance[Math.floor(Math.random() * pangetChance.length )];
     if(message.content.startsWith("panget ba si"))
+    {
+        if(chancePanget == "Hindi"){
+            message.channel.send("Hindi");
+        }
+        else{
+            message.channel.send("Oo");
+        } return;
+    }
+    //naliligo
+    let pangetChance = ["Oo", "Oo","Hindi","Oo", "Hindi", "Hindi", "Oo", "Oo"];
+    var chancePanget =pangetChance[Math.floor(Math.random() * pangetChance.length )];
+    if(message.content.startsWith("naliligo ba si"))
     {
         if(chancePanget == "Hindi"){
             message.channel.send("Hindi");
