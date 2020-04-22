@@ -51,15 +51,6 @@ bot.on("message" , async message => {
         }
     }
 
-    //BADWERDS
-    let mura = ['gago','taena','tangina','bobo','tanga'];
-    if(message.content.startsWith(mura))
-    {
-        message.delete({timeout: 10000})
-        message.channel.send({embed:{color:'a20a28', description:"**BAD!**"}})
-        return;
-    }
-
     // CHECK PREFIX, DEFINE ARGS & COMMAND
     if(!message.content.startsWith(prefix)) return;
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
