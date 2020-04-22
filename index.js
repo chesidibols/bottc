@@ -46,10 +46,14 @@ bot.on("message" , async message => {
         if(message.content.startsWith("tc."))
         {
             message.delete({timeout: 10000})
-            message.channel.send({embed:{color:'a20a28', description:"**PLEASE USE <#♚bots > IF CHECKING BALANCE OR OTHER TRANSACTIONS USE <#atm1> <#atm2>**"}});
+            message.channel.send({embed:{color:'a20a28', description:"**PLEASE USE SPECIFIC CHANNELS FOR COMMANDS THANKYOU!**"}});
             return;
         }
     }
+
+    //BADWERDS
+    let mura = ['gago','taena','tangina','bobo','tanga'];
+    if(message.content.startsWith(""))
 
     // CHECK PREFIX, DEFINE ARGS & COMMAND
     if(!message.content.startsWith(prefix)) return;
