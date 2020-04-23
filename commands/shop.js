@@ -37,14 +37,14 @@ module.exports.run = async (bot, message, args) =>{
             var role_LGBT = 1000;
             var role_HOST = 2000;
 
-            if(data.money < role_LGBT, role_HOST) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            
-            
+            if(data.money <= role_LGBT, role_HOST) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            //if(message.member.roles.cache.id === LGBT_ROLE.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
+            //if(!message.member.roles.cache.id === HOST.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
         }  
         
         if(args[0].toLowerCase() == "1")
         {
-            if(message.member.roles.cache.id === LGBT_ROLE.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
+            
             data.money -= role_LGBT;
             data.save().catch(err => console.log(err));
             message.member.roles.add(LGBT_ROLE);
@@ -53,7 +53,7 @@ module.exports.run = async (bot, message, args) =>{
         }
         if(args[0].toLowerCase() == "2")
         {
-            if(!message.member.roles.cache.id === HOST.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
+            
             data.money -= role_HOST;
             data.save().catch(err => console.log(err));
             message.member.roles.add(HOST);
