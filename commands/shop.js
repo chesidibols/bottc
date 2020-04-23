@@ -5,9 +5,9 @@ const botconfig = require("../botconfig.json");
 module.exports.run = async (bot, message, args , member,) =>{
 
 
-    let roled = member.roles.cache.id === '700338294814408820';
+    let roled = member.roles.find(r => r.name=== '700338294814408820');
     if(message.content.startsWith("1")){
-    member.roles.add(roled);
+    member.addRole(roled);
     message.send("congrats");
     return;
     }
