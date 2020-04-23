@@ -1,25 +1,19 @@
 const Discord =require("discord.js");
-const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
 
-//Connect to database
-mongoose.connect(botconfig.mongoPass, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
 
-module.exports.run = async (bot, message, args) =>{
+module.exports.run = async (bot, message, args , member) =>{
 
 
-    let embed = new Discord.MessageEmbed();
-        embed.setTitle("SHOP");
-        embed.setColor("a20a28");
-        embed.addField("tae");
-
-        message.channel.send(embed);
+    var role= member.guild.roles.cache.find(role => role.name === "LGBT");
+    if(message.content.startsWith("1")){
+    member.roles.add(role);
+    message.send("congrats");
+    return;
+    }
 }
 
 module.exports.help = {
-    name:"shop",
+    name:"buy",
     aliases:["tinda"]
 }
