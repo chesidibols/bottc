@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) =>{
     //if(!user) return message.channel.send({embed:{color:'a20a28', description:"**Sorry, couldn't find that user.**"}});
 
     if(args[0].toLowerCase() == "LGBT"){
-        message.member.roles.remove(LGBT_ROLE.id);
+        message.member.roles.remove(LGBT_ROLE);
         message.channel.send("removed");
         return;
     }
