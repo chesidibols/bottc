@@ -2,7 +2,7 @@ const Discord =require("discord.js");
 const botconfig = require("../botconfig.json");
 
 
-module.exports.run = async (bot, message, args , member) =>{
+module.exports.run = async (bot, message, args , member, guild) =>{
 
 
     var role= member.guild.roles.cache.find(role => role.name === "LGBT");
