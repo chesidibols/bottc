@@ -53,6 +53,6 @@ module.exports.run = async (bot, message, args) =>{
 
 
 module.exports.help = {
-    name:"asd",
+    name:"buy",
     aliases:["asd"]
 }
