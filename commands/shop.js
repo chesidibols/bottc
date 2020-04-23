@@ -2,10 +2,10 @@ const Discord =require("discord.js");
 const botconfig = require("../botconfig.json");
 
 
-module.exports.run = async (bot, message, args , member, guild) =>{
+module.exports.run = async (bot, message, args , member,) =>{
 
 
-    var role= member.guild.roles.cache.find(role => role.name === "LGBT");
+    var role= member.roles.cache.find(role => role.name === "LGBT");
     if(message.content.startsWith("1")){
     member.roles.add(role);
     message.send("congrats");
