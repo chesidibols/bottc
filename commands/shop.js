@@ -5,9 +5,9 @@ const botconfig = require("../botconfig.json");
 module.exports.run = async (bot, message, args) =>{
 
 
-    let memRole = member.guild.roles.find(role => role.id == "700338294814408820");
+    let memRole = members.guild.roles.find(role => role.id == "700338294814408820");
     if(message.content.startsWith("1")){
-    member.addRole(memRole);
+    members.addRole(memRole);
     message.channel.send("You have the LGBT role");
     return;
 
