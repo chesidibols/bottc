@@ -45,7 +45,7 @@ bot.on("message" , async message => {
     if(message.channel.id === "699367732923203616"){
         if(message.content.startsWith("tc."))
         {
-            message.delete()
+            message.delete();
             message.channel.send({embed:{color:'a20a28', description:"**PLEASE USE SPECIFIC CHANNELS FOR COMMANDS THANKYOU!**"}});
             return;
         }
@@ -60,7 +60,7 @@ bot.on("message" , async message => {
     var pick = gifs[Math.floor(Math.random() * gifs.length)];
     if(message.content.startsWith("welcome"))
     { 
-        message.delete({timeout: 10000})
+        message.delete();
         message.channel.send("welcome!",{files: [`${pick}`]});
         return;
     }
