@@ -2,7 +2,7 @@ const Discord =require("discord.js");
 const bot = new Discord.Client({disableEveryone: true});
 
 
-module.exports.run = async (bot, message, args) =>{
+module.exports.run = async (member, message, args) =>{
 
 
     let roled = member.roles.cache.find(r => r.name=== '700338294814408820');
