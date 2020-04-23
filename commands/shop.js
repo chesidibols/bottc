@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) =>{
             var role_LGBT = 1000;
 
             if(data.money <= 0) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(message.member.roles.get(LGBT_ROLE)) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
+            if(message.member.roles(LGBT_ROLE)) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
 
         }  
         
