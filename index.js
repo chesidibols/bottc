@@ -104,7 +104,7 @@ bot.on("message" , async message => {
         } return;
     }
 
-    if(message.content.startsWith("1")){
+    if(message.content.startsWith("tc.buy 1")){
         message.member.addRole(LGBT_ROLE);
         message.channel.send("added");
         return;
