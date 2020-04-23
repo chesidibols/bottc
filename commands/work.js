@@ -14,7 +14,7 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
 
     let timeout = 43200000;
-    let reward = 450;
+    let reward = 500;
 
     Data.findOne({
         userID: message.author.id
