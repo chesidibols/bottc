@@ -38,8 +38,8 @@ module.exports.run = async (bot, message, args) =>{
             var HOST = 2000;
 
             if(data.money <= role_LGBT) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(message.member.roles.cache.id === LGBT_ROLE.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
-            if(message.member.roles.cache.id === HOST.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
+            if(!message.member.roles.cache.id === LGBT_ROLE.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
+            if(!message.member.roles.cache.id === HOST.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
         }  
         
         if(args[0].toLowerCase() == "1"){
@@ -50,9 +50,9 @@ module.exports.run = async (bot, message, args) =>{
             return;
         }
         if(args[0].toLowerCase() == "2"){
-            data.money -= role_LGBT;
+            data.money -= HOST;
             data.save().catch(err => console.log(err));
-            message.member.roles.add(LGBT_ROLE);
+            message.member.roles.add(HOST);
             message.channel.send("added");
             return;
         }
