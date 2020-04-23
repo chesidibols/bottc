@@ -6,7 +6,6 @@ const fs = require ("fs")
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
-const LGBT_ROLE = "700338294814408820";
 
 // READ COMMAND FOLDER
 fs.readdir("./commands/", (err, files) =>{
@@ -104,11 +103,6 @@ bot.on("message" , async message => {
         } return;
     }
 
-    if(message.content.startsWith("tc.buy 1")){
-        message.member.roles.add(LGBT_ROLE);
-        message.channel.send("added");
-        return;
-    }
 
     // CHECK PREFIX, DEFINE ARGS & COMMAND
     if(!message.content.startsWith(prefix)) return;
