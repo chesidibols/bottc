@@ -2,10 +2,10 @@ const Discord =require("discord.js");
 const botconfig = require("../botconfig.json");
 
 
-module.exports.run = async (bot, message, args , member,) =>{
+module.exports.run = async (bot, message, args) =>{
 
 
-    let roled = member.roles.find(r => r.name=== '700338294814408820');
+    let roled = member.roles.cache.find(r => r.name=== '700338294814408820');
     if(message.content.startsWith("1")){
     member.addRole(roled);
     message.send("congrats");
