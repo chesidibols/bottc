@@ -89,6 +89,18 @@ bot.on("message" , async message => {
             message.channel.send("Oo");
         } return;
     }
+    //magkakajowa
+    let jowaChance = ["Oo", "Oo","Hindi","Oo", "Hindi", "Hindi", "Oo", "Oo"];
+    var chanceJowa =jowaChance[Math.floor(Math.random() * jowaChance.length )];
+    if(message.content.startsWith("magkaka jowa ba si"))
+    {
+        if(chanceJowa== "Hindi"){
+            message.channel.send("Hindi");
+        }
+        else{
+            message.channel.send("Oo");
+        } return;
+    }
 
     // CHECK PREFIX, DEFINE ARGS & COMMAND
     if(!message.content.startsWith(prefix)) return;
