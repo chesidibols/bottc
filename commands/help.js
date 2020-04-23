@@ -7,10 +7,9 @@ module.exports.run = async (bot, message, args) =>{
         embed.setTitle("BOT COMMANDS");
         embed.setColor("a20a28");
         embed.addFields(
-            { name: '**tc.bal**', value: 'Check Balance' },
-            { name: '\u200B', value: '\u200B' },
-            { name: '**tc.pay**', value: 'Pay to other user', inline: true },
-            { name: '**tc.roll**', value: 'To Gamble', inline: true },
+            { description: '**tc.bal**', value: 'Check Balance' },
+            { description: '**tc.pay**', value: 'Pay to other user', inline: true },
+            { description: '**tc.roll**', value: 'To Gamble', inline: true },
         )
 
         message.channel.send(embed);
