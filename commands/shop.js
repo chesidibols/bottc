@@ -1,5 +1,5 @@
 const Discord =require("discord.js");
-
+const botconfig = require("../botconfig.json");
 const LGBT_ROLE = "700338294814408820";
 
 module.exports.run = async (bot, message, args) =>{
