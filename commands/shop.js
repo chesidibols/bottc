@@ -13,6 +13,7 @@ const Data = require("../models/data.js");
 
 //roles
 const LGBT_ROLE = "700338294814408820";
+const HOST = "701318351930261574";
 
 module.exports.run = async (bot, message, args) =>{
 
@@ -34,13 +35,21 @@ module.exports.run = async (bot, message, args) =>{
         } else {
 
             var role_LGBT = 1000;
+            var HOST = 2000;
 
             if(data.money <= role_LGBT) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             if(message.member.roles.cache.id === LGBT_ROLE.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
-
+            if(message.member.roles.cache.id === HOST.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
         }  
         
         if(args[0].toLowerCase() == "1"){
+            data.money -= role_LGBT;
+            data.save().catch(err => console.log(err));
+            message.member.roles.add(LGBT_ROLE);
+            message.channel.send("added");
+            return;
+        }
+        if(args[0].toLowerCase() == "2"){
             data.money -= role_LGBT;
             data.save().catch(err => console.log(err));
             message.member.roles.add(LGBT_ROLE);
