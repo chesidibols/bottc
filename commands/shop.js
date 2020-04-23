@@ -2,12 +2,12 @@ const Discord =require("discord.js");
 const botconfig = require("../botconfig.json");
 
 
-module.exports.run = async (bot, message, args) =>{
+module.exports.run = async (bot, message, args , member) =>{
 
 
-    let memRole = members.guild.roles.find(role => role.id == "700338294814408820");
+    let memRole = member.guild.roles.find(role => role.id == "700338294814408820");
     if(message.content.startsWith("1")){
-    members.addRole(memRole);
+    member.addRole(memRole);
     message.channel.send("You have the LGBT role");
     return;
 
