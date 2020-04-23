@@ -42,12 +42,29 @@ bot.on("message" , async message => {
     let prefix = botconfig.prefix;
 
     //NO COMMAND IN LOBBY CHANNEL
-    if(message.channel.id === "698536543350161448"){
+    if(message.channel.id === "699367732923203616"){
         if(message.content.startsWith("tc."))
         {
             message.delete({timeout: 10000})
             message.channel.send({embed:{color:'a20a28', description:"**PLEASE USE SPECIFIC CHANNELS FOR COMMANDS THANKYOU!**"}});
             return;
+        }
+    }
+
+    //Welcome
+
+    if(message.content.startsWith("Welcome"))
+    {
+        let gifs = [
+            "./tenor1.gif",
+            "./tenor2.gif",
+            "./tenor3.gif"
+        ];
+    
+        var pick = gifs[Math.floor(Math.random() * gifs.length)];
+        if(!args[0])  {
+        message.delete({timeout: 10000})
+        return  message.channel.send("welcome!",{files: [`${pick}`]});
         }
     }
 
