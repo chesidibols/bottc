@@ -52,16 +52,14 @@ bot.on("message" , async message => {
     }
 
     //Welcome
-
+    let gifs = [
+        "./tenor1.gif",
+        "./tenor2.gif",
+        "./tenor3.gif"
+    ];
+    var pick = gifs[Math.floor(Math.random() * gifs.length)];
     if(message.content.startsWith("Welcome"))
-    {
-        let gifs = [
-            "./tenor1.gif",
-            "./tenor2.gif",
-            "./tenor3.gif"
-        ];
-    
-        var pick = gifs[Math.floor(Math.random() * gifs.length)];
+    { 
         if(!args[0])  {
         message.delete({timeout: 10000})
         return  message.channel.send("welcome!",{files: [`${pick}`]});
