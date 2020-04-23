@@ -58,11 +58,12 @@ bot.on("message" , async message => {
         "./tenor3.gif"
     ];
     var pick = gifs[Math.floor(Math.random() * gifs.length)];
-    if(message.content.startsWith("Welcome"))
+    if(message.content.startsWith("welcome"))
     { 
         if(!args[0])  {
         message.delete({timeout: 10000})
-        return  message.channel.send("welcome!",{files: [`${pick}`]});
+        message.channel.send("welcome!",{files: [`${pick}`]});
+        return;
         }
     }
 
