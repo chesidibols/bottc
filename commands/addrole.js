@@ -8,18 +8,19 @@ mongoose.connect(botconfig.mongoPass, {
     useUnifiedTopology: true,
 });
 
+const LGBT_ROLE = "700338294814408820";
+
 module.exports.run = async (bot, message, args) =>{
 
 
-    let embed = new Discord.MessageEmbed();
-        embed.setTitle("SHOP");
-        embed.setColor("a20a28");
-        embed.addField("tae");
-
-        message.channel.send(embed);
+    if(args[0].toLowerCase() == "LGBT"){
+        message.member.roles.remove(LGBT_ROLE);
+        message.channel.send("removed");
+        return;
+    }
 }
 
 module.exports.help = {
-    name:"shop",
+    name:"remove",
     aliases:["tinda"]
 }
