@@ -4,16 +4,16 @@ const LGBT_ROLE = "700338294814408820";
 
 module.exports.run = async (bot, message, args) =>{
 
-        if(message.content.startsWith("1")){
-            message.member.addRole(LGBT_ROLE);
-            message.channel.send("added");
-            return;
-        }
+    if(args[0].toLowerCase() == "1"){
+        message.member.roles.add(LGBT_ROLE);
+        message.channel.send("added");
+        return;
+    }
 
     
 }
 
 module.exports.help = {
-    name:"asd",
-    aliases:["asd"]
+    name:"buy",
+    aliases:["b"]
 }
