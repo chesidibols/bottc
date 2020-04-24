@@ -49,7 +49,7 @@ module.exports.run = async (bot, message, args) =>{
             data.money -= Nickname;
             data.save().catch(err => console.log(err));
             message.member.roles.add(Change_Nickname);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have the <@${(Change_Nickname).toString()}>**`}});
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have the Change Nickname**`}});
             return;
         }
         if(args[0].toLowerCase() == "2")
@@ -58,7 +58,7 @@ module.exports.run = async (bot, message, args) =>{
             data.money -= ColorRole;
             data.save().catch(err => console.log(err));
             message.member.roles.add(Color_Role);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have the <@${(Color_Role).toString()}>**`}})
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have the Color Role**`}})
             return;
         }
      }
