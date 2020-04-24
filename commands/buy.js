@@ -37,7 +37,8 @@ module.exports.run = async (bot, message, args) =>{
             var Nickname = 100000;
             var ColorRole = 100000;
 
-            if(data.money <= role_LGBT) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= Nickname) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= ColorRole) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             //if(message.member.roles.cache.id === LGBT_ROLE.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
             //if(message.member.roles.cache.id === HOST.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
         }  
