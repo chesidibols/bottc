@@ -47,8 +47,18 @@ module.exports.run = async (bot, message, args) =>{
             var Spotify = 500000;
             var paybhandred_steam = 600000;
 
-            if(data.money <= Nickname) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= ColorRole) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= pipti_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= pipti_steam) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= wanhandred_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= tupipti_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= discord_nitro) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= trihandred_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= tupipti_steam) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= paybhandred_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= discord_boost) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= netflix) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= Spotify ) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= paybhandred_steam) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             //if(message.member.roles.cache.id === LGBT_ROLE.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
             //if(message.member.roles.cache.id === HOST.id) return message.channel.send({embed:{color:'a20a28', description:"**You have this role**"}});
         }  
