@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) =>{
             return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:699944502856646716>"}});
         } else {
 
-            var pipti_load = 49999;
+            var pipti_load = 50000;
             var pipti_steam = 50000;
             var wanhandred_load = 100000;
             var tupipti_load = 250000;
@@ -63,7 +63,7 @@ module.exports.run = async (bot, message, args) =>{
         
         if(args[0].toLowerCase() == "1")
         {
-            if(data.money <= pipti_load) {
+            if(data.money < pipti_load) {
             return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             }else {
             data.money -= pipti_load;
