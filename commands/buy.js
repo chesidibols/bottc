@@ -55,7 +55,7 @@ module.exports.run = async (bot, message, args) =>{
             }else {
             data.money -= pipti_load;
             data.save().catch(err => console.log(err));
-            message.send(`${bot.users.cache.get(user.id).tag} Buy's 50 pesos load` + admin);
+            message.send(`${message.author.tag} Buy's 50 pesos load` + admin);
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos load contact <@noʎʞɔnɟ> for claiming**`}});
             return;
             }
