@@ -54,11 +54,11 @@ module.exports.run = async (bot, message, args) =>{
             if(pick == "lose"){
              data.money -= bet;
              data.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28',description:`You lose. New balance: ${data.money} <:coinns:699944502856646716>`}});
+            return message.channel.send({embed:{color:'a20a28',description:`You lose. New balance: ${(data.money).toLocaleString()} <:coinns:699944502856646716>`}});
         }else{
                 data.money += bet+bet;
                 data.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28',description:`**You win!. New balance: ${data.money}** <:coinns:699944502856646716>`}});
+            return message.channel.send({embed:{color:'a20a28',description:`**You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:699944502856646716>`}});
     }
         }
     })
