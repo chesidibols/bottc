@@ -47,7 +47,7 @@ module.exports.run = async (bot, message, args) =>{
             var Spotify = 500000;
             var paybhandred_steam = 600000;
             
-            if(data.money <= lahat) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= pipti_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             if(data.money <= pipti_steam) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             if(data.money <= wanhandred_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             if(data.money <= tupipti_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
