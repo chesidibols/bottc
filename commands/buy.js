@@ -12,9 +12,11 @@ mongoose.connect(botconfig.mongoPass, {
 const Data = require("../models/data.js");
 
 
-const admin = bot.users.cache.get('594243987900989452');
+
 module.exports.run = async (bot, message, args) =>{
 
+    const admin = bot.users.cache.get('594243987900989452');
+    
     Data.findOne({
         userID: message.author.id
     },(err, data) => {
