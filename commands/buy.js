@@ -47,12 +47,8 @@ module.exports.run = async (bot, message, args) =>{
             var Spotify = 500000;
             var paybhandred_steam = 600000;
             
-            let lahat = [pipti_load,pipti_steam,wanhandred_load,tupipti_load,discord_boost,discord_nitro,trihandred_load,tupipti_steam,paybhandred_load,netflix,Spotify,paybhandred_load];
-
             if(data.money <= lahat) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-
-
-          /*  if(data.money <= pipti_steam) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            if(data.money <= pipti_steam) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             if(data.money <= wanhandred_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             if(data.money <= tupipti_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             if(data.money <= discord_nitro) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
@@ -62,7 +58,7 @@ module.exports.run = async (bot, message, args) =>{
             if(data.money <= discord_boost) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             if(data.money <= netflix) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             if(data.money <= Spotify ) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= paybhandred_steam) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});*/
+            if(data.money <= paybhandred_steam) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
         }  
         
         if(args[0].toLowerCase() == "1")
