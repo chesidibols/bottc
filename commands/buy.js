@@ -11,9 +11,6 @@ mongoose.connect(botconfig.mongoPass, {
 // MODELS
 const Data = require("../models/data.js");
 
-//roles
-const Change_Nickname = "703307108312940684";
-const Color_Role = "703307935937331291";
 
 module.exports.run = async (bot, message, args) =>{
 
@@ -47,18 +44,6 @@ module.exports.run = async (bot, message, args) =>{
             var Spotify = 500000;
             var paybhandred_steam = 600000;
             
-            
-            /*
-            ;
-            
-            
-            
-            
-            
-            
-           
-            
-             */
         }  
         
         if(args[0].toLowerCase() == "1")
