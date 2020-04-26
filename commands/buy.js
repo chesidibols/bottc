@@ -34,7 +34,7 @@ module.exports.run = async (bot, message, args) =>{
             return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:699944502856646716>"}});
         } else {
 
-            var pipti_load = 39999;
+            var pipti_load = 49999;
             var pipti_steam = 50000;
             var wanhandred_load = 100000;
             var tupipti_load = 250000;
