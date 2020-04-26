@@ -15,8 +15,8 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
-    const admin = bot.users.cache.get('594243987900989452');
-    
+    const admin = bot.users.cache.get('323473522179571712');
+
     Data.findOne({
         userID: message.author.id
     },(err, data) => {
