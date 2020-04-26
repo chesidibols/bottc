@@ -8,7 +8,6 @@ module.exports.run = async (bot, message, args) =>{
     let embed = new Discord.MessageEmbed();
         embed.setTitle("SHOP");
         embed.setColor("a20a28");
-        embed.addDescription("tc.buy # of item to buy.")
         embed.addFields(
             { name: '**1.50 Pesos Load**', value: '50,000  coins.', inline: true },
             { name: '**2.50 Pesos Steam**', value: '55,000 coins.', inline: true },
