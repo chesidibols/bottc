@@ -48,17 +48,17 @@ module.exports.run = async (bot, message, args) =>{
             var paybhandred_steam = 600000;
             
             
-            /*if(data.money <= pipti_steam) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= wanhandred_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= tupipti_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= discord_nitro) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= trihandred_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= tupipti_steam) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= paybhandred_load) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= discord_boost) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= netflix) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= Spotify ) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            if(data.money <= paybhandred_steam) return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}}); */
+            /*
+            ;
+            
+            
+            
+            
+            
+            
+           
+            
+             */
         }  
         
         if(args[0].toLowerCase() == "1")
@@ -68,103 +68,136 @@ module.exports.run = async (bot, message, args) =>{
             }else {
             data.money -= pipti_load;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos load contact <@noʎʞɔnɟ#0001> for claiming**`}});
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos load contact <@noʎʞɔnɟ> for claiming**`}});
             return;
             }
         }
         if(args[0].toLowerCase() == "2")
         {
-            
+            if(data.money < pipti_steam){ 
+                return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else {
             data.money -= pipti_steam;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos steam wallet contact <@noʎʞɔnɟ#0001> for claiming**`}})
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos steam wallet contact <@noʎʞɔnɟ> for claiming**`}})
             return;
+            }
         }
 
         if(args[0].toLowerCase() == "3")
         {
-            
+            if(data.money < wanhandred_load){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}})
+            }else {
             data.money -= wanhandred_load;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 100 load contact <@noʎʞɔnɟ#0001> for claiming**`}});
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 100 load contact <@noʎʞɔnɟ> for claiming**`}});
             return;
+            }
         }
         if(args[0].toLowerCase() == "4")
         {
-            
+            if(data.money < tupipti_load){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else {
             data.money -= tupipti_load;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 250 load contact <@noʎʞɔnɟ#0001> for claiming**`}})
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 250 load contact <@noʎʞɔnɟ> for claiming**`}})
             return;
+            }
         }
 
         if(args[0].toLowerCase() == "5")
         {
-            
+            if(data.money < discord_nitro){
+             return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else{
             data.money -= discord_nitro;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month discord nitro contact <@noʎʞɔnɟ#0001> for claiming**`}});
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month discord nitro contact <@noʎʞɔnɟ> for claiming**`}});
             return;
+            }
         }
         if(args[0].toLowerCase() == "6")
         {
-            
-            data.money -= trihandred_load;
-            data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 300 load contact <@noʎʞɔnɟ#0001> for claiming**`}})
-            return;
+            if(data.money < trihandred_load){
+             return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else {
+                data.money -= trihandred_load;
+                data.save().catch(err => console.log(err));
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 300 load contact <@noʎʞɔnɟ> for claiming**`}})
+                return;
+                }
         }
 
         if(args[0].toLowerCase() == "7")
         {
-            
-            data.money -= tupipti_steam;
-            data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 250 steam wallet contact <@noʎʞɔnɟ#0001> for claiming**`}});
-            return;
+            if(data.money < tupipti_steam){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else{
+                data.money -= tupipti_steam;
+                data.save().catch(err => console.log(err));
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 250 steam wallet contact <@noʎʞɔnɟ> for claiming**`}});
+                return;
+                }
         }
         if(args[0].toLowerCase() == "8")
         {
-            
+            if(data.money < paybhandred_load){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else {
             data.money -= paybhandred_load;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 500 load contact <@noʎʞɔnɟ#0001> for claiming**`}})
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 500 load contact <@noʎʞɔnɟ> for claiming**`}})
             return;
+            }
         }
 
         if(args[0].toLowerCase() == "9")
         {
-            
-            data.money -= discord_boost;
-            data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Discord Nitro Boost contact <@noʎʞɔnɟ#0001> for claiming**`}})
-            return;
+            if(data.money < discord_boost){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+                }else {   
+                data.money -= discord_boost;
+                data.save().catch(err => console.log(err));
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Discord Nitro Boost contact <@noʎʞɔnɟ> for claiming**`}})
+                return;
+                }
         }
         if(args[0].toLowerCase() == "10")
         {
-            
-            data.money -= netflix;
-            data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month netflix access contact <@noʎʞɔnɟ#0001> for claiming**`}})
-            return;
+            if(data.money < netflix){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+                }else{
+                data.money -= netflix;
+                data.save().catch(err => console.log(err));
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month netflix access contact <@noʎʞɔnɟ> for claiming**`}})
+                return;
+                }
         }
 
         if(args[0].toLowerCase() == "11")
         {
-            
-            data.money -= Spotify;
-            data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Spotify Premium contact <@noʎʞɔnɟ#0001> for claiming**`}})
-            return;
+            if(data.money < Spotify ){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+                }else{
+                data.money -= Spotify;
+                data.save().catch(err => console.log(err));
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Spotify Premium contact <@noʎʞɔnɟ> for claiming**`}})
+                return;
+                }
         }
 
         if(args[0].toLowerCase() == "12")
         {
-            
+            if(data.money < paybhandred_steam){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else{
             data.money -= paybhandred_steam;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 500 Steam Wallet contact <@noʎʞɔnɟ#0001> for claiming**`}})
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 500 Steam Wallet contact <@noʎʞɔnɟ> for claiming**`}})
             return;
+            }
         }
      })
 }
