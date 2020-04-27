@@ -48,7 +48,7 @@ module.exports.run = async (bot, message, args) =>{
   
             if(bet > maxBet) return message.channel.send({embed:{color:'a20a28',description:`the maximum bet is ${maxBet.toLocaleString()} <:coinns:699944502856646716>`}});
 
-            let chances = ["win", "lose","lose","lose", "lose", "lose", "lose", "lose"];
+            let chances = ["win", "win","lose","lose", "lose", "lose", "lose", "lose"];
             var pick = chances[Math.floor(Math.random() * chances.length )];
 
             if(pick == "lose"){
