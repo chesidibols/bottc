@@ -60,7 +60,6 @@ bot.on("message" , async message => {
     var pick = gifs[Math.floor(Math.random() * gifs.length)];
     if(message.content.startsWith("welcome"))
     { 
-        message.delete();
         message.channel.send("welcome!",{files: [`${pick}`]});
         return;
     }
