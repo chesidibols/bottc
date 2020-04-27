@@ -55,8 +55,7 @@ bot.on("message" , async message => {
     //Welcome
     let gifs = [
         "./tenor1.gif",
-        "./tenor2.gif",
-        "./tenor3.gif"
+        "./tenor2.gif"
     ];
     var pick = gifs[Math.floor(Math.random() * gifs.length)];
     if(message.content.startsWith("welcome"))
