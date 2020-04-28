@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) =>{
             { name: '**10.1 Month Netflix**', value: '500,000 coins.', inline: true },
             { name: '**11.1 Month Spotify Premium**', value: '500,000 coins.', inline: true },
             { name: '**12.500 Steam Wallet**', value: '600,000 coins.', inline: true },
-            { name: `**${blue_hawaii}**`, value: '----', inline: true },
+            { name: `**${(blue_hawaii).toLocaleString()}**`, value: '----', inline: true },
         )
 
         message.channel.send(embed);
