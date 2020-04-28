@@ -12,17 +12,17 @@ const LGBT_ROLE = "700338294814408820";
 
 module.exports.run = async (bot, message, args) =>{
 
-    //let user = message.mentions.members.first() || bot.users.cache.get(args[0]);
-    //if(!user) return message.channel.send({embed:{color:'a20a28', description:"**Sorry, couldn't find that user.**"}});
+    let user = message.mentions.members.first() || bot.users.cache.get(args[0]);
+    if(!user) return message.channel.send({embed:{color:'a20a28', description:"**Sorry, couldn't find that user.**"}});
 
     if(args[0].toLowerCase() == "LGBT"){
-        message.member.roles.remove(LGBT_ROLE);
-        message.channel.send("removed");
+        message.member.roles.add(LGBT_ROLE);
+        message.channel.send({embed:{color:'a20a28', description:`**Role Added to ${bot.users.cache.get(args[0])}**`}});
         return;
     }
 }
 
 module.exports.help = {
-    name:"remove",
-    aliases:["tinda"]
+    name:"add",
+    aliases:[""]
 }
