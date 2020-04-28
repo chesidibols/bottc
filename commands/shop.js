@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) =>{
             { name: '**10.1 Month Netflix**', value: '500,000 coins.', inline: true },
             { name: '**11.1 Month Spotify Premium**', value: '500,000 coins.', inline: true },
             { name: '**12.500 Steam Wallet**', value: '600,000 coins.', inline: true },
-            { name: `**${(Roleto).toLocaleString()}**`, value: '----', inline: true },
+            { name: `**${Roleto}**`, value: '----', inline: true },
         )
 
         message.channel.send(embed);
