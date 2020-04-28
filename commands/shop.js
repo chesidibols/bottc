@@ -7,7 +7,7 @@ const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) =>{
 
-    const blue_hawaii = bot.member.get("704649829460082759").toLocaleString();
+    const blue_hawaii = bot.member.id("704649829460082759").toLocaleString();
     
     let embed = new Discord.MessageEmbed();
         embed.setTitle("SHOP");
