@@ -7,8 +7,7 @@ const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) =>{
 
-    const blue_hawaii = bot.member.id("704649829460082759").toLocaleString();
-    
+
     let embed = new Discord.MessageEmbed();
         embed.setTitle("SHOP");
         embed.setColor("a20a28");
@@ -25,7 +24,7 @@ module.exports.run = async (bot, message, args) =>{
             { name: '**10.1 Month Netflix**', value: '500,000 coins.', inline: true },
             { name: '**11.1 Month Spotify Premium**', value: '500,000 coins.', inline: true },
             { name: '**12.500 Steam Wallet**', value: '600,000 coins.', inline: true },
-            { name: `**${(blue_hawaii).toLocaleString()}**`, value: '----', inline: true },
+            { name: `**<:𝕭𝖑𝖚𝖊 𝕳𝖆𝖜𝖆𝖎𝖎:704649829460082759>**`, value: '----', inline: true },
         )
 
         message.channel.send(embed);
