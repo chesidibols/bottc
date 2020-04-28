@@ -7,7 +7,7 @@ const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) =>{
 
-        const Roleto = "7𝕭𝖑𝖚𝖊 𝕳𝖆𝖜𝖆𝖎𝖎";
+        const Roleto = "𝕭𝖑𝖚𝖊 𝕳𝖆𝖜𝖆𝖎𝖎";
 
     let embed = new Discord.MessageEmbed();
         embed.setTitle("SHOP");
@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) =>{
             { name: '**10.1 Month Netflix**', value: '500,000 coins.', inline: true },
             { name: '**11.1 Month Spotify Premium**', value: '500,000 coins.', inline: true },
             { name: '**12.500 Steam Wallet**', value: '600,000 coins.', inline: true },
-            { name: `**${Roleto}**`, value: '----', inline: true },
+            { name: `**<@${Roleto}>**`, value: '----', inline: true },
         )
 
         message.channel.send(embed);
