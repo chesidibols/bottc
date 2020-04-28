@@ -7,6 +7,7 @@ const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) =>{
 
+        const Roleto = bot.users.cache.get("704649829460082759").toLocaleString();
 
     let embed = new Discord.MessageEmbed();
         embed.setTitle("SHOP");
@@ -24,7 +25,7 @@ module.exports.run = async (bot, message, args) =>{
             { name: '**10.1 Month Netflix**', value: '500,000 coins.', inline: true },
             { name: '**11.1 Month Spotify Premium**', value: '500,000 coins.', inline: true },
             { name: '**12.500 Steam Wallet**', value: '600,000 coins.', inline: true },
-            { name: `**@<704649829460082759>**`, value: '----', inline: true },
+            { name: `**${(Roleto).toLocaleString()}**`, value: '----', inline: true },
         )
 
         message.channel.send(embed);
