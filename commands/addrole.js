@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) =>{
 
     if(args[0].toLowerCase() == "LGBT"){
         message.member.roles.add(LGBT_ROLE);
-        message.channel.send({embed:{color:'a20a28', description:`**Role Added to ${bot.users.cache.get(args[0])}**`}});
+        message.channel.send({embed:{color:'a20a28', description:`**Role Added to ${user}**`}});
         return;
     }
 }
