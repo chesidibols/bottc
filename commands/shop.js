@@ -7,7 +7,7 @@ const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) =>{
 
-        const Roleto = bot.users.cache.id("704649829460082759");
+        const Roleto = "7𝕭𝖑𝖚𝖊 𝕳𝖆𝖜𝖆𝖎𝖎";
 
     let embed = new Discord.MessageEmbed();
         embed.setTitle("SHOP");
