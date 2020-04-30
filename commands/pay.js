@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) =>{
     }, (err, authorData) =>{
         if(err) console.log(err);
         if(!authorData) {
-            return message.send({embed:{color:'a20a28', description:"**You dont have any <:coinnss:699944502856646716> to send. **"}});
+            return message.channel.send({embed:{color:'a20a28', description:"**You dont have any <:coinnss:699944502856646716> to send. **"}});
         } else {
             Data.findOne({
                 userID: user.id
