@@ -33,11 +33,22 @@ bot.on("ready" , async () => {
     bot.user.setActivity(`Eating Souls`);
 })
 
+
 bot.on("message" , async message => {
 
     // CHECK CHANNEL TYPE
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
+
+    //NO COMMAND IN LOBBY CHANNEL
+    if(message.channel.id === "699367732923203616"){
+        if(message.content.startsWith("tc."))
+        {
+            message.delete();
+            message.channel.send({embed:{color:'a20a28', description:"**PLEASE USE SPECIFIC CHANNELS FOR COMMANDS THANKYOU!**"}});
+            return;
+        }
+    }
 
     // SET PREFIX
     let prefix = botconfig.prefix;
@@ -63,15 +74,7 @@ bot.on("message" , async message => {
         return;
     }
 
-    //NO COMMAND IN LOBBY CHANNEL
-    if(message.channel.id === "699367732923203616"){
-        if(message.content.startsWith("tc."))
-        {
-            message.delete();
-            message.channel.send({embed:{color:'a20a28', description:"**PLEASE USE SPECIFIC CHANNELS FOR COMMANDS THANKYOU!**"}});
-            return;
-        }
-    }
+    
 })
 
 
