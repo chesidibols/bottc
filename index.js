@@ -42,66 +42,6 @@ bot.on("message" , async message => {
     // SET PREFIX
     let prefix = botconfig.prefix;
 
-    //NO COMMAND IN LOBBY CHANNEL
-    if(message.channel.id === "699367732923203616"){
-        if(message.content.startsWith("tc."))
-        {
-            message.delete();
-            message.channel.send({embed:{color:'a20a28', description:"**PLEASE USE SPECIFIC CHANNELS FOR COMMANDS THANKYOU!**"}});
-            return;
-        }
-    }
-
-    //Welcome
-    let gifs = [
-        "./tenor1.gif",
-        "./tenor2.gif"
-    ];
-    var pick = gifs[Math.floor(Math.random() * gifs.length)];
-    if(message.content.startsWith("welcome"))
-    { 
-        message.channel.send("welcome!",{files: [`${pick}`]});
-        return;
-    }
-
-    //panget ba
-    let pangetChance = ["Oo", "Oo","Hindi","Oo", "Hindi", "Hindi", "Oo", "Oo"];
-    var chancePanget =pangetChance[Math.floor(Math.random() * pangetChance.length )];
-    if(message.content.startsWith("panget ba si"))
-    {
-        if(chancePanget == "Hindi"){
-            message.channel.send("Hindi");
-        }
-        else{
-            message.channel.send("Oo");
-        } return;
-    }
-    //naliligo
-    let ligoChance = ["Oo", "Oo","Hindi","Oo", "Hindi", "Hindi", "Oo", "Oo"];
-    var chanceLigo =ligoChance[Math.floor(Math.random() * ligoChance.length )];
-    if(message.content.startsWith("naliligo ba si"))
-    {
-        if(chanceLigo == "Hindi"){
-            message.channel.send("Hindi");
-        }
-        else{
-            message.channel.send("Oo");
-        } return;
-    }
-    //magkakajowa
-    let jowaChance = ["Oo", "Oo","Hindi","Oo", "Hindi", "Hindi", "Oo", "Oo"];
-    var chanceJowa =jowaChance[Math.floor(Math.random() * jowaChance.length )];
-    if(message.content.startsWith("magkaka jowa ba si"))
-    {
-        if(chanceJowa== "Hindi"){
-            message.channel.send("Hindi");
-        }
-        else{
-            message.channel.send("Oo");
-        } return;
-    }
-
-
     // CHECK PREFIX, DEFINE ARGS & COMMAND
     if(!message.content.startsWith(prefix)) return;
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -121,6 +61,16 @@ bot.on("message" , async message => {
         command.run(bot, message, args);
     } catch (e) {
         return;
+    }
+
+    //NO COMMAND IN LOBBY CHANNEL
+    if(message.channel.id === "699367732923203616"){
+        if(message.content.startsWith("tc."))
+        {
+            message.delete();
+            message.channel.send({embed:{color:'a20a28', description:"**PLEASE USE SPECIFIC CHANNELS FOR COMMANDS THANKYOU!**"}});
+            return;
+        }
     }
 })
 
