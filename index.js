@@ -30,7 +30,7 @@ fs.readdir("./commands/", (err, files) =>{
 // BOT ONLINE MESSAGE & ACTIVITY MESSAGE
 bot.on("ready" , async () => {
     console.log(`${bot.user.username} is online on ${bot.guilds.cache.size} servers!`);
-    bot.user.setActivity(`Eating Souls`);
+    bot.user.setActivity(`Wacthing you because I love you!`);
 })
 
 
