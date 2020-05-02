@@ -1,7 +1,7 @@
 const Discord =require("discord.js");
 const botconfig = require("../botconfig.json");
 
-
+const alak = "704649539025633356";
 
 
 
@@ -24,6 +24,7 @@ module.exports.run = async (bot, message, args) =>{
             { name: '**10.1 Month Netflix**', value: '500,000 coins.', inline: true },
             { name: '**11.1 Month Spotify Premium**', value: '500,000 coins.', inline: true },
             { name: '**12.500 Steam Wallet**', value: '600,000 coins.', inline: true },
+            { name: `**13. <@&${alak}>**`, value: '20,000 coins', inline: true },
         )
 
         message.channel.send(embed);
