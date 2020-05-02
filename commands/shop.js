@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, args) =>{
         )
 
         message.channel.send(embed);*/
-        message.channel.send(alak);
+        message.channel.send(`<@&${alak}>`);
 
 }
 
