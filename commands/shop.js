@@ -1,13 +1,13 @@
 const Discord =require("discord.js");
 const botconfig = require("../botconfig.json");
 
-const alak = "704649539025633356";
+
 
 
 
 module.exports.run = async (bot, message, args) =>{
 
-
+    const alak = "704649539025633356";
     let embed = new Discord.MessageEmbed();
         embed.setTitle("SHOP");
         embed.setColor("a20a28");
