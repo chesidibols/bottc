@@ -6,8 +6,8 @@ const botconfig = require("../botconfig.json");
 
 
 module.exports.run = async (bot, message, args) =>{
-
     const alak = "704649539025633356";
+   /* const alak = "704649539025633356";
     let embed = new Discord.MessageEmbed();
         embed.setTitle("SHOP");
         embed.setColor("a20a28");
@@ -27,7 +27,9 @@ module.exports.run = async (bot, message, args) =>{
             { name: `**13. <@&${alak}>**`, value: '20,000 coins', inline: true },
         )
 
-        message.channel.send(embed);
+        message.channel.send(embed);*/
+        message.channel.send(alak);
+
 }
 
 
