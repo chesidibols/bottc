@@ -6,7 +6,7 @@ const botconfig = require("../botconfig.json");
 
 
 module.exports.run = async (bot, message, args) =>{
-    const colorsw = message.setColor("44e975")
+    const colorsw = message.channel.setColor("44e975")
     let embed = new Discord.MessageEmbed();
         embed.setTitle("SHOP");
         embed.setColor("a20a28");
