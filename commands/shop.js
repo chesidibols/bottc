@@ -6,8 +6,7 @@ const botconfig = require("../botconfig.json");
 
 
 module.exports.run = async (bot, message, args) =>{
-    const alak = "704649539025633356";
-   /* const alak = "704649539025633356";
+
     let embed = new Discord.MessageEmbed();
         embed.setTitle("SHOP");
         embed.setColor("a20a28");
@@ -24,12 +23,10 @@ module.exports.run = async (bot, message, args) =>{
             { name: '**10.1 Month Netflix**', value: '500,000 coins.', inline: true },
             { name: '**11.1 Month Spotify Premium**', value: '500,000 coins.', inline: true },
             { name: '**12.500 Steam Wallet**', value: '600,000 coins.', inline: true },
-            { name: `**13. <@&${alak}>**`, value: '20,000 coins', inline: true },
+            { color: "44e975", name: `**13. 𝔇𝔞𝔦𝔮𝔲𝔦𝔯𝔦**`, value: '20,000 coins', inline: true },
         )
 
-        message.channel.send(embed);*/
-        message.channel.send(`<@&${alak}>`);
-
+        message.channel.send(embed);
 }
 
 
