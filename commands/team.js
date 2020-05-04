@@ -13,7 +13,7 @@ const red_ = "706963747146563625";
 const yellow_ = "706963811642376232";
 const green_ = "706963905175486464";
 
-let blue_1 = "706065705774219274";
+let blue_1 = member.roles.has("706065705774219274");
 //let red_1= "706963747146563625";
 //let yellow_1= "706963811642376232";
 //let green_1 = "706963905175486464";
@@ -21,7 +21,7 @@ let blue_1 = "706065705774219274";
 module.exports.run = async (bot, message, args) =>{
 
     if(args[0].toLowerCase() == "blue"){
-        if(member.roles.has(blue_1))
+        if(member.roles.id == blue_1)
         {
         message.channel.send("You are already in the team");
         return;
