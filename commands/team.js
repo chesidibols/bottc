@@ -16,7 +16,7 @@ const green_ = "706963905175486464";
 module.exports.run = async (bot, message, args) =>{
 
     if(args[0].toLowerCase() == "blue"){
-        if(message.author === blue_)
+        if(message.role.id === blue_)
         {
             message.channel.send("You are already in the team");
             return;
