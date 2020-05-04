@@ -16,11 +16,11 @@ const green_ = "706963905175486464";
 module.exports.run = async (bot, message, args) =>{
 
     if(args[0].toLowerCase() == "blue"){
-        if(message.member.roles.cache.id === blue_)
-    {
+        if(message.member.roles.cache.id === "706065705774219274")
+        {
         message.channel.send("You are already in the team");
         return;
-    }
+        }
         message.member.roles.add(blue_);
         message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag} You are in <@&${blue_}> Team**`}});
         return;
