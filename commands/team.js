@@ -28,21 +28,6 @@ module.exports.run = async (bot, message, args) =>{
             return;
         }
 
-        else if(message.member.roles.has === red_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
-        else if(message.member.roles.has === yellow_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
-        else if(message.member.roles.has === green_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
         message.member.roles.add(blue_);
         message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag} You are in <@&${blue_}> Team**`}});
         return;
@@ -54,22 +39,6 @@ module.exports.run = async (bot, message, args) =>{
             message.channel.send("You already in the group");
             return;
         }
-
-        else if(message.member.roles.has === blue_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
-        else if(message.member.roles.has === yellow_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
-        else if(message.member.roles.has === green_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
         message.member.roles.add(red_);
         message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag} You are in <@&${red_}> Team**`}});
         return;
@@ -82,21 +51,6 @@ module.exports.run = async (bot, message, args) =>{
             return;
         }
 
-        else if(message.member.roles.has === red_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
-        else if(message.member.roles.has === blue_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
-        else if(message.member.roles.has === green_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
         message.member.roles.add(yellow_);
         message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag} You are in <@&${yellow_}> Team**`}});
         return;
@@ -105,21 +59,6 @@ module.exports.run = async (bot, message, args) =>{
     if(args[0].toLowerCase() == "green"){
 
         if(message.member.roles.has === green_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
-        else if(message.member.roles.has === red_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
-        else if(message.member.roles.has === yellow_1.id) {
-            message.channel.send("You already in the group");
-            return;
-        }
-
-        else if(message.member.roles.has === blue_1.id) {
             message.channel.send("You already in the group");
             return;
         }
