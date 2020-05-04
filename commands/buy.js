@@ -46,6 +46,14 @@ module.exports.run = async (bot, message, args) =>{
             var netflix = 500000;
             var Spotify = 500000;
             var paybhandred_steam = 600000;
+
+            var daiquiri = 10000;
+            var blue_hawaii = 10000;
+            var mojito = 10000;
+            var blue_lagoon = 10000;
+            var miami_bice = 10000;
+            var hurricane = 10000;
+            var purple_bage = 10000;
             
         }  
         
@@ -57,7 +65,7 @@ module.exports.run = async (bot, message, args) =>{
             data.money -= pipti_load;
             data.save().catch(err => console.log(err));
             admin.send(`${message.author.tag} Buy's 50 pesos load`);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos load contact <@noʎʞɔnɟ> for claiming**`}});
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos load **`}});
             return;
             }
         }
@@ -68,7 +76,8 @@ module.exports.run = async (bot, message, args) =>{
             }else {
             data.money -= pipti_steam;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos steam wallet contact <@noʎʞɔnɟ> for claiming**`}})
+            admin.send(`${message.author.tag} Buy's 50 steam load`);
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos steam wallet **`}})
             return;
             }
         }
@@ -80,7 +89,8 @@ module.exports.run = async (bot, message, args) =>{
             }else {
             data.money -= wanhandred_load;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 100 load contact <@noʎʞɔnɟ> for claiming**`}});
+            admin.send(`${message.author.tag} Buy's 100 pesos load`);
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 100 load **`}});
             return;
             }
         }
@@ -91,7 +101,8 @@ module.exports.run = async (bot, message, args) =>{
             }else {
             data.money -= tupipti_load;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 250 load contact <@noʎʞɔnɟ> for claiming**`}})
+            admin.send(`${message.author.tag} Buy's 250 pesos load`);
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 250 load **`}})
             return;
             }
         }
@@ -103,7 +114,8 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= discord_nitro;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month discord nitro contact <@noʎʞɔnɟ> for claiming**`}});
+            admin.send(`${message.author.tag} Buy's Discord Nitro`);
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month discord nitro **`}});
             return;
             }
         }
@@ -114,7 +126,8 @@ module.exports.run = async (bot, message, args) =>{
             }else {
                 data.money -= trihandred_load;
                 data.save().catch(err => console.log(err));
-                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 300 load contact <@noʎʞɔnɟ> for claiming**`}})
+                admin.send(`${message.author.tag} Buy's 300 pesos load`);
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 300 load **`}})
                 return;
                 }
         }
@@ -126,7 +139,8 @@ module.exports.run = async (bot, message, args) =>{
             }else{
                 data.money -= tupipti_steam;
                 data.save().catch(err => console.log(err));
-                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 250 steam wallet contact <@noʎʞɔnɟ> for claiming**`}});
+                admin.send(`${message.author.tag} Buy's 250 steam`);
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 250 steam wallet **`}});
                 return;
                 }
         }
@@ -137,7 +151,8 @@ module.exports.run = async (bot, message, args) =>{
             }else {
             data.money -= paybhandred_load;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 500 load contact <@noʎʞɔnɟ> for claiming**`}})
+            admin.send(`${message.author.tag} Buy's 500 pesos load`);
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 500 load **`}})
             return;
             }
         }
@@ -149,7 +164,8 @@ module.exports.run = async (bot, message, args) =>{
                 }else {   
                 data.money -= discord_boost;
                 data.save().catch(err => console.log(err));
-                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Discord Nitro Boost contact <@noʎʞɔnɟ> for claiming**`}})
+                admin.send(`${message.author.tag} Buy's Discord Boost`);
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Discord Nitro Boost **`}})
                 return;
                 }
         }
@@ -160,7 +176,8 @@ module.exports.run = async (bot, message, args) =>{
                 }else{
                 data.money -= netflix;
                 data.save().catch(err => console.log(err));
-                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month netflix access contact <@noʎʞɔnɟ> for claiming**`}})
+                admin.send(`${message.author.tag} Buy's Netflix Subscription`);
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month netflix access **`}})
                 return;
                 }
         }
@@ -172,7 +189,8 @@ module.exports.run = async (bot, message, args) =>{
                 }else{
                 data.money -= Spotify;
                 data.save().catch(err => console.log(err));
-                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Spotify Premium contact <@noʎʞɔnɟ> for claiming**`}})
+                admin.send(`${message.author.tag} Buy's Spotify subscription`);
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Spotify Premium \**`}})
                 return;
                 }
         }
@@ -184,7 +202,92 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= paybhandred_steam;
             data.save().catch(err => console.log(err));
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 500 Steam Wallet contact <@noʎʞɔnɟ> for claiming**`}})
+            admin.send(`${message.author.tag} Buy's 500 Steam load`);
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 500 Steam Wallet.**`}})
+            return;
+            }
+        }
+
+        if(args[0].toLowerCase() == "13")
+        {
+            if(data.money < daiquiri){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else{
+            data.money -= daiquiri;
+            data.save().catch(err => console.log(err));
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝔇𝔞𝔦𝔮𝔲𝔦𝔯𝔦 color role.**`}})
+            return;
+            }
+        }
+
+        if(args[0].toLowerCase() == "14")
+        {
+            if(data.money < blue_hawaii){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else{
+            data.money -= blue_hawaii;
+            data.save().catch(err => console.log(err));
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕭𝖑𝖚𝖊 𝕳𝖆𝖜𝖆𝖎𝖎 color Role.**`}})
+            return;
+            }
+        }
+
+        if(args[0].toLowerCase() == "15")
+        {
+            if(data.money < mojito){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else{
+            data.money -= mojito;
+            data.save().catch(err => console.log(err));
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕸𝖔𝖏𝖎𝖙𝖔 color Role.**`}})
+            return;
+            }
+        }
+
+        if(args[0].toLowerCase() == "16")
+        {
+            if(data.money < blue_lagoon){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else{
+            data.money -= blue_lagoon;
+            data.save().catch(err => console.log(err));
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕭𝖑𝖚𝖊 𝕷𝖆𝖌𝖔𝖔𝖓 color role.**`}})
+            return;
+            }
+        }
+
+        if(args[0].toLowerCase() == "17")
+        {
+            if(data.money < miami_bice){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else{
+            data.money -= miami_bice;
+            data.save().catch(err => console.log(err));
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕸𝖎𝖆𝖒𝖎 𝖁𝖎𝖈𝖊 color role.**`}})
+            return;
+            }
+        }
+
+        if(args[0].toLowerCase() == "18")
+        {
+            if(data.money < hurricane){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else{
+            data.money -= hurricane;
+            data.save().catch(err => console.log(err));
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕳𝖚𝖗𝖗𝖎𝖈𝖆𝖓𝖊 color role.**`}})
+            return;
+            }
+        }
+
+        if(args[0].toLowerCase() == "19")
+        {
+            if(data.money < purple_bage){
+                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
+            }else{
+            data.money -= purple_bage;
+            data.save().catch(err => console.log(err));
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕻𝖚𝖗𝖕𝖑𝖊 𝕳𝖆𝖟𝖊 color role.**`}})
             return;
             }
         }
