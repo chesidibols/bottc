@@ -19,6 +19,7 @@ module.exports.run = async (bot, message, args) =>{
         if(message.author.tag == blue_)
         {
             message.channel.send("You are already in the team");
+            return;
         }
         else{
         message.member.roles.add(blue_);
