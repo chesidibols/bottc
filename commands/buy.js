@@ -11,7 +11,13 @@ mongoose.connect(botconfig.mongoPass, {
 // MODELS
 const Data = require("../models/data.js");
 
-
+    const daiquiri1 = "704649539025633356";
+    const blue_hawaii1 = "704649829460082759";
+    const mojito1 = "704649703165395054";
+    const blue_lagoon1 = "703607741213704263";
+    const miami_bice1 = "704649910821060668";
+    const hurricane1 = "704649919432228926";
+    const purple_bage1 = "704649930924490791";
 
 module.exports.run = async (bot, message, args) =>{
 
@@ -215,6 +221,7 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= daiquiri;
             data.save().catch(err => console.log(err));
+            message.member.roles.add(daiquiri1);
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝔇𝔞𝔦𝔮𝔲𝔦𝔯𝔦 color role.**`}})
             return;
             }
@@ -227,6 +234,7 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= blue_hawaii;
             data.save().catch(err => console.log(err));
+            message.member.roles.add(blue_hawaii1);
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕭𝖑𝖚𝖊 𝕳𝖆𝖜𝖆𝖎𝖎 color Role.**`}})
             return;
             }
@@ -239,6 +247,7 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= mojito;
             data.save().catch(err => console.log(err));
+            message.member.roles.add(mojito1);
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕸𝖔𝖏𝖎𝖙𝖔 color Role.**`}})
             return;
             }
@@ -251,6 +260,7 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= blue_lagoon;
             data.save().catch(err => console.log(err));
+            message.member.roles.add(blue_lagoon1);
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕭𝖑𝖚𝖊 𝕷𝖆𝖌𝖔𝖔𝖓 color role.**`}})
             return;
             }
@@ -263,6 +273,7 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= miami_bice;
             data.save().catch(err => console.log(err));
+            message.member.roles.add(miami_bice1);
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕸𝖎𝖆𝖒𝖎 𝖁𝖎𝖈𝖊 color role.**`}})
             return;
             }
@@ -275,6 +286,7 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= hurricane;
             data.save().catch(err => console.log(err));
+            message.member.roles.add(hurricane1);
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕳𝖚𝖗𝖗𝖎𝖈𝖆𝖓𝖊 color role.**`}})
             return;
             }
@@ -287,6 +299,7 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= purple_bage;
             data.save().catch(err => console.log(err));
+            message.member.roles.add(purple_bage1);
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕻𝖚𝖗𝖕𝖑𝖊 𝕳𝖆𝖟𝖊 color role.**`}})
             return;
             }
