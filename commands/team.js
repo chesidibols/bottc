@@ -50,12 +50,12 @@ module.exports.run = async (bot, message, args) =>{
 
     if(args[0].toLowerCase() == "red"){
 
-        if(message.member.roles.has === blue_1.id) {
+        if(message.member.roles.has === red_1.id) {
             message.channel.send("You already in the group");
             return;
         }
 
-        else if(message.member.roles.has === red_1.id) {
+        else if(message.member.roles.has === blue_1.id) {
             message.channel.send("You already in the group");
             return;
         }
@@ -77,7 +77,7 @@ module.exports.run = async (bot, message, args) =>{
 
     if(args[0].toLowerCase() == "yellow"){
 
-        if(message.member.roles.has === blue_1.id) {
+        if(message.member.roles.has === yellow_1.id) {
             message.channel.send("You already in the group");
             return;
         }
@@ -87,7 +87,7 @@ module.exports.run = async (bot, message, args) =>{
             return;
         }
 
-        else if(message.member.roles.has === yellow_1.id) {
+        else if(message.member.roles.has === blue_1.id) {
             message.channel.send("You already in the group");
             return;
         }
@@ -104,7 +104,7 @@ module.exports.run = async (bot, message, args) =>{
 
     if(args[0].toLowerCase() == "green"){
 
-        if(message.member.roles.has === blue_1.id) {
+        if(message.member.roles.has === green_1.id) {
             message.channel.send("You already in the group");
             return;
         }
@@ -119,7 +119,7 @@ module.exports.run = async (bot, message, args) =>{
             return;
         }
 
-        else if(message.member.roles.has === green_1.id) {
+        else if(message.member.roles.has === blue_1.id) {
             message.channel.send("You already in the group");
             return;
         }
