@@ -39,7 +39,7 @@ module.exports.run = async (bot, message, args) =>{
         return;
     }
 
-    if(message.author.roles === blue_)
+    if(message.member.roles.cache.id === blue_)
     {
         message.channel.send("You are already in the team");
         return;
