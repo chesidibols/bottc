@@ -30,13 +30,13 @@ module.exports.run = async (bot, message, args) =>{
             { name: '**10.1 Month Netflix**', value: '500,000 coins.', inline: true },
             { name: '**11.1 Month Spotify Premium**', value: '500,000 coins.', inline: true },
             { name: '**12.500 Steam Wallet**', value: '600,000 coins.', inline: true },
-            { name: `**13.𝔇𝔞𝔦𝔮𝔲𝔦𝔯𝔦**`, value: `<@&${daiquiri}>`, inline: true },
-            { name: `**14.𝕭𝖑𝖚𝖊 𝕳𝖆𝖜𝖆𝖎𝖎**`, value: `<@&${blue_hawaii}>`, inline: true },
-            { name: `**15.𝕸𝖔𝖏𝖎𝖙𝖔**`, value: `<@&${mojito}>`, inline: true },
-            { name: `**16.𝕭𝖑𝖚𝖊 𝕷𝖆𝖌𝖔𝖔𝖓**`, value: `<@&${blue_lagoon}>`, inline: true },
-            { name: `**17.𝕸𝖎𝖆𝖒𝖎 𝖁𝖎𝖈𝖊**`, value: `<@&${miami_bice}>`, inline: true },
-            { name: `**18.𝕳𝖚𝖗𝖗𝖎𝖈𝖆𝖓𝖊**`, value: `<@&${hurricane}>`, inline: true },
-            { name: `**19.𝕻𝖚𝖗𝖕𝖑𝖊 𝕳𝖆𝖟𝖊**`, value: `<@&${purple_bage}>`, inline: true },
+            { name: `**13.10,000**`, value: `<@&${daiquiri}>`, inline: true },
+            { name: `**14.10,000**`, value: `<@&${blue_hawaii}>`, inline: true },
+            { name: `**15.10,000**`, value: `<@&${mojito}>`, inline: true },
+            { name: `**16.10,000**`, value: `<@&${blue_lagoon}>`, inline: true },
+            { name: `**17.10,000**`, value: `<@&${miami_bice}>`, inline: true },
+            { name: `**18.10,000**`, value: `<@&${hurricane}>`, inline: true },
+            { name: `**19.10,000**`, value: `<@&${purple_bage}>`, inline: true },
         )
         message.channel.send(embed);
 }
