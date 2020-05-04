@@ -21,11 +21,11 @@ let blue_1 = member.roles.has("706065705774219274");
 module.exports.run = async (bot, message, args) =>{
 
     if(args[0].toLowerCase() == "blue"){
-        if(member.roles.id == blue_1)
+      /*  if(member.roles.id == blue_1)
         {
         message.channel.send("You are already in the team");
         return;
-        }
+        }*/
         message.member.roles.add(blue_);
         message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag} You are in <@&${blue_}> Team**`}});
         return;
