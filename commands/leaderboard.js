@@ -19,6 +19,16 @@ module.exports.run = async (bot, message, args) =>{
         ['money', 'descending']
     ]).exec((err,res) =>{
         if(err) console.log(err);
+        if(!data){
+            const newData = new Data({
+                name: message.author.tag,
+                userID: message.author.id,
+                lb:"all",
+                money: 0,
+                daily: 0,
+            })
+
+            newData.save().catch(err => console.log(err));
 
         var page = Math.ceil(res.length / 10);
 
@@ -48,7 +58,7 @@ module.exports.run = async (bot, message, args) =>{
                 embed.addField(`**${i + 1}. ${res[i].name}**` ,`<:coinns:699944502856646716> ${res[i].money.toLocaleString()}`);
             }
         }
-        newData.save().catch(err => console.log(err));
+        
         message.channel.send(embed);
     });
 }
