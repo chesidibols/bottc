@@ -14,24 +14,12 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
     
     Data.find({
-        name: message.author.tag,
-        userID: message.author.id,
         lb:"all"
     }).sort([
         ['money', 'descending']
-    ]).exec((err,res,data) =>{
+    ]).exec((err,res) =>{
         if(err) console.log(err);
-        if(!data){
-            const newData = new Data({
-                name: message.author.tag,
-                userID: message.author.id,
-                lb:"all",
-                money: 0,
-                daily: 0,
-            })
 
-            newData.save().catch(err => console.log(err));
-        }
         var page = Math.ceil(res.length / 10);
 
         let embed = new Discord.MessageEmbed();
@@ -52,7 +40,7 @@ module.exports.run = async (bot, message, args) =>{
             embed.setFooter(`page ${pg} of ${page}`);
             for(i = start; i < res.length; i++){
                 embed.addField(`**${i + 1}. ${res[i].name}**` ,`<:coinns:699944502856646716> ${res[i].money.toLocaleString()}`);
-                newData.save().catch(err => console.log(err));
+                
             }
         } else{
             embed.setFooter(`page ${pg} of ${page}`);
