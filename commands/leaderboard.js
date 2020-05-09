@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) =>{
         lb:"all"
     }).sort([
         ['money', 'descending']
-    ]).exec((err,res) =>{
+    ]).exec((err,res,data) =>{
         if(err) console.log(err);
         if(!data){
             const newData = new Data({
