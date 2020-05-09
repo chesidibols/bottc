@@ -14,7 +14,6 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
     
     Data.find({
-        userID: message.author.id,
         lb:"all"
     }).sort([
         ['money', 'descending']
@@ -49,7 +48,7 @@ module.exports.run = async (bot, message, args) =>{
                 embed.addField(`**${i + 1}. ${res[i].name}**` ,`<:coinns:699944502856646716> ${res[i].money.toLocaleString()}`);
             }
         }
-
+        newData.save().catch(err => console.log(err));
         message.channel.send(embed);
     });
 }
