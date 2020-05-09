@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) =>{
             })
 
             newData.save().catch(err => console.log(err));
-
+        }
         var page = Math.ceil(res.length / 10);
 
         let embed = new Discord.MessageEmbed();
@@ -60,7 +60,7 @@ module.exports.run = async (bot, message, args) =>{
         }
         
         message.channel.send(embed);
-    }});
+    });
 }
 
 module.exports.help = {
