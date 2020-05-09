@@ -56,7 +56,6 @@ module.exports.run = async (bot, message, args) =>{
             embed.setFooter(`page ${pg} of ${page}`);
             for(i = start; i< end; i++){
                 embed.addField(`**${i + 1}. ${res[i].name}**` ,`<:coinns:699944502856646716> ${res[i].money.toLocaleString()}`);
-                newData.save().catch(err => console.log(err));
             }
         }
         
