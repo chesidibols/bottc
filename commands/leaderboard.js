@@ -14,6 +14,8 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
     
     Data.find({
+        name: message.author.tag,
+        userID: message.author.id,
         lb:"all"
     }).sort([
         ['money', 'descending']
