@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) =>{
     }
 
 
-    let user = message.mentions.members.first() || bot.users.cache.get(args[0]) || message.mentions.roles.members.first();
+    let user = message.mentions.members.first() || bot.users.cache.get(args[0]) || message.mentions.roles.members();
     if(!user) return message.channel.send({embed:{color:'a20a28', description:"**Sorry, couldn't find that user.**"}});
 
     
