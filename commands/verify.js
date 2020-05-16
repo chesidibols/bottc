@@ -21,13 +21,13 @@ let green_1 = "706963905175486464";
 
 module.exports.run = async (bot, message, args) =>{
 
-    
+        message.delete();
         message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag} Please React ✅ to verify.*`}});
 
     
 }
 
 module.exports.help = {
-    name:"team",
-    aliases:["t"]
+    name:"verify",
+    aliases:["v"]
 }
