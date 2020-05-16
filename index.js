@@ -51,8 +51,11 @@ bot.on("message" , async message => {
             return;
         }
     }
-    if(message.content.startsWith("verify") || message.channel.id != verifyChannel.id){
-        member.roles.add(verified);
+    if(message.channel.id != verifyChannel.id){
+        if(message.content.startsWith("verify"))
+        {
+            member.roles.add(verified);
+        }
     }
 
 
