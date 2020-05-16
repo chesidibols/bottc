@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const bot = new Discord.Client({disableEveryone: true , partials:['MESSAGE']});
+const bot = new Discord.Client({disableEveryone: true , partials:['MESSAGE','REACTION']});
 const botconfig = require ("./botconfig.json");
 const fs = require ("fs")
 
