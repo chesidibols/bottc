@@ -87,7 +87,7 @@ bot.on('messageReactionAdd', async (reaction, user) =>{
         try {
             if(role && member){
                 console.log("Role and member found.");
-                await member.role.add(role);
+                await member.roles.add(role);
             }
         }
         catch (err){
