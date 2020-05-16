@@ -100,6 +100,16 @@ bot.on('raw', event => {
 })
 
 bot.on("messageReactionAdd", (messageReaction, user) =>{
-    console.log(user.username + "reacted.");
+    var roleName = messageReaction.emoji.name;
+    var role = messageReaction.message.guild.roles.find(role => role.name.toLowerCase() === roleName.toLowerCase());
+
+    if(role)
+    {
+        var member = messageReaction.message.guild.members.find(member => member.id === user.id);
+        if(member)
+        {
+            member.roles.add(role.id);
+        }
+    }
 })
 bot.login(botconfig.token);
