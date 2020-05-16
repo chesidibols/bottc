@@ -54,7 +54,7 @@ bot.on("message" , async message => {
     if(message.channel.id != verifyChannel.id){
         if(message.content.startsWith("verify"))
         {
-            member.roles.add(verified);
+            message.member.roles.add(verified);
         }
     }
 
