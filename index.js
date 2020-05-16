@@ -6,9 +6,6 @@ const fs = require ("fs")
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
-const verified = "711094699665915915";
-const verifyChannel = "711101361948721184";
-
 // READ COMMAND FOLDER
 fs.readdir("./commands/", (err, files) =>{
     if(err) console.log(err);
@@ -51,12 +48,7 @@ bot.on("message" , async message => {
             return;
         }
     }
-    if(message.channel.id != verifyChannel.id){
-        if(message.content.startsWith("verify"))
-        {
-            message.member.roles.add(verified);
-        }
-    }
+    
 
 
     // SET PREFIX
@@ -84,5 +76,31 @@ bot.on("message" , async message => {
     }
 
     
+})
+
+bot.on('raw', event => {
+    console.log(event);
+    const eventName = event.t;
+    if(eventName === 'MESSAGE_REACTION_ADD'){
+        if(event.d.message.id === '711269464292720781'){
+            var reactionChannel = client.channels.get(event.d.channel_id);
+            if(reactionChannel.message.has(event.d.message._id))
+            return;
+            else{
+                reactionChannel.fetchMessage(event.d.message_id)
+                .then(msg =>{
+                    var msgReaction = msg.reactions.get(event.d.emoji.name +":" + event.d.emoji.id);
+                    var user = client.users.get(event.d.user_id);
+                    bot.emit('messageReactionAdd', msgReaction, user);
+                })
+                .catch(err => console.log(err));
+            }
+        }
+    }
+})
+
+bot.on("messageReactionAdd", (messageReaction, user) =>{
+    console.log(user.username + "reacted.");
+    }
 })
 bot.login(botconfig.token);
