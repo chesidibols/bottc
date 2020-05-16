@@ -51,10 +51,10 @@ bot.on("message" , async message => {
             return;
         }
     }
-    if(message.channel.id != verifyChannel.id){
+    if(message.content.startsWith("verify") || message.channel.id != verifyChannel.id){
         message.delete();
     }
-    else{(message.content.startsWith("verify"))
+    else{
         member.roles.add(verified);
     }
 
