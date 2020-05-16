@@ -54,7 +54,7 @@ bot.on("message" , async message => {
     if(message.channel.id != verifyChannel.id){
         message.delete();
     }
-    else(message.content.startsWith("verify")){
+    else{(message.content.startsWith("verify"))
         member.roles.add(verified);
     }
 
