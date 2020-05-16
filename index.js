@@ -79,7 +79,7 @@ bot.on("message" , async message => {
 })
 
 bot.on('raw', event => {
-    console.log(event);
+    //console.log(event);
     const eventName = event.t;
     if(eventName === 'MESSAGE_REACTION_ADD'){
         if(!event.d.message.id === '711269464292720781'){
