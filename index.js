@@ -104,7 +104,7 @@ bot.on('messageReactionAdd', async (reaction, user) =>{
     }
     else
     {
-        
+        let message = await reaction.message.fetch();
         console.log("Not a partial.");
         if(message.id === '711285933403537529');
         console.log(true);
