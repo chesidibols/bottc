@@ -53,7 +53,7 @@ bot.on("message" , async message => {
         }
     }
 
-    if(message.emoji.name === reactions.id && message.channel.id === verifyChannel.id){
+    if(message.emoji === reactions.id && message.channel.id === verifyChannel.id){
         member.roles.add(verified);
     }
 
