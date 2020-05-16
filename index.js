@@ -108,7 +108,7 @@ bot.on("messageReactionAdd", (messageReaction, user) =>{
         var member = messageReaction.message.guild.members.find(member => member.id === user.id);
         if(member)
         {
-            member.roles.add(role.id);
+            member.addRole(role.id);
             console.log("Succes")
         }
     }
