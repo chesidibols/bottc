@@ -51,8 +51,10 @@ bot.on("message" , async message => {
             return;
         }
     }
-
-    if(reaction.emoji.name === '<:coinnss:699944502856646716>' && message.channel.id === verifyChannel.id){
+    if(message.channel.id != verifyChannel.id){
+        message.delete();
+    }
+    else(message.content.startsWith("verify")){
         member.roles.add(verified);
     }
 
@@ -83,7 +85,4 @@ bot.on("message" , async message => {
 
     
 })
-
-bot.channel.id.get(verifyChannel.id)
-
 bot.login(botconfig.token);
