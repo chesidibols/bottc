@@ -6,6 +6,9 @@ const fs = require ("fs")
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
+const verified = "711094699665915915";
+const reactions = messageReaction.message;
+const verifyChannel = "711101361948721184";
 
 // READ COMMAND FOLDER
 fs.readdir("./commands/", (err, files) =>{
@@ -49,6 +52,11 @@ bot.on("message" , async message => {
             return;
         }
     }
+
+    if(messageReaction.emoji.name === '✅' && message.channel.id === verifyChannel.id){
+        member.roles.add(verified);
+    }
+
 
     // SET PREFIX
     let prefix = botconfig.prefix;
