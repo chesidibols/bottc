@@ -7,7 +7,7 @@ bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
 const verified = "711094699665915915";
-const message = messageReaction.message;
+const message = reaction.message;
 const verifyChannel = "711101361948721184";
 
 // READ COMMAND FOLDER
@@ -53,7 +53,7 @@ bot.on("message" , async message => {
         }
     }
 
-    if(messageReaction.emoji.name === '<:coinnss:699944502856646716>' && message.channel.id === verifyChannel.id){
+    if(reaction.emoji.name === '<:coinnss:699944502856646716>' && message.channel.id === verifyChannel.id){
         member.roles.add(verified);
     }
 
