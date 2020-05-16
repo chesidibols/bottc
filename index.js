@@ -101,6 +101,5 @@ bot.on('raw', event => {
 
 bot.on("messageReactionAdd", (messageReaction, user) =>{
     console.log(user.username + "reacted.");
-    }
 })
 bot.login(botconfig.token);
