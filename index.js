@@ -82,7 +82,7 @@ bot.on('raw', event => {
     console.log(event);
     const eventName = event.t;
     if(eventName === 'MESSAGE_REACTION_ADD'){
-        if(event.d.message.id === '711269464292720781'){
+        if(!event.d.message.id === '711269464292720781'){
             var reactionChannel = client.channels.get(event.d.channel_id);
             if(reactionChannel.message.has(event.d.message._id))
             return;
