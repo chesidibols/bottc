@@ -82,8 +82,8 @@ bot.on('messageReactionAdd', async (reaction, user) =>{
 
     let applyRole = async() => {
         let emojiName = reaction.emoji.name;
-        let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
-        let member = reaction.message.guild.members.find(member => member.id === user.id);
+        let role = reaction.message.guild.roles.cache.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
+        let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
         try {
             if(role && member){
                 console.log("Role and member found.");
