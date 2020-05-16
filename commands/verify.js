@@ -22,7 +22,7 @@ let green_1 = "706963905175486464";
 module.exports.run = async (bot, message, args) =>{
 
         message.delete();
-        message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag} Please React ✅ to verify.*`}});
+        message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag} Please React <:coinnss:699944502856646716> to verify.*`}});
 
     
 }
