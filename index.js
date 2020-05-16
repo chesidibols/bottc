@@ -7,7 +7,6 @@ bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
 const verified = "711094699665915915";
-const message = reaction.message;
 const verifyChannel = "711101361948721184";
 
 // READ COMMAND FOLDER
@@ -85,5 +84,6 @@ bot.on("message" , async message => {
     
 })
 
+bot.channel.id.get(verifyChannel.id)
 
 bot.login(botconfig.token);
