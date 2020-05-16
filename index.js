@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const bot = new Discord.Client({disableEveryone: true});
+const bot = new Discord.Client({disableEveryone: true , partials:['MESSAGE']});
 const botconfig = require ("./botconfig.json");
 const fs = require ("fs")
 
@@ -78,36 +78,37 @@ bot.on("message" , async message => {
     
 })
 
-bot.on('raw', event => {
-    //console.log(event);
-    const eventName = event.t;
-    if(eventName === 'MESSAGE_REACTION_ADD'){
-        if(event.d.message.id === '711285933403537529'){
-            var reactionChannel = client.channels.get(event.d.channel_id);
-            if(reactionChannel.message.has(event.d.message._id))
-            return;
-            else{
-                reactionChannel.fetchMessage(event.d.message_id)
-                .then(msg =>{
-                    var msgReaction = msg.reactions.get(event.d.emoji.name +":" + event.d.emoji.id);
-                    var user = client.users.get(event.d.user_id);
-                    bot.emit('messageReactionAdd', msgReaction, user);
-                })
-                .catch(err => console.log(err));
+bot.on('messageReactionAdd', async (reaction, user) =>{
+
+    let applyRole = async() => {
+        let emojiName = reaction.emoji.name;
+        let role = reaction.message.guild.roles.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
+        let member = reaction.message.guild.members.find(member => member.id === user.id);
+        try {
+            if(role && member){
+                console.log("Role and member found.");
+                await member.role.add(role);
             }
         }
-    }
-})
-
-bot.on("messageReactionAdd", (messageReaction, user) =>{
-    var roleName = messageReaction.emoji.name;
-    var role = messageReaction.message.guild.roles.id("711094699665915915");
-
-        var member = messageReaction.message.guild.members.find(member => member.id === user.id);
-        if(member)
-        {
-            member.roles.add(role);
-            console.log("Succes")
+        catch (err){
+            console.log(err);
         }
+    }
+
+    if(reaction.message.partial)
+    {
+        let msg = await reaction.message.fetch();
+        if(msg.id === "711285933403537529");
+        console.log("cached");
+        applyRole();
+    }
+    else
+    {
+        
+        console.log("Not a partial.");
+        if(msg.id === "711285933403537529");
+        console.log(true);
+        applyRole();
+    }
 })
 bot.login(botconfig.token);
