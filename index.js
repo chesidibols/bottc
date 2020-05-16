@@ -52,7 +52,6 @@ bot.on("message" , async message => {
         }
     }
     if(message.content.startsWith("verify") || message.channel.id != verifyChannel.id){
-        message.delete();
         member.roles.add(verified);
     }
 
