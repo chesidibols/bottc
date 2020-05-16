@@ -109,6 +109,7 @@ bot.on("messageReactionAdd", (messageReaction, user) =>{
         if(member)
         {
             member.roles.add(role.id);
+            console.log("Succes")
         }
     }
 })
