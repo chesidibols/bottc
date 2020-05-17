@@ -10,9 +10,10 @@ mongoose.connect(botconfig.mongoPass, {
 // MODELS
 const Data = require("../models/data.js");
 
-const logsCoin = "711554230661677056";
+
 
 module.exports.run = async (bot, message, args) =>{
+    const logsCoin = bot.channels.cache.get("711554230661677056");
     
     if(!message.member.roles.cache.get('701904860848586803')) {
 
