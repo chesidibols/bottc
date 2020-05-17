@@ -12,6 +12,7 @@ const Data = require("../models/data.js");
 
 
 module.exports.run = async (bot, message, args) =>{
+    let logsCoin = bot.channels.cache.get('711554230661677056');
     
     if(!message.member.roles.cache.id === '594243987900989452') 
     {
@@ -49,8 +50,9 @@ module.exports.run = async (bot, message, args) =>{
             userData.save().catch(err => console.log(err));
         }
         
-        return message.channel.send({embed:{color:'a20a28', description:`**${message.author.username}** gives ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag}**`}});
-
+        message.channel.send({embed:{color:'a20a28', description:`**${message.author.username}** gives ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag}**`}});
+        logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username}** removed ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag}**`}});
+        return;
     })
 }
 
