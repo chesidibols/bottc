@@ -13,7 +13,7 @@ const Data = require("../models/data.js");
 
 
 module.exports.run = async (bot, message, args) =>{
-   var logsCoin = bot.channels.find(ch => ch.name ==='coin-logs');
+   var logsCoin = bot.channels.cache.get('711554230661677056');
     
     if(!message.member.roles.cache.get('701904860848586803')) {
 
