@@ -12,6 +12,7 @@ mongoose.connect(botconfig.mongoPass, {
 const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
+    let logsCoin = bot.channels.cache.get('711554230661677056');
 
     let timeout = 43200000;
     let reward = 500;
@@ -41,7 +42,9 @@ module.exports.run = async (bot, message, args) =>{
                 data.work = Date.now();
                 data.save().catch(err => console.log(err));
 
-                return message.channel.send({embed:{color:'a20a28', description:`You worked hard here's your pay check! ${reward} <:coinnss:699944502856646716>`}});
+                message.channel.send({embed:{color:'a20a28', description:`You worked hard here's your pay check! ${reward} <:coinnss:699944502856646716>`}});
+                logsCoin.channel.send({embed:{color:'a20a28', description:`You worked hard here's your pay check! ${reward} <:coinnss:699944502856646716>`}});
+                return;
             }
         }
     })
