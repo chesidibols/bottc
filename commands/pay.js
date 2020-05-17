@@ -58,8 +58,8 @@ module.exports.run = async (bot, message, args) =>{
                     authorData.save().catch(err => console.log(err));
                 }
                 
-                message.channel.send({embed:{color:'a20a28', description:`**${message.author.username}** transferred ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag} and has ${money} <:coinns:699944502856646716> **`}});
-                logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username}** transferred ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag} and has ${money} <:coinns:699944502856646716> **`}});
+                message.channel.send({embed:{color:'a20a28', description:`**${message.author.username}** transferred ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag}**`}});
+                logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username}** transferred ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag}**`}});
                 return;
 
             })
