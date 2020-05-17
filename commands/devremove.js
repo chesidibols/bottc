@@ -10,7 +10,7 @@ mongoose.connect(botconfig.mongoPass, {
 // MODELS
 const Data = require("../models/data.js");
 
-const logsCoin = message.channel.id("711554230661677056")
+const logsCoin = "711554230661677056";
 
 module.exports.run = async (bot, message, args) =>{
     
