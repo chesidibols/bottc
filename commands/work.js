@@ -42,8 +42,8 @@ module.exports.run = async (bot, message, args) =>{
                 data.work = Date.now();
                 data.save().catch(err => console.log(err));
 
-                message.channel.send({embed:{color:'a20a28', description:`You worked hard here's your pay check! ${reward} <:coinnss:699944502856646716>`}});
-                logsCoin.send({embed:{color:'a20a28', description:`${message.author.username} worked hard here's your pay check! ${reward} <:coinnss:699944502856646716>`}});
+                message.channel.send({embed:{color:'a20a28', description:`**You worked hard here's your pay check! ${reward} <:coinnss:699944502856646716>**`}});
+                logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} worked hard here is the pay check! ${reward} <:coinnss:699944502856646716>**`}});
                 return;
             }
         }
