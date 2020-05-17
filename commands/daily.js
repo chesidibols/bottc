@@ -12,6 +12,7 @@ mongoose.connect(botconfig.mongoPass, {
 const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
+    let logsCoin = bot.channels.cache.get('711554230661677056');
 
     let timeout = 86400000;
     let reward = 500;
@@ -36,12 +37,15 @@ module.exports.run = async (bot, message, args) =>{
                 let time = ms(timeout - (Date.now() - data.daily));
 
                 return message.channel.send({embed:{color:'a20a28', description:`**You already collected your daily reward! Collect again in ${time.hours}h ${time.minutes}m**`}});
+                
             } else {
                 data.money +=reward;
                 data.daily = Date.now();
                 data.save().catch(err => console.log(err));
 
-                return message.channel.send({embed:{color:'a20a28', description:`You recieved ${reward} <:coinnss:699944502856646716>`}});
+                message.channel.send({embed:{color:'a20a28', description:`You recieved ${reward} <:coinnss:699944502856646716>`}});
+                logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} daily reward claimed remaining time is ${time.hours}h ${time.minutes}m**`}});
+                return;
             }
         }
     })
