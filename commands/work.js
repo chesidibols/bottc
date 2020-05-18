@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) =>{
     let logsCoin = bot.channels.cache.get('711554230661677056');
 
     let timeout = 14400000;
-    let reward = 500;
+    let reward = 200;
 
     Data.findOne({
         userID: message.author.id
