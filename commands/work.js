@@ -14,7 +14,7 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
     let logsCoin = bot.channels.cache.get('711554230661677056');
 
-    let timeout = 43200000;
+    let timeout = 14400000;
     let reward = 500;
 
     Data.findOne({
