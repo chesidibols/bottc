@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) =>{
     }
 
 
-    let user = message.mentions.members.first() || bot.users.cache.get(args[0]) ||message.member.roles.cache.id === '334327971194077196' ;
+    let user = message.mentions.members.first() || bot.users.cache.get(args[0]) || message.mention.member.roles.first() ;
     if(!user) return message.channel.send({embed:{color:'a20a28', description:"**Sorry, couldn't find that user.**"}});
 
     
