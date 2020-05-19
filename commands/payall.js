@@ -50,6 +50,6 @@ module.exports.run = async (bot, message, args) =>{
 }
 
 module.exports.help = {
-    name:"give",
-    aliases:["g"]
+    name:"payall",
+    aliases:["pall"]
 }
