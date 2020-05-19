@@ -40,7 +40,7 @@ bot.on("message" , async message => {
     if(message.author.bot) return;
 
     //NO COMMAND IN LOBBY CHANNEL
-    if(message.channel.id === "699367732923203616" || message.channel.id ==="711554230661677056" || message.channel.id === "698542960555458622"){
+    if(message.channel.id === "699367732923203616" || message.channel.id ==="711554230661677056" || message.channel.id === "707966547880312873"){
         if(message.content.startsWith("tc."))
         {
             message.delete();
