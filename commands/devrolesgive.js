@@ -18,13 +18,9 @@ module.exports.run = async (bot, message, args) =>{
     {
         return message.channel.send({embed:{color:'a20a28', description:"**You don't have the permission to this command**"}});
     }
-    let roleName = message.content.split("").slice(1).join("");
-    let membersWithRole = message.guild.members.filter(member => {
-        return member.roles.find("name",roleName);
-    }).map(member =>{
-        return member.user.username;
-    })
-    let user = membersWithRole.join || membersWithRole.join.get(args[0]);
+
+
+    let user = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
     if(!user) return message.channel.send({embed:{color:'a20a28', description:"**Sorry, couldn't find that user.**"}});
 
     
