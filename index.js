@@ -99,13 +99,13 @@ bot.on('messageReactionAdd', async (reaction, user) =>{
     {
         let message = await reaction.message.fetch();
         if(message.id === '711298282415980594');
-        console.log("cached");
+        //console.log("cached");
         applyRole();
     }
     else
     {
         let message = await reaction.message.fetch();
-        console.log("Not a partial.");
+       // console.log("Not a partial.");
         if(message.id === '711298282415980594');
         console.log(true);
         applyRole();
