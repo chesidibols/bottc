@@ -40,7 +40,8 @@ bot.on("message" , async message => {
     if(message.author.bot) return;
 
     //NO COMMAND IN LOBBY CHANNEL
-    if(message.channel.id === "699367732923203616" || message.channel.id ==="711554230661677056"){
+    const bawalChannels = ['699367732923203616', '711554230661677056' ];
+    if(message.channel.id = bawalChannels){ //"699367732923203616" || message.channel.id ==="711554230661677056"){
         if(message.content.startsWith("tc."))
         {
             message.delete();
