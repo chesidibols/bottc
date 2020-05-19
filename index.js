@@ -107,7 +107,7 @@ bot.on('messageReactionAdd', async (reaction, user) =>{
         let message = await reaction.message.fetch();
        // console.log("Not a partial.");
         if(message.id === '711298282415980594');
-        console.log(true);
+       // console.log(true);
         applyRole();
     }
 })
