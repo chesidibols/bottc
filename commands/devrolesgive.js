@@ -19,8 +19,7 @@ module.exports.run = async (bot, message, args) =>{
         return message.channel.send({embed:{color:'a20a28', description:"**You don't have the permission to this command**"}});
     }
 
-
-    let user = message.mentions.members.first() || message.guild.members.get(args[0]);
+    let user = message.guild.member(message.mentions.users.first()) || bot.users.cache.get(args[0]);
     if(!user) return message.channel.send({embed:{color:'a20a28', description:"**Sorry, couldn't find that user.**"}});
 
     
@@ -51,7 +50,7 @@ module.exports.run = async (bot, message, args) =>{
         }
         
         message.channel.send({embed:{color:'a20a28', description:`**${message.author.username}** gives ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag}**`}});
-        logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username}** gives ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag}**`}});
+       // logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username}** gives ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag}**`}});
         return;
     })
 }
