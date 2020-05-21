@@ -12,26 +12,9 @@ const Data = require("../models/data.js");
 
 const chooseArr = ["🗻", "📃", "✂"]
 
-module.exports.run = async (bot, message, args) =>{
+module.exports = {
 
-    
-    /*Data.findOne({
-        userID: message.author.id
-    },(err, data) => {
-        if(err) console.log(err);
-        if(!data){
-            const newData = new Data({
-                name: message.author.tag,
-                userID: message.author.id,
-                lb:"all",
-                money: 0,
-                daily: 0,
-            })
-
-            newData.save().catch(err => console.log(err));
-        } else {
-        var award = 24;*/
-
+    run: async (client, message, args) => {
         let embed = new Discord.MessageEmbed();
         embed.setTitle("ROCK PAPER SCISSORS");
         embed.setColor("a20a28");
@@ -67,10 +50,8 @@ module.exports.run = async (bot, message, args) =>{
 
         }
     }
-    //})
+}
 
-    
-//}
 
 module.exports.help = {
     name:"jakenpoy",
