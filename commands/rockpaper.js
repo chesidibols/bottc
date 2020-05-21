@@ -31,6 +31,7 @@ module.exports.run = async (bot, message, args) =>{
 
             newData.save().catch(err => console.log(err));
         } else {
+            let batoPik = async() =>{
         var award = 24;
 
         let embed = new Discord.MessageEmbed();
@@ -40,13 +41,13 @@ module.exports.run = async (bot, message, args) =>{
         embed.setDescription("Add a reaction to one of these emojis to play the game!");
         embed.setTimestamp();
 
-        const m =  message.channel.send(embed);
-        const reacted =  promptMessage(m, message.author, 30, chooseArr);
+        const m = await message.channel.send(embed);
+        const reacted = await promptMessage(m, message.author, 30, chooseArr);
 
         const botChoice = chooseArr[Math.floor(Math.random() * chooseArr.length)];
 
-        const result =  getResult(reacted, botChoice);
-        m.clearReaction();
+        const result = await getResult(reacted, botChoice);
+        await m.clearReaction();
 
         embed.setDescription("");
         embed.addField(result, `${reacted} vs ${botChoice}`);
@@ -66,6 +67,7 @@ module.exports.run = async (bot, message, args) =>{
                 return "You lost!";
             }
 
+            }
         }
     }
     })
