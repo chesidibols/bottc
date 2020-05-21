@@ -15,7 +15,7 @@ const chooseArr = ["🗻", "📃", "✂"]
 module.exports.run = async (bot, message, args) =>{
 
     
-    Data.findOne({
+    /*Data.findOne({
         userID: message.author.id
     },(err, data) => {
         if(err) console.log(err);
@@ -30,8 +30,7 @@ module.exports.run = async (bot, message, args) =>{
 
             newData.save().catch(err => console.log(err));
         } else {
-        async function rakPaper() {
-        var award = 24;
+        var award = 24;*/
 
         let embed = new Discord.MessageEmbed();
         embed.setTitle("ROCK PAPER SCISSORS");
@@ -57,9 +56,9 @@ module.exports.run = async (bot, message, args) =>{
             if((me === "🗻" && clientChosen ==="✂") ||
             (me ==="📃" && clientChosen === "🗻") ||
             (me ==="✂" && clientChosen ==="📃")){
-                data.money += award;
-                data.save().catch(err => console.log(err));
-                return `You won! New balance: ${(data.money).toLocaleString()}`;
+                //data.money += award;
+                //data.save().catch(err => console.log(err));
+                return `You won!`;//${(data.money).toLocaleString()}
             } else if (me === clientChosen){
                 return "It's a tie!";
             }else{
@@ -67,7 +66,6 @@ module.exports.run = async (bot, message, args) =>{
             }
 
         }
-    }
     }
     })
 
