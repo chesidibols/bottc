@@ -39,10 +39,7 @@ module.exports.run = async (bot, message, args) =>{
             if((me === "🗻" && clientChosen ==="✂") ||
             (me ==="📃" && clientChosen === "🗻") ||
             (me ==="✂" && clientChosen ==="📃")){
-                data.money += award;
-                data.save().catch(err => console.log(err));
-                batoPik();
-                return `You won! New balance: ${(data.money).toLocaleString()}`;
+                return `You won!`;
             } else if (me === clientChosen){
                 return "It's a tie!";
             }else{
