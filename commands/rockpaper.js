@@ -13,23 +13,7 @@ const Data = require("../models/data.js");
 const chooseArr = ["🗻", "📃", "✂"]
 
 module.exports.run = async (bot, message, args) =>{
-    let embed = new Discord.MessageEmbed();
-    embed.setTitle("ROCK PAPER SCISSORS");
-    embed.setColor("a20a28");
-    embed.setFooter(mesage.guild.me.displayName, client.user.displayAvatarURL);
-    embed.setDescription("Add a reaction to one of these emojis to play the game!");
-    embed.setTimestamp();
 
-    const m = await message.channel.send(embed);
-    const reacted = await promptMessage(m, message.author, 30, chooseArr);
-
-    const botChoice = chooseArr[Math.floor(Math.random() * chooseArr.length)];
-
-    const result = await getResult(reacted, botChoice);
-    await m.clearReaction();
-
-    embed.setDescription("");
-    embed.addField(result, `${reacted} vs ${botChoice}`);
     
     Data.findOne({
         userID: message.author.id
@@ -49,7 +33,23 @@ module.exports.run = async (bot, message, args) =>{
 
         var award = 24;
 
-        
+        let embed = new Discord.MessageEmbed();
+        embed.setTitle("ROCK PAPER SCISSORS");
+        embed.setColor("a20a28");
+        embed.setFooter(mesage.guild.me.displayName, client.user.displayAvatarURL);
+        embed.setDescription("Add a reaction to one of these emojis to play the game!");
+        embed.setTimestamp();
+
+        const m = await message.channel.send(embed);
+        const reacted = await promptMessage(m, message.author, 30, chooseArr);
+
+        const botChoice = chooseArr[Math.floor(Math.random() * chooseArr.length)];
+
+        const result = await getResult(reacted, botChoice);
+        await m.clearReaction();
+
+        embed.setDescription("");
+        embed.addField(result, `${reacted} vs ${botChoice}`);
 
         m.embed(embed);
 
