@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
-const Discord =require("discord.js");
+const Discord = require("discord.js");
 
 //Connect to database
 mongoose.connect(botconfig.mongoPass, {
@@ -39,6 +39,9 @@ module.exports.run = async (bot, message, args) =>{
             if((me === "🗻" && clientChosen ==="✂") ||
             (me ==="📃" && clientChosen === "🗻") ||
             (me ==="✂" && clientChosen ==="📃")){
+                data.money += award;
+                data.save().catch(err => console.log(err));
+                batoPik();
                 return `You won!`;
             } else if (me === clientChosen){
                 return "It's a tie!";
@@ -48,7 +51,6 @@ module.exports.run = async (bot, message, args) =>{
 
             }
 }
-    
 
 module.exports.help = {
     name:"jakenpoy",
