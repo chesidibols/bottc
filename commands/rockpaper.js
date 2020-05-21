@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) =>{
 
             newData.save().catch(err => console.log(err));
         } else {
-
+        async function rakPaper() {
         var award = 24;
 
         let embed = new Discord.MessageEmbed();
@@ -67,6 +67,7 @@ module.exports.run = async (bot, message, args) =>{
             }
 
         }
+    }
     }
     })
 
