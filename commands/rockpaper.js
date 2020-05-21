@@ -15,25 +15,6 @@ const chooseArr = ["🗻", "📃", "✂"]
 
 module.exports.run = async (bot, message, args) =>{
 
-    
-    Data.findOne({
-        userID: message.author.id
-    },(err, data) => {
-        if(err) console.log(err);
-        if(!data){
-            const newData = new Data({
-                name: message.author.tag,
-                userID: message.author.id,
-                lb:"all",
-                money: 0,
-                daily: 0,
-            })
-
-            newData.save().catch(err => console.log(err));
-        } else {
-            let batoPik = async() =>{
-        var award = 24;
-
         let embed = new Discord.MessageEmbed();
         embed.setTitle("ROCK PAPER SCISSORS");
         embed.setColor("a20a28");
@@ -69,12 +50,8 @@ module.exports.run = async (bot, message, args) =>{
             }
 
             }
-        }
-    }
-    })
-
-    
 }
+    
 
 module.exports.help = {
     name:"jakenpoy",
