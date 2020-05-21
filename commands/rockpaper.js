@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
+const Discord =require("discord.js");
 
 //Connect to database
 mongoose.connect(botconfig.mongoPass, {
