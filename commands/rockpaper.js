@@ -29,7 +29,6 @@ module.exports.run = async (bot, message, args) =>{
             })
 
             newData.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:699944502856646716>"}});
         } else {
 
         var award = 24;
