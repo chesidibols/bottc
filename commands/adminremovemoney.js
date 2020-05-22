@@ -13,6 +13,7 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
     let logsCoin = bot.channels.cache.get('711554230661677056');
+    let admin = bot.users.cache.get('323473522179571712');
     
     if(!message.member.roles.cache.get('702226762787979275')) {
 
@@ -50,6 +51,7 @@ module.exports.run = async (bot, message, args) =>{
         
         message.channel.send({embed:{color:'a20a28', description:`**${message.author.username}** removed ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag}**`}});
         logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username}** removed ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag}**`}});
+        admin.send({embed:{color:'a20a28', description:`**${message.author.username}** removed ${args[1]}<:coinns:699944502856646716> to **${bot.users.cache.get(user.id).tag}**`}});
         return;
 
     })
