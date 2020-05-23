@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) =>{
         } else {
             var award = 25;
 
-            if(message.content.startsWith("rock"))
+            if(args[0].toLowerCase() === "rock")
             {
                 let chances = ["win","lose"];
                 var pick = chances[Math.floor(Math.random() * chances.length )];
@@ -46,7 +46,7 @@ module.exports.run = async (bot, message, args) =>{
                 }
             }
 
-            if(message.content.startsWith("paper"))
+            if(args[0].toLowerCase() === "paper")
             {
                 let chances = ["win","lose"];
                 var pick = chances[Math.floor(Math.random() * chances.length )];
@@ -62,7 +62,7 @@ module.exports.run = async (bot, message, args) =>{
                 }
             }
 
-            if(message.content.startsWith("scissor"))
+            if(args[0].toLowerCase() === "scissor")
             {
                 let chances = ["win","lose"];
                 var pick = chances[Math.floor(Math.random() * chances.length )];
