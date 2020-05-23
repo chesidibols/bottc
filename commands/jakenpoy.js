@@ -12,6 +12,11 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
+    if(message.channel.id != "713604164781080606")
+    {
+        return message.channel.send({embed:{color:'a20a28',description:"**PLEASE USE <#jakenpoy> channel thanks!**"}});
+    }
+    
     Data.findOne({
         userID: message.author.id
     },(err, data) => {
