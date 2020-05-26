@@ -10,13 +10,10 @@ mongoose.connect(botconfig.mongoPass, {
 
 module.exports.run = async (bot, message, args) =>{
 
+    let thisRole = message.mentions.first;
+    let myRole = message.guild.roles.find(role => role.name === thisRole);
+    console.log(myRole);
 
-    let embed = new Discord.MessageEmbed();
-        embed.setTitle("SHOP");
-        embed.setColor("a20a28");
-        embed.addField("tae");
-
-        message.channel.send(embed);
 }
 
 module.exports.help = {
