@@ -11,6 +11,11 @@ mongoose.connect(botconfig.mongoPass, {
 const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
+    if(message.channel.id != "701993773554597929")
+    {
+        message.channel.send({embed:{color:'a20a28', description:"**Please Use #atm channel.**"}}); 
+        return;
+    }
 
     Data.findOne({
         userID: message.author.id
