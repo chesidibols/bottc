@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) =>{
     let geChannel = "701993793838252103";
     if(message.channel.id != "701993793838252103")
     {
-        message.channel.send({embed:{color:'a20a28', description:`**Please Use ${message.guild.channels.get(geChannel).toString()} channel.**`}}); 
+        message.channel.send({embed:{color:'a20a28', description:`**Please Use ${message.channel.get(geChannel).toString()} channel.**`}}); 
         return;
     }
 
