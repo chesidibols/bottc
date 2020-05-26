@@ -12,10 +12,10 @@ mongoose.connect(botconfig.mongoPass, {
 const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
-
+    let geChannel = message.channel.get("701993793838252103").toLocaleString();
     if(message.channel.id != "701993793838252103")
     {
-        message.channel.send({embed:{color:'a20a28', description:"**Please Use <#work> channel.**"}}); 
+        message.channel.send({embed:{color:'a20a28', description:`**Please Use ${getChannel} channel.**`}}); 
         return;
     }
 
