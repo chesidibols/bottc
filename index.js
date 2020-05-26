@@ -48,6 +48,10 @@ bot.on("message" , async message => {
             return;
         }
     }
+
+    if(!message.member.roles.cache.get('702226762787979275')) {
+        return message.channel.send({embed:{color:'a20a28', description:"**You don't have the role"}});
+    }
     
 
 
