@@ -12,6 +12,13 @@ mongoose.connect(botconfig.mongoPass, {
 const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
+
+    if(message.channel.id != "701993793838252103")
+    {
+        message.channel.send({embed:{color:'a20a28', description:"**Please Use #work channel.**"}}); 
+        return;
+    }
+
     let logsCoin = bot.channels.cache.get('711554230661677056');
 
     let timeout = 14400000;
