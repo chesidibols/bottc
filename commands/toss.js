@@ -12,7 +12,9 @@ module.exports.run = async (bot, message, args) =>{
     let thisRole = message.mentions.first;
     message.guild.members.fetch().then(members => {
     const users = members.filter(mmbr => mmbr.roles.cache.get(thisRole)).map(m => m.user.tag).join('\n')
-    message.channel.send(users);
+    const embed = new Discord.MessageEmbed()
+    .setDescription(users);
+    message.channel.send(embed);
     })
     
 
