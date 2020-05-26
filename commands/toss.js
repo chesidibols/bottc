@@ -11,9 +11,10 @@ mongoose.connect(botconfig.mongoPass, {
 module.exports.run = async (bot, message, args) =>{
     let thisRole = message.mentions.first;
     message.guild.members.fetch().then(members => {
-    const theRole = members.filter(mmbr => mmbr.roles.cache.get(thisRole)).map(m => m.user.tag).join('\n')
+    const thesRole = members.filter(mmbr => mmbr.roles.cache.get(thisRole)).map(m => m.user.tag).join('\n')
+    console.log(thesRole);
     })
-    console.log(theRole);
+    
 
 }
 
