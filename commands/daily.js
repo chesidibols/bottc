@@ -13,6 +13,12 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
+    if(message.channel.id != "701993793838252103")
+    {
+        message.channel.send({embed:{color:'a20a28', description:"**Please Use #work channel.**"}}); 
+        return;
+    }
+
     let timeout = 86400000;
     let reward = 500;
 
