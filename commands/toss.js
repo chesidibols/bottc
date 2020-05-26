@@ -9,7 +9,7 @@ mongoose.connect(botconfig.mongoPass, {
 });
 
 module.exports.run = async (bot, message, args) =>{
-    let thisRole = message.mentions.first;
+    let thisRole = message.content;
     message.guild.members.fetch().then(members => {
     const users = members.filter(mmbr => mmbr.roles.cache.get(thisRole)).map(m => m.user.tag).join('\n')
     const embed = new Discord.MessageEmbed()
