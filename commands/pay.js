@@ -14,6 +14,11 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
 
     let logsCoin = bot.channels.cache.get('711554230661677056');
+
+    if(message.channel.id != "701993773554597929")
+    {
+        message.channel.send({embed:{color:'a20a28', description:"**Please Use #atm channel.**"}}); 
+    }
     
     let user = message.mentions.members.first() || bot.users.cache.get(args[0]);
     if(!user) return message.send({embed:{color:'a20a28', description:"**Sorry, couldn't find that user.**"}});
