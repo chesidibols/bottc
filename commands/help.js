@@ -13,8 +13,6 @@ module.exports.run = async (bot, message, args) =>{
             { name: '**tc.roll**', value: 'To Gamble.', inline: true },
             { name: '**tc.work**', value: 'Gives you 500 coins every 12 hours.', inline: true },
             { name: '**tc.daily**', value: 'Gives you 500 every 24 Hours.', inline: true },
-            { name: '**tc.give**', value: 'Banker rights only.', inline: true },
-            { name: '**tc.r-coins/tc.remove-coins**', value: 'Banker rights only.', inline: true },
         )
 
         message.channel.send(embed);
