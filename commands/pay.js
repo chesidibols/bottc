@@ -18,6 +18,7 @@ module.exports.run = async (bot, message, args) =>{
     if(message.channel.id != "701993773554597929")
     {
         message.channel.send({embed:{color:'a20a28', description:"**Please Use #atm channel.**"}}); 
+        return;
     }
     
     let user = message.mentions.members.first() || bot.users.cache.get(args[0]);
