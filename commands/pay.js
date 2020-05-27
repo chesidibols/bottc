@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) =>{
     }, (err, authorData) =>{
         if(err) console.log(err);
         if(!authorData) {
-            return message.channel.send({embed:{color:'a20a28', description:"**You dont have any <:coinnss:699944502856646716> to send. **"}});
+            return message.channel.send({embed:{color:'a20a28', description:"**You dont have any <:coinns:715103658601218088> to send. **"}});
         } else {
             Data.findOne({
                 userID: user.id
@@ -44,8 +44,8 @@ module.exports.run = async (bot, message, args) =>{
 
                 if(args[1] != Math.floor(args[1])) return message.channel.send({embed:{color:'a20a28',description:"**OOPS! YOU CAN'T PAY WITH LETTERS :P**"}});
 
-                if(parseInt(args[1]) > authorData.money) return message.channel.send({embed:{color:'a20a28', description:"You do not have enough <:coinnss:699944502856646716>"}});
-                if(parseInt(args[1]) < 10) return message.channel.send({embed:{color:'a20a28', description:"You cannot pay less than 10 <:coinnss:699944502856646716>"}});
+                if(parseInt(args[1]) > authorData.money) return message.channel.send({embed:{color:'a20a28', description:"You do not have enough <:coinns:715103658601218088>"}});
+                if(parseInt(args[1]) < 10) return message.channel.send({embed:{color:'a20a28', description:"You cannot pay less than 10 <:coinns:715103658601218088>"}});
 
                 if(!userData) {
                     const newData = new Data({
