@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) =>{
             })
 
             newData.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag}** has ${reward} <:coinnss:699944502856646716>`}});
+            return message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag}** has ${reward} <:coinns:715103658601218088>`}});
         } else {
             if(timeout - (Date.now() - data.daily) > 0){
                 let time = ms(timeout - (Date.now() - data.daily));
@@ -49,8 +49,8 @@ module.exports.run = async (bot, message, args) =>{
                 data.daily = Date.now();
                 data.save().catch(err => console.log(err));
 
-                message.channel.send({embed:{color:'a20a28', description:`**You recieved ${reward} <:coinnss:699944502856646716>**`}});
-                logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} recieved ${reward} <:coinnss:699944502856646716>**`}});
+                message.channel.send({embed:{color:'a20a28', description:`**You recieved ${reward} <:coinns:715103658601218088>**`}});
+                logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} recieved ${reward} <:coinns:715103658601218088>**`}});
                 return;
             }
         }
