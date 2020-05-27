@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) =>{
             })
 
             newData.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:699944502856646716>"}});
+            return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:715103658601218088>"}});
         } else {
             var award = 10;
 
@@ -46,7 +46,7 @@ module.exports.run = async (bot, message, args) =>{
                 }else{
                     data.money += award;
                 data.save().catch(err => console.log(err));
-                message.channel.send({embed:{color:'a20a28',description:`✂ **You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:699944502856646716>`}});
+                message.channel.send({embed:{color:'a20a28',description:`✂ **You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:715103658601218088>`}});
                 return;
                 }
             }
@@ -62,7 +62,7 @@ module.exports.run = async (bot, message, args) =>{
                 }else{
                     data.money += award;
                 data.save().catch(err => console.log(err));
-                message.channel.send({embed:{color:'a20a28',description:`👊 **You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:699944502856646716>`}});
+                message.channel.send({embed:{color:'a20a28',description:`👊 **You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:715103658601218088>`}});
                 return;
                 }
             }
@@ -78,7 +78,7 @@ module.exports.run = async (bot, message, args) =>{
                 }else{
                     data.money += award;
                 data.save().catch(err => console.log(err));
-                message.channel.send({embed:{color:'a20a28',description:`📃 **You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:699944502856646716>`}});
+                message.channel.send({embed:{color:'a20a28',description:`📃 **You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:715103658601218088>`}});
                 return;
                 }
             }
