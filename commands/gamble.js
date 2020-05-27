@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) =>{
             })
 
             newData.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:699944502856646716>"}});
+            return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:715103658601218088>"}});
         } else {
             var maxBet=1000;
     
@@ -50,9 +50,9 @@ module.exports.run = async (bot, message, args) =>{
 
             if(bet != Math.floor(bet)) return message.channel.send({embed:{color:'a20a28',description:"you can only enter whole number"}});
     
-            if(data.money < bet) return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:699944502856646716>"}});
+            if(data.money < bet) return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:715103658601218088>"}});
   
-            if(bet > maxBet) return message.channel.send({embed:{color:'a20a28',description:`the maximum bet is ${maxBet.toLocaleString()} <:coinns:699944502856646716>`}});
+            if(bet > maxBet) return message.channel.send({embed:{color:'a20a28',description:`the maximum bet is ${maxBet.toLocaleString()} <:coinns:715103658601218088>`}});
 
             let chances = ["win", "win","lose","lose", "lose", "lose", "lose", "lose"];
             var pick = chances[Math.floor(Math.random() * chances.length )];
@@ -60,11 +60,11 @@ module.exports.run = async (bot, message, args) =>{
             if(pick == "lose"){
              data.money -= bet;
              data.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28',description:`You lose. New balance: ${(data.money).toLocaleString()} <:coinns:699944502856646716>`}});
+            return message.channel.send({embed:{color:'a20a28',description:`You lose. New balance: ${(data.money).toLocaleString()} <:coinns:715103658601218088>`}});
         }else{
                 data.money += bet+bet;
                 data.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28',description:`**You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:699944502856646716>`}});
+            return message.channel.send({embed:{color:'a20a28',description:`**You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:715103658601218088>`}});
     }
         }
     })
