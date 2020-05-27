@@ -42,9 +42,9 @@ module.exports.run = async (bot, message, args) =>{
             })
 
             newData.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28', description:`**${bot.users.cache.get(user.id).tag}** has 0 <:coinnss:699944502856646716>`}});
+            return message.channel.send({embed:{color:'a20a28', description:`**${bot.users.cache.get(user.id).tag}** has 0 <:coinns:715103658601218088>`}});
         } else {
-            return message.channel.send({embed:{color:'a20a28', description:`**${bot.users.cache.get(user.id).tag}** has ${(data.money).toLocaleString()} <:coinnss:699944502856646716>`}});
+            return message.channel.send({embed:{color:'a20a28', description:`**${bot.users.cache.get(user.id).tag}** has ${(data.money).toLocaleString()} <:coinns:715103658601218088>`}});
         }
     })
     
