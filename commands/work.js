@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) =>{
             })
 
             newData.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag}** has ${reward} <:coinnss:699944502856646716>`}});
+            return message.channel.send({embed:{color:'a20a28', description:`**${message.author.tag}** has ${reward} <:coinns:715103658601218088>`}});
         } else {
             if(timeout - (Date.now() - data.work) > 0){
                 let time = ms(timeout - (Date.now() - data.work));
@@ -49,8 +49,8 @@ module.exports.run = async (bot, message, args) =>{
                 data.work = Date.now();
                 data.save().catch(err => console.log(err));
 
-                message.channel.send({embed:{color:'a20a28', description:`**You worked hard here's your pay check! ${reward} <:coinnss:699944502856646716>**`}});
-                logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} worked hard here is the pay check! ${reward} <:coinnss:699944502856646716>**`}});
+                message.channel.send({embed:{color:'a20a28', description:`**You worked hard here's your pay check! ${reward} <:coinns:715103658601218088>**`}});
+                logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} worked hard here is the pay check! ${reward} <:coinns:715103658601218088>**`}});
                 return;
             }
         }
