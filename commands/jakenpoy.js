@@ -34,6 +34,7 @@ module.exports.run = async (bot, message, args) =>{
             return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:715103658601218088>"}});
         } else {
             var award = 10;
+            var talo = 25;
 
             if(args[0].toLowerCase() === "rock")
             {
@@ -41,6 +42,8 @@ module.exports.run = async (bot, message, args) =>{
                 var pick = chances[Math.floor(Math.random() * chances.length )];
 
                 if(pick == "lose"){
+                    data.money -= talo;
+                    data.save().catch(err => console.log(err));
                     message.channel.send({embed:{color:'a20a28',description:`📃 **You lose**`}});
                     return;
                 }else{
@@ -57,6 +60,8 @@ module.exports.run = async (bot, message, args) =>{
                 var pick = chances[Math.floor(Math.random() * chances.length )];
 
                 if(pick == "lose"){
+                    data.money -= talo;
+                    data.save().catch(err => console.log(err));
                     message.channel.send({embed:{color:'a20a28',description:`✂ **You lose**`}});
                     return;
                 }else{
@@ -73,6 +78,8 @@ module.exports.run = async (bot, message, args) =>{
                 var pick = chances[Math.floor(Math.random() * chances.length )];
 
                 if(pick == "lose"){
+                    data.money -= talo;
+                    data.save().catch(err => console.log(err));
                     message.channel.send({embed:{color:'a20a28',description:`👊 **You lose**`}});
                     return;
                 }else{
