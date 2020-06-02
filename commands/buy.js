@@ -63,7 +63,7 @@ module.exports.run = async (bot, message, args) =>{
             
         }  
         
-        if(args[0].toLowerCase() == "1")
+       /* if(args[0].toLowerCase() == "1")
         {
             if(data.money < pipti_load) {
             return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
@@ -212,9 +212,9 @@ module.exports.run = async (bot, message, args) =>{
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 500 Steam Wallet.**`}})
             return;
             }
-        }
+        }*/
 
-        if(args[0].toLowerCase() == "13")
+        if(args[0].toLowerCase() == "1")
         {
             if(data.money < daiquiri){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
@@ -227,7 +227,7 @@ module.exports.run = async (bot, message, args) =>{
             }
         }
 
-        if(args[0].toLowerCase() == "14")
+        if(args[0].toLowerCase() == "2")
         {
             if(data.money < blue_hawaii){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
@@ -240,7 +240,7 @@ module.exports.run = async (bot, message, args) =>{
             }
         }
 
-        if(args[0].toLowerCase() == "15")
+        if(args[0].toLowerCase() == "3")
         {
             if(data.money < mojito){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
@@ -253,7 +253,7 @@ module.exports.run = async (bot, message, args) =>{
             }
         }
 
-        if(args[0].toLowerCase() == "16")
+        if(args[0].toLowerCase() == "4")
         {
             if(data.money < blue_lagoon){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
@@ -266,7 +266,7 @@ module.exports.run = async (bot, message, args) =>{
             }
         }
 
-        if(args[0].toLowerCase() == "17")
+        if(args[0].toLowerCase() == "5")
         {
             if(data.money < miami_bice){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
@@ -279,7 +279,7 @@ module.exports.run = async (bot, message, args) =>{
             }
         }
 
-        if(args[0].toLowerCase() == "18")
+        if(args[0].toLowerCase() == "6")
         {
             if(data.money < hurricane){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
@@ -292,7 +292,7 @@ module.exports.run = async (bot, message, args) =>{
             }
         }
 
-        if(args[0].toLowerCase() == "19")
+        if(args[0].toLowerCase() == "7")
         {
             if(data.money < purple_bage){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
