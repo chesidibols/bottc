@@ -14,7 +14,7 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
     let logsCoin = bot.channels.cache.get('711554230661677056');
     
-    if(!message.member.roles.cache.id === '594243987900989452') 
+    if(!message.member.roles.cache.id === '701904860848586803')
     {
         return message.channel.send({embed:{color:'a20a28', description:"**You don't have the permission to this command**"}});
     }
