@@ -13,7 +13,7 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
     
-    Data.findAndUpdate({
+    Data.updateMany({
         lb:"all"
     }).sort([
         ['money', 'descending']
