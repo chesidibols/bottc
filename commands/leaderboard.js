@@ -13,7 +13,8 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
     
-    Data.find({
+    Data.findByIdAndUpdate({
+        userID: user.id,
         lb:"all"
     }).sort([
         ['money', 'descending']
