@@ -14,7 +14,7 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
-    let etoRole = message.mentions.roles.first();
+    let etoRole = message.mentions.roles.first().id;
 
     let ListEmbed = new Discord.MessageEmbed();
         ListEmbed.setTitle(`Users with ${etoRole}`)
