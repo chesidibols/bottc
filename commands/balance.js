@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) =>{
         userID: user.id
     },(err, data) =>{
         if(err) console.log(err);
-        if(!data) {
+        if(data) {
             const newData = new Data({
                 name: bot.users.cache.get(user.id).tag,
                 userID: message.author.id,
