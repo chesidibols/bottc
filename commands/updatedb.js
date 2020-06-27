@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) =>{
 
         if(!userData) {
             const newData = new Data({
-                name: memberUnderRole,
+                name: bot.users.cache.get(user.id).tag,
                 userID: message.author.id,
                 lb:"all",
                 money: parseInt(args[1]),
