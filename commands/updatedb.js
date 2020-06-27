@@ -14,7 +14,7 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
-    Data.updateMany({
+    Data.updateOne({
         userID:user.id
     })
 
