@@ -15,9 +15,9 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
 
     Data.updateOne({
-        userID:user.id
+        userID:message.author.tag
     })
-
+ message.channel.send("done");
 }
 
 module.exports.help = {
