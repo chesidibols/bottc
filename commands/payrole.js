@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) =>{
 
     let ListEmbed = new Discord.RichEmbed({
         "title":`Users under the role`,
-        "description": message.guild.roles.cache.get(etoRole).members.map(m=>(m.user.id).tag).join('\n'),
+        "description": message.guild.roles.cache.get(etoRole).members.map(m=>m.user.username).join('\n'),
         "color" : 0xffff
     })
         
