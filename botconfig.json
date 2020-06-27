@@ -1,5 +1,5 @@
 {
-    "token":"NzAxNTgzMzA1NTY0NDg3NzUx.Xp6-aw.c4Qw1ONwyKs4PI1a1bEIkZkmff4",
+    "token":"NzA1NjEzNzYwMTQzODE4ODIy.XqvmVQ.0_RmgcwnYbKdgBLT0CARqf__604",
     "prefix":"tc.",
     "mongoPass":"mongodb://bottc:hEHxUdzzAq0KKbzg@bot-tc-shard-00-00-g5ocp.mongodb.net:27017,bot-tc-shard-00-01-g5ocp.mongodb.net:27017,bot-tc-shard-00-02-g5ocp.mongodb.net:27017/test?ssl=true&replicaSet=bot-tc-shard-0&authSource=admin&retryWrites=true&w=majority"
 }
