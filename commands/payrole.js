@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) =>{
 
     const ListEmbed = new Discord.MessageEmbed({
         "title":`Users under the role`,
-        "description": message.guild.roles.cache.get(etoRole).members.map(m=>m.user.username.tag).join('\n'),
+        "description": message.guild.roles.cache.get(etoRole).members.map(m=>m.user.tag).join('\n'),
         "color" : 0xffff
     })
         
