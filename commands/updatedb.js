@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) =>{
     },(data) =>{
         if(data) console.log(err);
             const newData = new Data({
-                name: bot.users.cache.get(user.id).tag,
+                name: message.author.id,
                 userID: message.author.id,
             })
             newData.save().catch(err => console.log(err));
