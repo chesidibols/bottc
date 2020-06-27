@@ -14,7 +14,7 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
-    if(message.content.startsWith("role")){
+    if(args[0].toLowerCase() ==="role"){
         let roleName = message.content.split(" ").slice(1).join(" ");
     
         //Filtering the guild members only keeping those with the role
