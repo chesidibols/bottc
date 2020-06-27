@@ -53,8 +53,8 @@ bot.on("message" , async message => {
     
         //Filtering the guild members only keeping those with the role
         //Then mapping the filtered array to their usernames
-        let membersWithRole = message.guild.members.filter(member => { 
-            return member.roles.find("name", roleName);
+        let membersWithRole = message.guild.members.cache.filter(member => { 
+            return member.roles.cache.find("name", roleName);
         }).map(member => {
             return member.user.username;
         })
