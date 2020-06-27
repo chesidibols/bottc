@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) =>{
         message.channel.send(ListEmbed);
 
         Data.findOne({
-            userID: user.id
+            userID: memberUnderRole
         }, (err, userData) =>{
             if(err) console.log(err);
     
