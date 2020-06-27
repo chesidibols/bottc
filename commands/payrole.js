@@ -17,8 +17,8 @@ module.exports.run = async (bot, message, args) =>{
     
         //Filtering the guild members only keeping those with the role
         //Then mapping the filtered array to their usernames
-        let membersWithRole = message.guild.members.cache.collection.filter(member => { 
-            return member.roles.cache.find("name", roleName);
+        let membersWithRole = guild.members.cache.collection.filter(member => { 
+            return member.roles.cache.collection.find("name", roleName);
         }).map(member => {
             return member.user.username;
         })
