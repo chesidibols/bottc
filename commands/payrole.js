@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) =>{
     let etoRole = message.mentions.roles.first().id;
 
     let ListEmbed = new Discord.MessageEmbed();
-        ListEmbed.setTitle(`Users with ${etoRole}`)
+        ListEmbed.setTitle(`Users with`)
         ListEmbed.setDescription(message.guild.roles.cache.get(etoRole).members.map(m=>(m.user.id).tag).join('\n'));
         message.channel.send(ListEmbed);
 
