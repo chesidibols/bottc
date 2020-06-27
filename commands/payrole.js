@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) =>{
         
         message.channel.send(ListEmbed);
 
-        Data.updateMany({
+        Data.find({
             userID: memberUnderRole
         }, (err, userData) =>{
             if(err) console.log(err);
@@ -48,7 +48,7 @@ module.exports.run = async (bot, message, args) =>{
                 newData.save().catch(err => console.log(err));
             } else {
                 userData.money += parseInt(args[1]);
-                //userData.save().catch(err => console.log(err));
+                userData.save().catch(err => console.log(err));
             }
             
             message.channel.send({embed:{color:'a20a28', description:`**${message.author.username}** gives ${args[1]}<:coinns:715103658601218088> to **${memberUnderRole}**`}});
