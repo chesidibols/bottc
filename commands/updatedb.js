@@ -15,8 +15,8 @@ module.exports.run = async (bot, message, args) =>{
 
     Data.findOneAndUpdate({
         userID: user.id
-    },(err, data) =>{
-        if(err) console.log(err);
+    },(data) =>{
+        if(data) console.log(err);
             const newData = new Data({
                 name: bot.users.cache.get(user.id).tag,
                 userID: message.author.id,
