@@ -13,13 +13,11 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
-
-    if(message.mentions.roles.first()){
-        let roleName = message.content.split(" ").slice(1).join(" ");
+        let roleName = message.mentions.roles.first()
     
         //Filtering the guild members only keeping those with the role
         //Then mapping the filtered array to their usernames
-        let membersWithRole = message.guild.members.cache.find(member => { 
+        let membersWithRole = message.guild.members.cache.filter(member => { 
             return member.roles.cache.find("name", roleName);
         }).map(member => {
             return member.user.username;
@@ -32,7 +30,6 @@ module.exports.run = async (bot, message, args) =>{
         });
     
         return message.channel.send({embed});
-    }
 
 }
 
