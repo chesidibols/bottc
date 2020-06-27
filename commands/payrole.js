@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) =>{
 
         let roleName = message.mentions.roles.first()
     
-        let members = message.guild.roles.get(roleName).members; // returns Collection (GuildMember)
+        let members = message.guild.roles.cache.find(roleName).members; // returns Collection (GuildMember)
         console.log(members.map(member => member.user.username));
 
 }
