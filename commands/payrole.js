@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) =>{
 
         let roleName = message.mentions.roles.first()
     
-        let embed = new discord.RichEmbed({
+        let embed = new Discord.RichEmbed({
             "title": `Users with the ${roleName} role`,
             "description": message.guild.roles.cache.get(roleName).members.map(m=>m.user.tag).join('\n'),
             "color": 0xFFFF
