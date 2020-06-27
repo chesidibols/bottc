@@ -14,7 +14,7 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
 
     Data.findOneAndUpdate({
-        userID: user.id
+        userID: message.author.id
     },(data) =>{
         if(data) console.log(err);
             const newData = new Data({
