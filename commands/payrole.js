@@ -22,12 +22,12 @@ module.exports.run = async (bot, message, args) =>{
         }).map(member => {
             return member.user.username;
         })
-    
-        let embed = new Discord.RichEmbed({
+        console.log(membersWithRole)
+       /* let embed = new Discord.RichEmbed({
             "title": `Users with the ${roleName} role`,
             "description": membersWithRole.join("\n"),
             "color": 0xFFFF
-        });
+        });*/
     
         return message.channel.send({embed});
 
