@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
+const Discord = require("discord.js");
 
 //Connect to database
 mongoose.connect(botconfig.mongoPass, {
@@ -13,23 +14,12 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
-        let roleName = message.mentions.roles.first()
-    
-        //Filtering the guild members only keeping those with the role
-        //Then mapping the filtered array to their usernames
-        let membersWithRole = guild.members.cache.collection.filter(member => { 
-            return member.roles.cache.collection.find("name", roleName);
-        }).map(member => {
-            return member.user.username;
-        })
-        console.log(membersWithRole)
-       /* let embed = new Discord.RichEmbed({
-            "title": `Users with the ${roleName} role`,
-            "description": membersWithRole.join("\n"),
-            "color": 0xFFFF
-        });*/
-    
-        return message.channel.send({embed});
+    let etoRole = message.mentions.roles.first();
+
+    let ListEmbed = new Discord.RichEmbed()
+        ListEmbed.setTitle(`Users with ${etoRole}`)
+        ListEmbed.setDescription(message.guild.roles.cache.get(etoRole).members.map(m=>m.users.tag).join('\n'));\
+        message.channel.send(ListEmbed);
 
 }
 
