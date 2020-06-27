@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) =>{
         
         message.channel.send(ListEmbed);
 
-        Data.findByIdAndUpdate({
+        Data.updateMany({
             userID: memberUnderRole
         }, (err, userData) =>{
             if(err) console.log(err);
