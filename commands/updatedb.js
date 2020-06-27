@@ -29,9 +29,6 @@ module.exports.run = async (bot, message, args) =>{
                 daily: 0,
             })
             newData.save().catch(err => console.log(err));
-        } else {
-            userData.money += parseInt(args[1]);
-            userData.save().catch(err => console.log(err));
         }
  message.channel.send("done");
 })
