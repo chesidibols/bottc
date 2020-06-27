@@ -15,17 +15,9 @@ module.exports.run = async (bot, message, args) =>{
 
         let roleName = message.mentions.roles.first()
     
-        //Filtering the guild members only keeping those with the role
-        //Then mapping the filtered array to their usernames
-        let membersWithRole = message.guild.members.cache.filter(member => { 
-            return member.roles.cache.find("name", roleName);
-        }).map(member => {
-            return member.user.username;
-        })
-    
         let embed = new discord.RichEmbed({
             "title": `Users with the ${roleName} role`,
-            "description": membersWithRole.join("\n"),
+            "description": message.guild.roles.cache.get(roleName).members.map(m=>m.user.tag).join('\n'),
             "color": 0xFFFF
         });
     
