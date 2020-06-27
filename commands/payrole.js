@@ -16,12 +16,12 @@ module.exports.run = async (bot, message, args) =>{
 
         let roleName = message.mentions.roles.first()
     
-        let members = message.guild.roles.cache.find(roleName).members; // returns Collection (GuildMember)
+        let members = guild.roles.cache.find(roleName).members; // returns Collection (GuildMember)
         console.log(members.map(member => member.user.username));
 
 }
 
 module.exports.help = {
-    name:"pr",
+    name:"prasdasdasda",
     aliases:["disableddddd"]
 }
