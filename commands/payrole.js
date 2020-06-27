@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) =>{
     const ListEmbed = new Discord.MessageEmbed({
         "title":`Users under the role`,
         "description": memberUnderRole,
-        "color" : 0xffff
+        "color" : "a20a28"
     })
         
         message.channel.send(ListEmbed);
