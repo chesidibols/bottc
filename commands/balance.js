@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args) =>{
         if(!data) {
             const newData = new Data({
                 name: bot.users.cache.get(user.id).tag,
-                userID: bot.users.cache.get(user.id).tag,
+                userID: message.author.id,
                 lb:"all",
                 money: 0,
                 daily: 0,
