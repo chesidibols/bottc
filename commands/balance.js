@@ -29,10 +29,20 @@ module.exports.run = async (bot, message, args) =>{
     }
     Data.findOne({
         //name: message.author.tag,
-        userID: message.author.id
+        userID: user.id
     },(err, data) =>{
         if(err) console.log(err);
-        
+        if(data)
+        {
+            let thisUser = message.author.tag;
+            Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
+                Data.findOne({userID:message.author.id}).then(function(result){
+                assert(result.name === thisUser)
+                console.log(`${thisUser} name was updated to the database`)
+                return;
+                })
+            });
+        }
        /* else
         {
             let thisUser = message.author.tag;
@@ -57,20 +67,10 @@ module.exports.run = async (bot, message, args) =>{
 
             newData.save().catch(err => console.log(err));
             return message.channel.send({embed:{color:'a20a28', description:`**${bot.users.cache.get(user.id).tag}** has 0 <:coinns:715103658601218088>`}});
-        }
-         else {
+        } else {
             return message.channel.send({embed:{color:'a20a28', description:`**${bot.users.cache.get(user.id).tag}** has ${(data.money).toLocaleString()} <:coinns:715103658601218088>`}});
         }
-        
     })
-            let thisUser = message.author.tag;
-            Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
-                Data.findOne({userID:message.author.id}).then(function(result){
-                assert(result.name === thisUser)
-                console.log(`${thisUser} name was updated to the database`)
-                return;
-                })
-            });
     
 }
 
