@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) =>{
         userID: message.author.id
     },(err, data) => {
         if(err) console.log(err);
-        if(data)
+        /*if(data)
         {
             let thisUser = message.author.tag;
             Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
@@ -40,7 +40,7 @@ module.exports.run = async (bot, message, args) =>{
                 return;
                 })
             });
-        }
+        }*/
 
         if(!data) {
             const newData = new Data({
