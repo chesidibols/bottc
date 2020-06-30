@@ -18,8 +18,8 @@ mongoose.connect(botconfig.mongoPass, {
 });
 
 // MODELS
-const Data = require("../models/data.js");
-const { deleteOne } = require("../models/data.js");
+const Data = require("../models/data");
+const { deleteOne } = require("../models/data");
 
 // READ COMMAND FOLDER
 fs.readdir("./commands/", (err, files) =>{
