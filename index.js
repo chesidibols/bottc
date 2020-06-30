@@ -46,7 +46,7 @@ bot.on("ready" , async () => {
     console.log(`${bot.user.username} is online on ${bot.guilds.cache.size} servers!`);
     bot.user.setActivity(`Wacthing you because I love you!`);
 })
-
+/*
 bot.on("guildMemberAdd", function (member) {
     console.log(`a user joins a guild: ${member.tag}`);
     const newData = new Data({
@@ -68,7 +68,7 @@ bot.on("guildMemberRemove", function (member) {
                 return;
                 })
             });
-});
+});*/
 
 bot.on("message" , async message => {
 
