@@ -47,8 +47,8 @@ module.exports.run = async (bot, message, args) =>{
                 
             })
         }
-        logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} admin paid ${args[0]} <:coinnss:699944502856646716> to everyone!**`}});
-        message.channel.send({embed:{color:'a20a28', description:`**${message.author.username} admin paid ${args[0]} <:coinnss:699944502856646716> to everyone!**`}});
+        logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} admin paid ${args[0]} <:coinns:715103658601218088> to everyone!**`}});
+        message.channel.send({embed:{color:'a20a28', description:`**${message.author.username} admin paid ${args[0]} <:coinns:715103658601218088> to everyone!**`}});
         return;
     })
   
