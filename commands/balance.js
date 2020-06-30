@@ -1,25 +1,27 @@
 const Discord =require("discord.js");
 const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
-
+const assert = require("assert");
 //Connect to database
 mongoose.connect(botconfig.mongoPass, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useCreateIndex:true,
+    useUnifiedTopology: true
 });
 
 // MODELS
 const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
-    let geChannel = "701993773554597929";
+    /*let geChannel = "701993773554597929";
     if(message.channel.id != "701993773554597929")
     {
         message.channel.send({embed:{color:'a20a28', description:`**Please Use <#${geChannel.toString()}> channel.**`}}); 
         return;
     }
 
-    message.delete({timeout: 10000})
+    message.delete({timeout: 10000})*/
 
     if(!args[0]){
         var user = message.author;
@@ -27,16 +29,40 @@ module.exports.run = async (bot, message, args) =>{
         var user = message.mentions.users.first() || bot.users.cache.get(args[0]);
 
     }
-
     Data.findOne({
-        userID: user.id
+        //name: message.author.tag,
+        userID: message.author.id
     },(err, data) =>{
         if(err) console.log(err);
+        if(data)
+        {
+            let thisUser = message.author.tag;
+            Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
+                Data.findOne({userID:message.author.id}).then(function(result){
+                assert(result.name === thisUser)
+                console.log(`${thisUser} name was updated to the database`)
+                return;
+                })
+            });
+        }
+       /* else
+        {
+            let thisUser = message.author.tag;
+            Data.findOneAndUpdate({name:thisUser},{userID:message.author.id}).then(function(){
+                Data.findOne({name:thisUser}).then(function(result){
+                assert(result.userID === message.author.id)
+                message.channel.send(`${thisUser} name was updated to the database`)
+                return;
+                })
+            });
+        }*/
+
         if(!data) {
             const newData = new Data({
-                name: bot.users.cache.get(user.id).tag,
+                name: message.author.tag,
                 userID: message.author.id,
                 lb:"all",
+                role: message.author.role.id,
                 money: 0,
                 daily: 0,
             })
