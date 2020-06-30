@@ -1,10 +1,13 @@
+const Discord =require("discord.js");
 const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
-
+const assert = require("assert");
 //Connect to database
 mongoose.connect(botconfig.mongoPass, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex:true,
+    useUnifiedTopology: true
 });
 
 // MODELS
@@ -29,6 +32,17 @@ module.exports.run = async (bot, message, args) =>{
         userID: user.id
     }, (err, userData) =>{
         if(err) console.log(err);
+        if(userData)
+        {
+            let thisUser = message.author.tag;
+            Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
+                Data.findOne({userID:message.author.id}).then(function(result){
+                assert(result.name === thisUser)
+                console.log(`${thisUser} name was updated to the database`)
+                return;
+                })
+            });
+        }
 
         if(!args[1]) return message.channel.send({embed:{color:'a20a28', description:"**Please specify the ammount you want to pay**"}});
 
