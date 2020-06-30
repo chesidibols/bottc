@@ -1,11 +1,13 @@
+const Discord =require("discord.js");
 const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
-const Discord = require("discord.js");
-
+const assert = require("assert");
 //Connect to database
 mongoose.connect(botconfig.mongoPass, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex:true,
+    useUnifiedTopology: true
 });
 
 // MODELS
@@ -14,20 +16,21 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
-    let etoRole = message.mentions.roles.first().id;
+    let etoRole = message.mentions.roles.first().id || bot.guilds.cache.get(message.guild.id).roles.cache.get(args[0])
 
-    let memberUnderRole = message.guild.roles.cache.get(etoRole).members.map(m=>m.user.tag).join('\n')
+    let memberUnderRole = message.guild.roles.cache.get(etoRole).members.map(m=>m.user.tag).join('\n').split('')
 
-    const ListEmbed = new Discord.MessageEmbed({
-        "title":`Users under the role`,
-        "description": memberUnderRole,
-        "color" : "a20a28"
+    Data.find({
+        userID: memberUnderRole
+    }, (err, data) => {
+
+        if (err) return console.log(err)
+        for (i = 0; i < data.length; i++)
+            console.log(data)
     })
-        
-        message.channel.send(ListEmbed);
-
+/*
         Data.findOne({
-            userID: memberUnderRole
+            userID: 'asd'
         }, (err, userData) =>{
             if(err) console.log(err);
     
@@ -54,7 +57,7 @@ module.exports.run = async (bot, message, args) =>{
             message.channel.send({embed:{color:'a20a28', description:`**${message.author.username}** gives ${args[1]}<:coinns:715103658601218088> to **${memberUnderRole}**`}});
            // logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username}** gives ${args[1]}<:coinns:715103658601218088> to **${memberUnderRole}**`}});
             return;
-        })
+        })*/
 
 }
 
