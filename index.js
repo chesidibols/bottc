@@ -18,7 +18,7 @@ mongoose.connect(botconfig.mongoPass, {
 });
 
 // MODELS
-const { deleteOne } = require("../models/data.js");
+//const { deleteOne } = require("../models/data.js");
 
 // READ COMMAND FOLDER
 fs.readdir("./commands/", (err, files) =>{
