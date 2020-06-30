@@ -41,7 +41,7 @@ module.exports.run = async (bot, message, args) =>{
             Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
                 Data.findOne({userID:message.author.id}).then(function(result){
                 assert(result.name === thisUser)
-                message.channel.send(`${thisUser} name was updated to the database`)
+                console.log(`${thisUser} name was updated to the database`)
                 return;
                 })
             });
