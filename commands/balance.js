@@ -63,8 +63,6 @@ module.exports.run = async (bot, message, args) =>{
         }
         
     })
-    if(data)
-        {
             let thisUser = message.author.tag;
             Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
                 Data.findOne({userID:message.author.id}).then(function(result){
@@ -73,7 +71,6 @@ module.exports.run = async (bot, message, args) =>{
                 return;
                 })
             });
-        }
     
 }
 
