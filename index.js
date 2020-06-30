@@ -2,9 +2,24 @@ const Discord = require("discord.js");
 const bot = new Discord.Client({disableEveryone: true , partials:['MESSAGE','REACTION']});
 const botconfig = require ("./botconfig.json");
 const fs = require ("fs")
+const mongoose = require("mongoose");
+const assert = require("assert");
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
+
+//Connect to database
+mongoose.connect(botconfig.mongoPass, {
+    useNewUrlParser: true,
+    useFindAndModify: false,
+    useCreateIndex:true,
+    useUnifiedTopology: true
+    
+});
+
+// MODELS
+const Data = require("../models/data.js");
+//const { deleteOne } = require("../models/data.js");
 
 // READ COMMAND FOLDER
 fs.readdir("./commands/", (err, files) =>{
@@ -32,12 +47,35 @@ bot.on("ready" , async () => {
     bot.user.setActivity(`Wacthing you because I love you!`);
 })
 
+bot.on("guildMemberAdd", function (member) {
+    console.log(`a user joins a guild: ${member.tag}`);
+    const newData = new Data({
+        name: member.tag,
+        userID: member.id,
+        lb:"all",
+        money: 0,
+        daily: 0,
+    })
+    newData.save();
+});
+
+bot.on("guildMemberRemove", function (member) {
+    console.log(`a member leaves a guild, or is kicked: ${member.tag}`);
+            Data.findOneAndRemove({userID:member.id}).then(function(){
+                Data.findOne({userID:member.id}).then(function(result){
+                assert(result === null)
+                console.log(`${member} name was updated to the database with the id ${member.id}`)
+                return;
+                })
+            });
+});
 
 bot.on("message" , async message => {
 
     // CHECK CHANNEL TYPE
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
+
 
     //NO COMMAND IN LOBBY CHANNEL
    /* if(message.channel.id === "699367732923203616" || message.channel.id ==="711554230661677056" || message.channel.id === "707966547880312873" ||  message.channel.id === "698587686486671502"){
@@ -72,8 +110,6 @@ bot.on("message" , async message => {
     } catch (e) {
         return;
     }
-
-    
 })
 
 bot.on('messageReactionAdd', async (reaction, user) =>{
@@ -108,5 +144,6 @@ bot.on('messageReactionAdd', async (reaction, user) =>{
        // console.log(true);
         applyRole();
     }
+  
 })
 bot.login(botconfig.token);
