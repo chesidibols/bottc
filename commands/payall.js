@@ -1,10 +1,13 @@
+const Discord =require("discord.js");
 const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
-
+const assert = require("assert");
 //Connect to database
 mongoose.connect(botconfig.mongoPass, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex:true,
+    useUnifiedTopology: true
 });
 
 // MODELS
@@ -41,6 +44,7 @@ module.exports.run = async (bot, message, args) =>{
                     data.money +=parseInt(args[0]);
                     data.save().catch(err => console.log(err));
                 }
+                
             })
         }
         logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} admin paid ${args[0]} <:coinnss:699944502856646716> to everyone!**`}});
