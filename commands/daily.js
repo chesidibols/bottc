@@ -2,6 +2,7 @@ const Discord =require("discord.js");
 const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
 const assert = require("assert");
+const ms = require("parse-ms");
 //Connect to database
 mongoose.connect(botconfig.mongoPass, {
     useNewUrlParser: true,
