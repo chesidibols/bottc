@@ -25,6 +25,13 @@ module.exports.run = async (bot, message, args) =>{
         ['money' , 'descending']
     ]).exec((err, res) =>{
         if (err) console.log(err)
+
+        if(!args[0]) return message.send({embed:{color:'a20a28', description:"**Please Specify Amount!**"}});
+        if(args[0] != Math.floor(args[0])) return message.send({embed:{color:'a20a28', description:"**Please Enter Whole numbers!**"}});
+
+        if(!res) return message.send({embed:{color:'a20a28', description:"**No role found!**"}});
+
+
         for (i = 0; i < res.length; i++)
             {
                 Data.findOne({
@@ -39,6 +46,7 @@ module.exports.run = async (bot, message, args) =>{
                     }
                 })
             }
+            message.channel.send({embed:{color:'a20a28', description:`**${message.author.username} gives ${args[0]} <:coinns:715103658601218088> to ${role}**`}});
         })
 
 
