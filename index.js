@@ -64,7 +64,7 @@ bot.on("guildMemberRemove", function (member) {
             Data.findOneAndRemove({userID:member.id}).then(function(){
                 Data.findOne({userID:member.id}).then(function(result){
                 assert(result === null)
-                console.log(`${member} name was updated to the database with the id ${member.id}`)
+                console.log(`${member} name was deleted to the database`)
                 return;
                 })
             });
