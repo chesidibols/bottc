@@ -16,12 +16,11 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
-    let etoRole = message.mentions.roles.first().id || bot.guilds.cache.get(message.guild.id).roles.cache.get(args[0])
-
-    let memberUnderRole = message.guild.roles.cache.get(etoRole).members.map(m=>m.user.tag).join('\n').split('')
+    let role = message.mentions.roles.first() || bot.guilds.cache.get(message.guild.id).roles.cache.get(args[0])
+    let mem = message.guild.roles.cache.get(role.id).members.map(m => m.user.id).join(' ').split(' ')
 
     Data.find({
-        userID: memberUnderRole
+        userID: mem
     }, (err, data) => {
 
         if (err) return console.log(err)
