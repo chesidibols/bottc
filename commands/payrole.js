@@ -29,11 +29,12 @@ module.exports.run = async (bot, message, args) =>{
             {
                 Data.findOne({
                     userID:res[i].userID
-                },(err , data) =>{
+                },(err , userData) =>{
                     if(err) console.log(err);
                     if(data)
                     {
-                        console.log(data.money)
+                        userData.money +=parseInt(args)[0];
+                        userData.save().catch(err =>console.log(err));
                     }
                 })
             }
