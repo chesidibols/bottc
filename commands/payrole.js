@@ -19,6 +19,12 @@ module.exports.run = async (bot, message, args) =>{
     let role = message.mentions.roles.first() || bot.users.cache.get(args[0]);
     let memID = message.guild.roles.cache.get(role.id).members.map(m => m.user.id).join(' ').split(' ')
 
+    if(!message.member.roles.cache.get('702226762787979275')) {
+
+        return message.channel.send({embed:{color:'a20a28', description:"**You don't have the permission to this command**"}});
+
+    }
+
     Data.find({
         userID: memID
     }).sort([
