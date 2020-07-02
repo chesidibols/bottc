@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) =>{
                     userID:res[i].userID
                 },(err , userData) =>{
                     if(err) console.log(err);
-                    if(data)
+                    if(userData)
                     {
                         userData.money +=parseInt(args)[0];
                         userData.save().catch(err =>console.log(err));
