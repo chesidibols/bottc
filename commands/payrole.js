@@ -21,9 +21,10 @@ module.exports.run = async (bot, message, args) =>{
 
     Data.find({
         userID: memID
-    }, (err, res) => {
-
-        if (err) return console.log(err)
+    }).sort([
+        ['money' , 'descending']
+    ]).exec((err, res) =>{
+        if (err) console.log(err)
         for (i = 0; i < res.length; i++)
             {
                 Data.findOne({
@@ -37,7 +38,8 @@ module.exports.run = async (bot, message, args) =>{
                     }
                 })
             }
-    })
+        })
+
 
 }
 
