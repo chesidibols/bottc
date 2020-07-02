@@ -33,8 +33,7 @@ module.exports.run = async (bot, message, args) =>{
                     if(err) console.log(err);
                     if(data)
                     {
-                        data.money +=parseInt(args)[0];
-                        data.save().catch(err =>console.log(err));
+                        console.log(data.money)
                     }
                 })
             }
