@@ -26,8 +26,8 @@ module.exports.run = async (bot, message, args) =>{
     ]).exec((err, res) =>{
         if (err) console.log(err)
 
-        if(!args[0]) return message.channel.send({embed:{color:'a20a28', description:"**Please Specify Amount!**"}});
-        if(args[0] != Math.floor(args[0])) return message.channel.send({embed:{color:'a20a28', description:"**Please Enter Whole numbers!**"}});
+        if(!args[1]) return message.channel.send({embed:{color:'a20a28', description:"**Please Specify Amount!**"}});
+        if(args[1] != Math.floor(args[1])) return message.channel.send({embed:{color:'a20a28', description:"**Please Enter Whole numbers!**"}});
 
         if(!res) return message.channel.send({embed:{color:'a20a28', description:"**No role found!**"}});
 
