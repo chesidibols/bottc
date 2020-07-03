@@ -72,6 +72,7 @@ bot.on("guildMemberRemove", function (member) {
 
 bot.on("message" , async message => {
 
+    let admin = bot.users.cache.get('594243987900989452');
     // CHECK CHANNEL TYPE
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
@@ -82,7 +83,8 @@ bot.on("message" , async message => {
         Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
             Data.findOne({userID:message.author.id}).then(function(result){
             assert(result.name === thisUser)
-            console.log(`${thisUser} name was updated to the database`)
+           // console.log(`${thisUser} name was updated to the database`)
+            admin.send(`${thisUser} name was updated to the database`)
             return;
             })
         });
