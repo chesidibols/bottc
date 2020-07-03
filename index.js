@@ -80,7 +80,7 @@ bot.on("message" , async message => {
     if(message.author)
     {
         Data.findOne({
-            userID: user.id
+            userID: message.author.id
         }, (err, userData) =>{
             if(err) console.log(err);
             if(userData)
