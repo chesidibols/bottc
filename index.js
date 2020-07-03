@@ -57,16 +57,16 @@ bot.on("guildMemberAdd", function (member) {
         daily: 0,
     })
     newData.save();
-    dblogs.send(`${member} was created to the database`)
+    console.log(`${member} was created to the database`)
 });
 
-bot.on("guildMemberRemove","messages", function (member) {
+bot.on("guildMemberRemove", function (member) {
     
     console.log(`a member leaves a guild, or is kicked: ${member.tag}`);
             Data.findOneAndRemove({userID:member.id}).then(function(){
                 Data.findOne({userID:member.id}).then(function(result){
                 assert(result === null)
-                dblogs.send(`${member} name was deleted to the database`)
+                console.log(`${member} name was deleted to the database`)
                 return;
                 })
             });
