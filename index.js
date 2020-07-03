@@ -60,7 +60,7 @@ bot.on("guildMemberAdd", function (member) {
     dblogs.send(`${member} was created to the database`)
 });
 
-bot.on("guildMemberRemove", function (member) {
+bot.on("guildMemberRemove","messages", function (member) {
     
     console.log(`a member leaves a guild, or is kicked: ${member.tag}`);
             Data.findOneAndRemove({userID:member.id}).then(function(){
