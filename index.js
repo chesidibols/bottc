@@ -79,15 +79,23 @@ bot.on("message" , async message => {
 
     if(message.author)
     {
-        let thisUser = message.author.tag;
-        Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
-            Data.findOne({userID:message.author.id}).then(function(result){
-            assert(result.name === thisUser)
-           // console.log(`${thisUser} name was updated to the database`)
-            dblogs.send(`${thisUser} name was updated to the database`)
-            return;
-            })
-        });
+        Data.findOne({
+            userID: user.id
+        }, (err, userData) =>{
+            if(err) console.log(err);
+            if(userData)
+            {
+                let thisUser = message.author.tag;
+                Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
+                    Data.findOne({userID:message.author.id}).then(function(result){
+                    assert(result.name === thisUser)
+                    //console.log(`${thisUser} name was updated to the database`)
+                    dblogs.send(`${thisUser} name was updated to the database`)
+                    return;
+                    })
+                });
+            }
+        })
     }
 
 
