@@ -15,6 +15,7 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
     let geChannel = "701993773554597929";
+    let dblogs = bot.channels.cache.get('728490481813553224');
     if(message.channel.id != "701993773554597929")
     {
         message.channel.send({embed:{color:'a20a28', description:`**Please Use <#${geChannel.toString()}> channel.**`}}); 
@@ -38,7 +39,7 @@ module.exports.run = async (bot, message, args) =>{
             Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
                 Data.findOne({userID:message.author.id}).then(function(result){
                 assert(result.name === thisUser)
-                console.log(`${thisUser} name was updated to the database`)
+                dblogs.send(`${thisUser} name was updated to the database`)
                 return;
                 })
             });
