@@ -77,7 +77,7 @@ bot.on("message" , async message => {
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
 
-    if(message.author)
+  /*  if(message.author)
     {
         Data.findOne({
             userID: message.author.id
@@ -96,7 +96,7 @@ bot.on("message" , async message => {
                 });
             }
         })
-    }
+    }*/
 
 
     //NO COMMAND IN LOBBY CHANNEL
