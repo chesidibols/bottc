@@ -16,7 +16,7 @@ mongoose.connect(botconfig.mongoPass, {
     useUnifiedTopology: true
     
 });
-
+const dblogs = bot.channels.cache.get('728490481813553224');
 // MODELS
 //const { deleteOne } = require("../models/data.js");
 const Data = require("./models/data.js");
@@ -57,14 +57,16 @@ bot.on("guildMemberAdd", function (member) {
         daily: 0,
     })
     newData.save();
+    dblogs.send(`${member} was created to the database`)
 });
 
 bot.on("guildMemberRemove", function (member) {
+    
     console.log(`a member leaves a guild, or is kicked: ${member.tag}`);
             Data.findOneAndRemove({userID:member.id}).then(function(){
                 Data.findOne({userID:member.id}).then(function(result){
                 assert(result === null)
-                console.log(`${member} name was deleted to the database`)
+                dblogs.send(`${member} name was deleted to the database`)
                 return;
                 })
             });
