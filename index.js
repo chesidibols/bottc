@@ -81,7 +81,7 @@ bot.on("message" , async message => {
         let thisUser = message.author.tag;
         Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
             Data.findOne({userID:message.author.id}).then(function(result){
-            assert(result.name === thisUser)
+            assert(result.name === thisUser).catch(err => console.log(err));
             console.log(`${thisUser} name was updated to the database`)
             return;
             })
