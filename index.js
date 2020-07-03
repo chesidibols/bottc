@@ -74,12 +74,12 @@ bot.on("guildMemberRemove", function (member) {
 
 bot.on("message" , async message => {
 
-    //let dblogs = bot.channels.cache.get('728490481813553224');
+    let dblogs = bot.channels.cache.get('728490481813553224');
     // CHECK CHANNEL TYPE
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
 
-  /*  if(message.author)
+    if(message.content.startsWith("hi"))
     {
         Data.findOne({
             userID: message.author.id
@@ -98,7 +98,7 @@ bot.on("message" , async message => {
                 });
             }
         })
-    }*/
+    }
 
 
     //NO COMMAND IN LOBBY CHANNEL
