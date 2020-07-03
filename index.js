@@ -76,6 +76,18 @@ bot.on("message" , async message => {
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
 
+    if(message.author)
+    {
+        let thisUser = message.author.tag;
+        Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
+            Data.findOne({userID:message.author.id}).then(function(result){
+            assert(result.name === thisUser)
+            console.log(`${thisUser} name was updated to the database`)
+            return;
+            })
+        });
+    }
+
 
     //NO COMMAND IN LOBBY CHANNEL
    /* if(message.channel.id === "699367732923203616" || message.channel.id ==="711554230661677056" || message.channel.id === "707966547880312873" ||  message.channel.id === "698587686486671502"){
