@@ -52,7 +52,7 @@ module.exports.run = async (bot, message, args) =>{
                     }
                 })
             }
-            message.channel.send({embed:{color:'a20a28', description:`**${message.author.username} gives ${args[1]} <:coinns:715103658601218088> to ${role} with ${i}**`}});
+            message.channel.send({embed:{color:'a20a28', description:`**${message.author.username} gives ${args[1]} <:coinns:715103658601218088> to ${role} with ${i} members**`}});
         })
 
 
