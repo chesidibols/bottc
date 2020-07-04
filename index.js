@@ -48,9 +48,9 @@ bot.on("ready" , async () => {
 })
 
 bot.on("guildMemberAdd", function (member) {
-    console.log(`a user joins a guild: ${member.tag}`);
+    console.log(`a user joins a guild: ${member}`);
     const newData = new Data({
-        name: member.tag,
+        name: member,
         userID: member.id,
         lb:"all",
         money: 0,
