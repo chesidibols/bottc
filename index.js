@@ -19,7 +19,7 @@ mongoose.connect(botconfig.mongoPass, {
 const dblogs = bot.channels.cache.get('728490481813553224');
 // MODELS
 //const { deleteOne } = require("../models/data.js");
-const Data = require("./models/data.js");
+const Data = require("../models/data.js");
 
 // READ COMMAND FOLDER
 fs.readdir("./commands/", (err, files) =>{
