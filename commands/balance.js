@@ -16,7 +16,7 @@ const Data = require("../models/data.js");
 module.exports.run = async (bot, message, args) =>{
     let geChannel = "759070730125312000";
    // let dblogs = bot.channels.cache.get('728490481813553224');
-    if(message.channel.id != "701993773554597929")
+    if(message.channel.id != "759070730125312000")
     {
         message.channel.send({embed:{color:'a20a28', description:`**Please Use <#${geChannel.toString()}> channel.**`}}); 
         return;
