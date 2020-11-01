@@ -74,7 +74,7 @@ bot.on("guildMemberRemove", function (member) {
 
 bot.on("message" , async message => {
 
-    let dblogs = bot.channels.cache.get('759070725713166376');
+    let dblogs = bot.channels.cache.get('');
     // CHECK CHANNEL TYPE
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
