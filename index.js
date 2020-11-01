@@ -74,7 +74,7 @@ bot.on("guildMemberRemove", function (member) {
 
 bot.on("message" , async message => {
 
-    let dblogs = bot.channels.cache.get('');
+   // let dblogs = bot.channels.cache.get('');
     // CHECK CHANNEL TYPE
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
@@ -91,8 +91,8 @@ bot.on("message" , async message => {
                 Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
                     Data.findOne({userID:message.author.id}).then(function(result){
                     assert(result.name === thisUser)
-                    //console.log(`${thisUser} name was updated to the database`)
-                    dblogs.send(`${thisUser} name was updated to the database`)
+                    console.log(`${thisUser} name was updated to the database`)
+                    //dblogs.send(`${thisUser} name was updated to the database`)
                     return;
                     })
                 });
