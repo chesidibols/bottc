@@ -74,7 +74,7 @@ bot.on("guildMemberRemove", function (member) {
 
 bot.on("message" , async message => {
 
-    let dblogs = bot.channels.cache.get('728490481813553224');
+    let dblogs = bot.channels.cache.get('759070725713166376');
     // CHECK CHANNEL TYPE
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
@@ -136,38 +136,6 @@ bot.on("message" , async message => {
     }
 })
 
-bot.on('messageReactionAdd', async (reaction, user) =>{
 
-    let applyRole = async() => {
-        let emojiName = reaction.emoji.name;
-        let role = reaction.message.guild.roles.cache.find(role => role.name.toLowerCase() === emojiName.toLowerCase());
-        let member = reaction.message.guild.members.cache.find(member => member.id === user.id);
-        try {
-            if(role && member){
-                console.log("Role and member found.");
-                await member.roles.add(role);
-            }
-        }
-        catch (err){
-            console.log(err);
-        }
-    }
 
-    if(reaction.message.partial)
-    {
-        let message = await reaction.message.fetch();
-        if(message.id === '711298282415980594');
-        //console.log("cached");
-        applyRole();
-    }
-    else
-    {
-        let message = await reaction.message.fetch();
-       // console.log("Not a partial.");
-        if(message.id === '711298282415980594');
-       // console.log(true);
-        applyRole();
-    }
-  
-})
 bot.login(botconfig.token);
