@@ -14,9 +14,9 @@ mongoose.connect(botconfig.mongoPass, {
 const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
-    let geChannel = "759070730125312000";
+    let geChannel = "772401083384856596";
    // let dblogs = bot.channels.cache.get('728490481813553224');
-    if(message.channel.id != "759070730125312000")
+    if(message.channel.id != "772401499991965697" && message.channel.id != "772401715181518909" && message.channel.id != "772401742994079764" && message.channel.id != "772401769606021151" )
     {
         message.channel.send({embed:{color:'a20a28', description:`**Please Use <#${geChannel.toString()}> channel.**`}}); 
         return;
@@ -67,9 +67,9 @@ module.exports.run = async (bot, message, args) =>{
             })
 
             newData.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28', description:`**${bot.users.cache.get(user.id).tag}** has 0 <:coinns:715103658601218088>`}});
+            return message.channel.send({embed:{color:'a20a28', description:`**${bot.users.cache.get(user.id).tag}** has 0 <:ttcchips:715103658601218088>`}});
         } else {
-            return message.channel.send({embed:{color:'a20a28', description:`**${bot.users.cache.get(user.id).tag}** has ${(data.money).toLocaleString()} <:coinns:715103658601218088>`}});
+            return message.channel.send({embed:{color:'a20a28', description:`**${bot.users.cache.get(user.id).tag}** has ${(data.money).toLocaleString()} <:ttcchips:715103658601218088>`}});
         }
     })
     
