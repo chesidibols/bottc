@@ -79,7 +79,7 @@ bot.on("message" , async message => {
     if(message.channel.type === "dm") return;
     if(message.author.bot) return;
 
-    if(message.content.toLowerCase("Hi"))
+    /*if(message.content.toLowerCase("Hi"))
     {
         Data.findOne({
             userID: message.author.id
