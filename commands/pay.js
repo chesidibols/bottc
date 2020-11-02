@@ -16,8 +16,8 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
-    let logsCoin = bot.channels.cache.get('711554230661677056');
-    let dblogs = bot.channels.cache.get('728490481813553224');
+   // let logsCoin = bot.channels.cache.get('711554230661677056');
+    let dblogs = bot.channels.cache.get('772401083384856596');
 
     let geChannel = "701993773554597929";
     if(message.channel.id != "701993773554597929")
@@ -81,7 +81,7 @@ module.exports.run = async (bot, message, args) =>{
                 }
                 
                 message.channel.send({embed:{color:'a20a28', description:`**${message.author.username}** transferred ${args[1]}<:ttcchips:715103658601218088> to **${bot.users.cache.get(user.id).tag}**`}});
-                logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username}** transferred ${args[1]}<:ttcchips:715103658601218088> to **${bot.users.cache.get(user.id).tag}**`}});
+                dblogs.send({embed:{color:'a20a28', description:`**${message.author.username}** transferred ${args[1]}<:ttcchips:715103658601218088> to **${bot.users.cache.get(user.id).tag}**`}});
                 return;
 
             })
