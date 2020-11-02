@@ -29,8 +29,8 @@ module.exports.run = async (bot, message, args) =>{
     ]).exec((err, res) => {
         if(err) console.log(err);
 
-        if(!args[0]) return message.send({embed:{color:'a20a28', description:"**Please Specify Amount!**"}});
-        if(args[0] != Math.floor(args[0])) return message.send({embed:{color:'a20a28', description:"**Please Enter Whole numbers!**"}});
+        //if(!args[0]) return message.send({embed:{color:'a20a28', description:"**Please Specify Amount!**"}});
+        //if(args[0] != Math.floor(args[0])) return message.send({embed:{color:'a20a28', description:"**Please Enter Whole numbers!**"}});
 
         if(!res) return message.send({embed:{color:'a20a28', description:"**No users found!**"}});
 
@@ -41,14 +41,14 @@ module.exports.run = async (bot, message, args) =>{
             },(err, data) =>{
                 if(err) console.log(err);
                 if(data){
-                    data.money =parseInt(args[0]);
+                    data.money = 0;
                     data.save().catch(err => console.log(err));
                 }
                 
             })
         }
-        logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} admin paid ${args[0]} <:ttcchips:715103658601218088> to everyone!**`}});
-        message.channel.send({embed:{color:'a20a28', description:`**${message.author.username} admin paid ${args[0]} <:ttcchips:715103658601218088> to everyone!**`}});
+        logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} removes <:ttcchips:715103658601218088> to everyone!**`}});
+        message.channel.send({embed:{color:'a20a28', description:`**${message.author.username} removes${args[0]} <:ttcchips:715103658601218088> to everyone!**`}});
         return;
     })
   
