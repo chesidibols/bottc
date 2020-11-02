@@ -15,9 +15,9 @@ const Data = require("../models/data.js");
 
 
 module.exports.run = async (bot, message, args) =>{
-    let logsCoin = bot.channels.cache.get('711554230661677056');
+    let logsCoin = bot.channels.cache.get('772401083384856596');
     
-    if(!message.member.roles.cache.id === '702226762787979275')  {
+    if(!message.member.roles.cache.get('759070501871681574')) {
 
         return message.channel.send({embed:{color:'a20a28', description:"**You don't have the permission to this command**"}});
 
@@ -47,8 +47,8 @@ module.exports.run = async (bot, message, args) =>{
                 
             })
         }
-        logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} admin paid ${args[0]} <:coinns:715103658601218088> to everyone!**`}});
-        message.channel.send({embed:{color:'a20a28', description:`**${message.author.username} admin paid ${args[0]} <:coinns:715103658601218088> to everyone!**`}});
+        logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} admin paid ${args[0]} <:ttcchips:715103658601218088> to everyone!**`}});
+        message.channel.send({embed:{color:'a20a28', description:`**${message.author.username} admin paid ${args[0]} <:ttcchips:715103658601218088> to everyone!**`}});
         return;
     })
   
