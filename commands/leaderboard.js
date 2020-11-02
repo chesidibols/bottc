@@ -12,6 +12,12 @@ mongoose.connect(botconfig.mongoPass, {
 const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
+
+    if(message.channel.id != "772401499991965697" && message.channel.id != "772401715181518909" && message.channel.id != "772401742994079764" && message.channel.id != "772401769606021151" )
+    {
+        message.channel.send({embed:{color:'a20a28', description:`**Please Use <#${geChannel.toString()}> channel.**`}}); 
+        return;
+    }
     
     Data.find({
         lb:"all"
