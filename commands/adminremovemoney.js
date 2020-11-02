@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) =>{
     //let admin = bot.users.cache.get('323473522179571712');
     let dblogs = bot.channels.cache.get('772401083384856596');
     
-    if(!message.member.roles.cache.get('759070501871681574') || !message.member.roles.cache.get('759369272119001128')) {
+    if(!message.member.roles.cache.get('759070501871681574')) {
 
         return message.channel.send({embed:{color:'a20a28', description:"**You don't have the permission to this command**"}});
 
