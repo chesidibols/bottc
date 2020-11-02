@@ -15,6 +15,7 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
     let geChannel = "772401083384856596";
+    let dblogs = bot.channels.cache.get('772401083384856596');
    // let dblogs = bot.channels.cache.get('728490481813553224');
     if(message.channel.id != "772401499991965697" && message.channel.id != "772401715181518909" && message.channel.id != "772401742994079764" && message.channel.id != "772401769606021151" )
     {
