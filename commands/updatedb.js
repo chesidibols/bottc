@@ -16,7 +16,7 @@ const Data = require("../models/data.js");
 const { deleteOne } = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
-    /*let list = bot.guilds.cache.get("333573514856628225"); 
+    let list = bot.guilds.cache.get("333573514856628225"); 
     list.members.cache.forEach(member => {
         let allUsers = member.user.id
         let allUsersTag = member.user.tag
@@ -31,7 +31,8 @@ module.exports.run = async (bot, message, args) =>{
             message.channel.send(`${thisUser} name was updated to the database`)
             return;
         })
-    })*/
+    })
+})/*
     let thisUser = message.author.tag;
     Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
         Data.findOne({userID:message.author.id}).then(function(result){
@@ -39,7 +40,7 @@ module.exports.run = async (bot, message, args) =>{
             message.channel.send(`${thisUser} name was updated to the database`)
             return;
         })
-    });
+    });*/
 }
 
 module.exports.help = {
