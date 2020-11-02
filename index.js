@@ -16,7 +16,7 @@ mongoose.connect(botconfig.mongoPass, {
     useUnifiedTopology: true
     
 });
-const dblogs = bot.channels.cache.get('728490481813553224');
+const dblogs = bot.channels.cache.get('772401083384856596');
 // MODELS
 //const { deleteOne } = require("../models/data.js");
 const Data = require("./models/data.js");
