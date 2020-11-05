@@ -15,10 +15,11 @@ mongoose.connect(botconfig.mongoPass, {
 const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
-    let geChannel = "701993793838252103";
-    if(message.channel.id != "701993793838252103")
-    {
-        message.channel.send({embed:{color:'a20a28', description:`**Please Use <#${geChannel.toString()}> channel.**`}}); 
+    let geChannel = "772401499991965697";
+    let dblogs = bot.channels.cache.get('772401083384856596');
+    // let dblogs = bot.channels.cache.get('728490481813553224');
+    if (message.channel.id != "772401499991965697" && message.channel.id != "772401715181518909" && message.channel.id != "772401742994079764" && message.channel.id != "772401769606021151") {
+        message.channel.send({ embed: { color: 'a20a28', description: `**Please Use <#${geChannel.toString()}> channel.**` } });
         return;
     }
 
@@ -64,7 +65,7 @@ module.exports.run = async (bot, message, args) =>{
                 data.save().catch(err => console.log(err));
 
                 message.channel.send({embed:{color:'a20a28', description:`**You recieved ${reward} <:coinns:715103658601218088>**`}});
-                logsCoin.send({embed:{color:'a20a28', description:`**${message.author.username} recieved ${reward} <:coinns:715103658601218088>**`}});
+                dblogs.send({embed:{color:'a20a28', description:`**${message.author.username} recieved ${reward} <:coinns:715103658601218088>**`}});
                 return;
             }
         }
