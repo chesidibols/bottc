@@ -310,5 +310,5 @@ module.exports.run = async (bot, message, args) =>{
 
 module.exports.help = {
     name:"bawaltangiunaa'sdasdaw",
-    aliases:["b"]
+    aliases:["bsssss"]
 }
