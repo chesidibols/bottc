@@ -9,7 +9,6 @@ module.exports.run = async (bot, message, args) =>{
         embed.addFields(
             { name: '**tc.bal**', value: 'Check Balance.', inline: true },
             { name: '**tc.pay**', value: 'Pay to other user.', inline: true },
-            { name: '**tc.buy**', value: 'To buy items in shop', inline: true },
             { name: '**tc.roll**', value: 'To Gamble.', inline: true },
             { name: '**tc.work**', value: 'Gives you 200 coins every 4 hours.', inline: true },
             { name: '**tc.daily**', value: 'Gives you 500 every 24 Hours.', inline: true },
