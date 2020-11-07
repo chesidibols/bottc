@@ -62,7 +62,7 @@ module.exports.run = async (bot, message, args) =>{
                 name: message.author.tag,
                 userID: message.author.id,
                 lb:"all",
-                role: message.author.role.id,
+                //role: message.author.role.id,
                 money: 0,
                 daily: 0,
             })
