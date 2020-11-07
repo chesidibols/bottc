@@ -15,9 +15,10 @@ const Data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) =>{
 
-    if(message.channel.id != "713604164781080606")
+    if(message.channel.id != "772401499991965697" && message.channel.id != "772401715181518909" && message.channel.id != "772401742994079764" && message.channel.id != "772401769606021151" )
     {
-        return message.channel.send({embed:{color:'a20a28',description:"**PLEASE USE <#jakenpoy> channel thanks!**"}});
+        message.channel.send({embed:{color:'a20a28', description:`**Please Use <#${geChannel.toString()}> channel.**`}}); 
+        return;
     }
     
     Data.findOne({
@@ -45,10 +46,10 @@ module.exports.run = async (bot, message, args) =>{
             })
 
             newData.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:715103658601218088>"}});
+            return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:ttcchips:715103658601218088>"}});
         } else {
-            var award = 10;
-            var talo = 25;
+            var award = 25;
+            var talo = 20;
 
             if(args[0].toLowerCase() === "rock")
             {
@@ -63,7 +64,7 @@ module.exports.run = async (bot, message, args) =>{
                 }else{
                     data.money += award;
                 data.save().catch(err => console.log(err));
-                message.channel.send({embed:{color:'a20a28',description:`✂ **You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:715103658601218088>`}});
+                message.channel.send({embed:{color:'a20a28',description:`✂ **You win!. New balance: ${(data.money).toLocaleString()}** <:ttcchips:715103658601218088>`}});
                 return;
                 }
             }
@@ -81,7 +82,7 @@ module.exports.run = async (bot, message, args) =>{
                 }else{
                     data.money += award;
                 data.save().catch(err => console.log(err));
-                message.channel.send({embed:{color:'a20a28',description:`👊 **You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:715103658601218088>`}});
+                message.channel.send({embed:{color:'a20a28',description:`👊 **You win!. New balance: ${(data.money).toLocaleString()}** <:ttcchips:715103658601218088>`}});
                 return;
                 }
             }
@@ -99,7 +100,7 @@ module.exports.run = async (bot, message, args) =>{
                 }else{
                     data.money += award;
                 data.save().catch(err => console.log(err));
-                message.channel.send({embed:{color:'a20a28',description:`📃 **You win!. New balance: ${(data.money).toLocaleString()}** <:coinns:715103658601218088>`}});
+                message.channel.send({embed:{color:'a20a28',description:`📃 **You win!. New balance: ${(data.money).toLocaleString()}** <:ttcchips:715103658601218088>`}});
                 return;
                 }
             }
