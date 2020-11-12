@@ -5,7 +5,12 @@ module.exports.run = async (bot, message, args) =>{
     let gifs = [
         "./tenor1.gif",
         "./tenor2.gif",
-        "./tenor3.gif"
+        "./tenor3.gif",
+        "./tenor4.gif",
+        "./tenor5.gif",
+        "./tenor6.gif",
+        "./tenor7.gif"
+        
     ];
 
     var pick = gifs[Math.floor(Math.random() * gifs.length)];
