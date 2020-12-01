@@ -30,19 +30,14 @@ module.exports.run = async (bot, message, args) =>{
             { name: '**10# 500,000 coins.**', value: '1 Month Netflix', inline: true },
             { name: '**11# 500,000 coins.**', value: '1 Month Spotify Premium', inline: true },
             { name: '**12# 600,000 coins.**', value: '500 Steam Wallet', inline: true },*/
-            { name: `**1# 10,000 coins**`, value: `<@&${daiquiri}>`, inline: true },
-            { name: `**2# 10,000 coins**`, value: `<@&${blue_hawaii}>`, inline: true },
-            { name: `**3# 10,000 coins**`, value: `<@&${mojito}>`, inline: true },
-            { name: `**4# 10,000 coins**`, value: `<@&${blue_lagoon}>`, inline: true },
-            { name: `**5# 10,000 coins**`, value: `<@&${miami_bice}>`, inline: true },
-            { name: `**6# 10,000 coins**`, value: `<@&${hurricane}>`, inline: true },
-            { name: `**7# 10,000 coins**`, value: `<@&${purple_bage}>`, inline: true },
+            { name: `**1# 50,000 coins**`, value: `Color Packs valid for 30d`, inline: true },
+            { name: `**2# 50,000 coins**`, value: `50 Pesos Load`, inline: true },
         )
         message.channel.send(embed);
 }
 
 
 module.exports.help = {
-    name:"potanginaaa",
+    name:"shop",
     aliases:["gagagagaga"]
 }
