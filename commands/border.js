@@ -23,10 +23,10 @@ module.exports.run = async (bot, message, args) => {
             ctx.strokeStyle = '#74037b';
             ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
-            const avatar = await Canvas.loadImage('./Shack.png');
+            const avatar = await Canvas.loadImage('./thebrgy.png');
             ctx.drawImage(avatar, 0, 0, 1045, 1045);
 
-            const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'Shack.png');
+            const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'thebrgy.png');
 
 
             message.channel.send(attachment);
@@ -50,10 +50,10 @@ module.exports.run = async (bot, message, args) => {
             ctx.strokeStyle = '#74037b';
             ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
-            const avatar = await Canvas.loadImage('./shack.png');
+            const avatar = await Canvas.loadImage('./thebrgy.png');
             ctx.drawImage(avatar, 0, 0, 1045, 1045);
 
-            const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'Shack.png');
+            const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'thebrgy.png');
 
 
             message.channel.send(attachment);
