@@ -53,7 +53,7 @@ module.exports.run = async (bot, message, args) => {
             const avatar = await Canvas.loadImage('./thebrgy.png');
             ctx.drawImage(avatar, 0, 0, 1045, 1045);
 
-            const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'Shack.png');
+            const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'thebrgy.png');
 
 
             message.channel.send(attachment);
@@ -68,7 +68,7 @@ module.exports.run = async (bot, message, args) => {
                 timestamp: new Date()
             }
         })
-        bot.guilds.cache.get('575341681596039178').channels.cache.get('737842621925556227').send("ERROR ```" + err.stack + " ```")
+        bot.guilds.cache.get('333573514856628225').channels.cache.get('759070686995677205').send("ERROR ```" + err.stack + " ```")
     }
 }
 
