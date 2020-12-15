@@ -39,7 +39,7 @@ module.exports.run = async (bot, message, args) =>{
             ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
             const avatar = await Canvas.loadImage('./thebrgy.png');
-            ctx.drawImage(avatar, -20, -20, 1045, 1045);
+            ctx.drawImage(avatar, 20, 20, 1045, 1045);
 
             const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'thebrgy.png');
 
@@ -66,7 +66,7 @@ module.exports.run = async (bot, message, args) =>{
             ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
             const avatar = await Canvas.loadImage('./thebrgy.png');
-            ctx.drawImage(avatar, -20, -20, 1045, 1045);
+            ctx.drawImage(avatar, 20, 20, 1045, 1045);
 
             const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'thebrgy.png');
 
