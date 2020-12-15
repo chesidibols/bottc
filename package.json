@@ -13,6 +13,7 @@
     },
     "dependencies": {
         "assert": "^2.0.0",
+        "canvas": "^2.6.1",
         "discord.js": "^12.2.0",
         "fs": "0.0.1-security",
         "mongoose": "^5.9.20",
