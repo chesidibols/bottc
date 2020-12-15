@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) =>{
             ctx.clip();
 
             const background = await Canvas.loadImage(user.displayAvatarURL({ format: 'jpg', size: 1024 }));
-            ctx.drawImage(background, 0, 0, 890, 890);
+            ctx.drawImage(background, 0, 0, 480, 480);
 
             ctx.strokeStyle = '#74037b';
             ctx.strokeRect(0, 0, canvas.width, canvas.height);
