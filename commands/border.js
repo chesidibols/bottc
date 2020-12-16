@@ -33,13 +33,13 @@ module.exports.run = async (bot, message, args) =>{
             ctx.clip();
 
             const background = await Canvas.loadImage(user.displayAvatarURL({ format: 'jpg', size: 1024 }));
-            ctx.drawImage(background, 183, 195, 890, 890);
+            ctx.drawImage(background, 0, 0, 890, 890);
 
             ctx.strokeStyle = '#74037b';
             ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
             const avatar = await Canvas.loadImage('./thebrgy.png');
-            ctx.drawImage(avatar, 0, -75, 1045, 1045);
+            ctx.drawImage(avatar, 0, 0, 1045, 1045);
 
             const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'thebrgy.png');
 
@@ -60,13 +60,13 @@ module.exports.run = async (bot, message, args) =>{
             ctx.clip();
 
             const background = await Canvas.loadImage(message.author.displayAvatarURL({ format: 'jpg', size: 1024 }));
-            ctx.drawImage(background, 135, 195, 890, 890);
+            ctx.drawImage(background, 0, 0, 890, 890);
 
             ctx.strokeStyle = '#74037b';
             ctx.strokeRect(0, 0, canvas.width, canvas.height);
 
             const avatar = await Canvas.loadImage('./thebrgy.png');
-            ctx.drawImage(avatar, 0, 75, 1045, 1045);
+            ctx.drawImage(avatar, 0, 0, 1045, 1045);
 
             const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'thebrgy.png');
 
