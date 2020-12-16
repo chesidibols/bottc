@@ -32,7 +32,7 @@ module.exports.run = async (bot, message, args) =>{
             // Clip off the region you drew on
             ctx.clip();
 
-            const background = await Canvas.loadImage(user.displayAvatarURL({ format: 'jpg', size: 1024 }));
+            const background = await Canvas.loadImage(user.displayAvatarURL({ format: 'jpg', size: 1070 }));
             ctx.drawImage(background, 38, 28, 1070, 1070);
 
             ctx.strokeStyle = '#74037b';
@@ -59,7 +59,7 @@ module.exports.run = async (bot, message, args) =>{
             // Clip off the region you drew on
             ctx.clip();
 
-            const background = await Canvas.loadImage(message.author.displayAvatarURL({ format: 'jpg', size: 1024 }));
+            const background = await Canvas.loadImage(message.author.displayAvatarURL({ format: 'jpg', size: 1070 }));
             ctx.drawImage(background, 38, 28, 1070, 1070);
 
             ctx.strokeStyle = '#74037b';
