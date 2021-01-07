@@ -13,7 +13,7 @@ mongoose.connect(botconfig.mongoPass, {
 module.exports.run = async (bot, message, args) =>{
 
     let r = Math.random().toString(36).substring(7);
-message.channel.send("random", r);
+message.channel.send(r);
 }
 
 module.exports.help = {
