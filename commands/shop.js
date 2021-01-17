@@ -29,6 +29,7 @@ module.exports.run = async (bot, message, args) =>{
             { name: '**10# 50,000<:ttcchips:715103658601218088>**', value: `<@&${barangay}>`, inline: true },
             { name: '**11# 50,000<:ttcchips:715103658601218088>**', value: `<@&${katangian}>`, inline: true },
             { name: '**12# 200,000<:ttcchips:715103658601218088>**', value: `<@&${kulay}>`, inline: true },
+            {name :"\n\u200b",value :`to buy type **c.buy number of your choice ex.(c.buy 2 = 50 Gcash)**`},
         )
         message.channel.send(embed);
 }
