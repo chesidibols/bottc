@@ -14,6 +14,10 @@ module.exports.run = async (bot, message, args) =>{
 
     let r = Math.random().toString(36).substring(7);
 message.channel.send(r);
+
+     if(message.author === r){
+         message.channel.send("nice")
+     }
 }
 
 module.exports.help = {
