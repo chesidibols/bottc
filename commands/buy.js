@@ -189,7 +189,6 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= kulay_;
             data.save().catch(err => console.log(err));
-            admin.send(`${message.author.tag} Buy's 500 Steam load`);
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${kulay}>**`}})
             return;
             }
