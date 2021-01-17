@@ -11,17 +11,16 @@ mongoose.connect(botconfig.mongoPass, {
 // MODELS
 const Data = require("../models/data.js");
 
-    const daiquiri1 = "704649539025633356";
-    const blue_hawaii1 = "704649829460082759";
-    const mojito1 = "704649703165395054";
-    const blue_lagoon1 = "703607741213704263";
-    const miami_bice1 = "704649910821060668";
-    const hurricane1 = "704649919432228926";
-    const purple_bage1 = "704649930924490791";
+    const kolorete = "798145159145455636";
+    const tribo = "798145163217338409";
+    const bayani = "798145164223840256";
+    const barangay = "798145167285682186";
+    const katangian = "798145167365505024";
+    const kulay = "774903451112046622";
 
 module.exports.run = async (bot, message, args) =>{
 
-    const admin = bot.users.cache.get('323473522179571712');
+    const excutive = "759070502748422155";
 
     Data.findOne({
         userID: message.author.id
@@ -37,273 +36,166 @@ module.exports.run = async (bot, message, args) =>{
             })
 
             newData.save().catch(err => console.log(err));
-            return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:coinns:715103658601218088>"}});
+            return message.channel.send({embed:{color:'a20a28',description:"you don't have that much <:ttcchips:715103658601218088>"}});
         } else {
 
             var pipti_load = 50000;
-            var pipti_steam = 50000;
-            var wanhandred_load = 100000;
-            var tupipti_load = 250000;
-            var discord_nitro = 250000;
-            var trihandred_load = 300000;
-            var tupipti_steam = 315000;
-            var paybhandred_load = 500000;
-            var discord_boost = 500000;
-            var netflix = 500000;
-            var Spotify = 500000;
-            var paybhandred_steam = 600000;
+            var pipti_gcash = 75000;
+            var onehundred_load = 100000;
+            var onehundred_gcash = 150000;
+            var one_month_nitro = 275000;
+            var one_month_boost = 550000;
 
-            var daiquiri = 10000;
-            var blue_hawaii = 10000;
-            var mojito = 10000;
-            var blue_lagoon = 10000;
-            var miami_bice = 10000;
-            var hurricane = 10000;
-            var purple_bage = 10000;
+            var kolorete_ = 50000;
+            var tribo_ = 50000;
+            var bayani_ = 50000;
+            var barangay_ = 50000;
+            var katangian_ = 50000;
+            var kulay_ = 200000;
             
         }  
         
-       /* if(args[0].toLowerCase() == "1")
+       if(args[0].toLowerCase() == "1")
         {
             if(data.money < pipti_load) {
             return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             }else {
             data.money -= pipti_load;
             data.save().catch(err => console.log(err));
-            admin.send(`${message.author.tag} Buy's 50 pesos load`);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos load **`}});
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos load. Please DM <@&${excutive}> please do your JOB :P**`}});
             return;
             }
         }
         if(args[0].toLowerCase() == "2")
         {
-            if(data.money < pipti_steam){ 
+            if(data.money < pipti_gcash){ 
                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             }else {
-            data.money -= pipti_steam;
+            data.money -= pipti_gcash;
             data.save().catch(err => console.log(err));
-            admin.send(`${message.author.tag} Buy's 50 steam load`);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos steam wallet **`}})
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 Gcash. Please DM <@&${excutive}> please do your JOB :P**`}})
             return;
             }
         }
 
         if(args[0].toLowerCase() == "3")
         {
-            if(data.money < wanhandred_load){
+            if(data.money < onehundred_load){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}})
             }else {
-            data.money -= wanhandred_load;
+            data.money -= onehundred_load;
             data.save().catch(err => console.log(err));
-            admin.send(`${message.author.tag} Buy's 100 pesos load`);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 100 load **`}});
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 100 load. Please DM <@&${excutive}> please do your JOB :P**`}});
             return;
             }
         }
         if(args[0].toLowerCase() == "4")
         {
-            if(data.money < tupipti_load){
+            if(data.money < onehundred_gcash){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             }else {
-            data.money -= tupipti_load;
+            data.money -= onehundred_gcash;
             data.save().catch(err => console.log(err));
-            admin.send(`${message.author.tag} Buy's 250 pesos load`);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 250 load **`}})
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 100 Gcash. Please DM <@&${excutive}> please do your JOB :P**`}})
             return;
             }
         }
 
         if(args[0].toLowerCase() == "5")
         {
-            if(data.money < discord_nitro){
+            if(data.money < one_month_nitro){
              return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             }else{
-            data.money -= discord_nitro;
+            data.money -= one_month_nitro;
             data.save().catch(err => console.log(err));
-            admin.send(`${message.author.tag} Buy's Discord Nitro`);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month discord nitro **`}});
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month discord nitro. Please DM <@&${excutive}> please do your JOB :P**`}});
             return;
             }
         }
         if(args[0].toLowerCase() == "6")
         {
-            if(data.money < trihandred_load){
+            if(data.money < one_month_boost){
              return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             }else {
-                data.money -= trihandred_load;
+                data.money -= one_month_boost;
                 data.save().catch(err => console.log(err));
-                admin.send(`${message.author.tag} Buy's 300 pesos load`);
-                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 300 load **`}})
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Nitro Boost. Please DM <@&${excutive}> please do your JOB :P**`}})
                 return;
                 }
         }
 
         if(args[0].toLowerCase() == "7")
         {
-            if(data.money < tupipti_steam){
+            if(data.money < kolorete_){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             }else{
-                data.money -= tupipti_steam;
+                data.money -= kolorete_;
                 data.save().catch(err => console.log(err));
-                admin.send(`${message.author.tag} Buy's 250 steam`);
-                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 250 steam wallet **`}});
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${kolorete}>**`}});
                 return;
                 }
         }
         if(args[0].toLowerCase() == "8")
         {
-            if(data.money < paybhandred_load){
+            if(data.money < tribo_){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             }else {
-            data.money -= paybhandred_load;
+            data.money -= tribo_;
             data.save().catch(err => console.log(err));
-            admin.send(`${message.author.tag} Buy's 500 pesos load`);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 500 load **`}})
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${tribo}>**`}})
             return;
             }
         }
 
         if(args[0].toLowerCase() == "9")
         {
-            if(data.money < discord_boost){
+            if(data.money < bayani_){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
                 }else {   
-                data.money -= discord_boost;
+                data.money -= bayani_;
                 data.save().catch(err => console.log(err));
-                admin.send(`${message.author.tag} Buy's Discord Boost`);
-                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Discord Nitro Boost **`}})
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${bayani}>**`}})
                 return;
                 }
         }
         if(args[0].toLowerCase() == "10")
         {
-            if(data.money < netflix){
+            if(data.money < barangay_){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
                 }else{
-                data.money -= netflix;
+                data.money -= barangay_;
                 data.save().catch(err => console.log(err));
-                admin.send(`${message.author.tag} Buy's Netflix Subscription`);
-                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month netflix access **`}})
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${barangay}>**`}})
                 return;
                 }
         }
 
         if(args[0].toLowerCase() == "11")
         {
-            if(data.money < Spotify ){
+            if(data.money < katangian_ ){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
                 }else{
-                data.money -= Spotify;
+                data.money -= katangian_;
                 data.save().catch(err => console.log(err));
-                admin.send(`${message.author.tag} Buy's Spotify subscription`);
-                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Spotify Premium \**`}})
+                message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${katangian}>**`}})
                 return;
                 }
         }
 
         if(args[0].toLowerCase() == "12")
         {
-            if(data.money < paybhandred_steam){
+            if(data.money < kulay_){
                  return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
             }else{
-            data.money -= paybhandred_steam;
+            data.money -= kulay_;
             data.save().catch(err => console.log(err));
             admin.send(`${message.author.tag} Buy's 500 Steam load`);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 500 Steam Wallet.**`}})
-            return;
-            }
-        }*/
-
-        if(args[0].toLowerCase() == "1")
-        {
-            if(data.money < daiquiri){
-                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            }else{
-            data.money -= daiquiri;
-            data.save().catch(err => console.log(err));
-            message.member.roles.add(daiquiri1);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝔇𝔞𝔦𝔮𝔲𝔦𝔯𝔦 color role.**`}})
+            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${kulay}>**`}})
             return;
             }
         }
 
-        if(args[0].toLowerCase() == "2")
-        {
-            if(data.money < blue_hawaii){
-                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            }else{
-            data.money -= blue_hawaii;
-            data.save().catch(err => console.log(err));
-            message.member.roles.add(blue_hawaii1);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕭𝖑𝖚𝖊 𝕳𝖆𝖜𝖆𝖎𝖎 color Role.**`}})
-            return;
-            }
-        }
-
-        if(args[0].toLowerCase() == "3")
-        {
-            if(data.money < mojito){
-                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            }else{
-            data.money -= mojito;
-            data.save().catch(err => console.log(err));
-            message.member.roles.add(mojito1);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕸𝖔𝖏𝖎𝖙𝖔 color Role.**`}})
-            return;
-            }
-        }
-
-        if(args[0].toLowerCase() == "4")
-        {
-            if(data.money < blue_lagoon){
-                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            }else{
-            data.money -= blue_lagoon;
-            data.save().catch(err => console.log(err));
-            message.member.roles.add(blue_lagoon1);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕭𝖑𝖚𝖊 𝕷𝖆𝖌𝖔𝖔𝖓 color role.**`}})
-            return;
-            }
-        }
-
-        if(args[0].toLowerCase() == "5")
-        {
-            if(data.money < miami_bice){
-                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            }else{
-            data.money -= miami_bice;
-            data.save().catch(err => console.log(err));
-            message.member.roles.add(miami_bice1);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕸𝖎𝖆𝖒𝖎 𝖁𝖎𝖈𝖊 color role.**`}})
-            return;
-            }
-        }
-
-        if(args[0].toLowerCase() == "6")
-        {
-            if(data.money < hurricane){
-                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            }else{
-            data.money -= hurricane;
-            data.save().catch(err => console.log(err));
-            message.member.roles.add(hurricane1);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕳𝖚𝖗𝖗𝖎𝖈𝖆𝖓𝖊 color role.**`}})
-            return;
-            }
-        }
-
-        if(args[0].toLowerCase() == "7")
-        {
-            if(data.money < purple_bage){
-                 return message.channel.send({embed:{color:'a20a28',description:"You don't have any money"}});
-            }else{
-            data.money -= purple_bage;
-            data.save().catch(err => console.log(err));
-            message.member.roles.add(purple_bage1);
-            message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 𝕻𝖚𝖗𝖕𝖑𝖊 𝕳𝖆𝖟𝖊 color role.**`}})
-            return;
-            }
-        }
+       
      })
 }
 
