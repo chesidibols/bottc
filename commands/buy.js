@@ -22,6 +22,8 @@ module.exports.run = async (bot, message, args) =>{
 
     const excutive = "759070502748422155";
 
+    let dblogs = bot.channels.cache.get('772401083384856596');
+
     Data.findOne({
         userID: message.author.id
     },(err, data) => {
@@ -62,6 +64,7 @@ module.exports.run = async (bot, message, args) =>{
             }else {
             data.money -= pipti_load;
             data.save().catch(err => console.log(err));
+            dblogs.send(`${message.author} buy's 50 pesos load <@&${excutive}> please do your JOB :P`)
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 pesos load. Please DM <@&${excutive}> please do your JOB :P**`}});
             return;
             }
@@ -73,6 +76,7 @@ module.exports.run = async (bot, message, args) =>{
             }else {
             data.money -= pipti_gcash;
             data.save().catch(err => console.log(err));
+            dblogs.send(`${message.author} buy's 50 50 Gcash <@&${excutive}> please do your JOB :P`)
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 50 Gcash. Please DM <@&${excutive}> please do your JOB :P**`}})
             return;
             }
@@ -85,6 +89,7 @@ module.exports.run = async (bot, message, args) =>{
             }else {
             data.money -= onehundred_load;
             data.save().catch(err => console.log(err));
+            dblogs.send(`${message.author} buy's 100 load <@&${excutive}> please do your JOB :P`)
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 100 load. Please DM <@&${excutive}> please do your JOB :P**`}});
             return;
             }
@@ -96,6 +101,7 @@ module.exports.run = async (bot, message, args) =>{
             }else {
             data.money -= onehundred_gcash;
             data.save().catch(err => console.log(err));
+            dblogs.send(`${message.author} buy's 100 Gcash <@&${excutive}> please do your JOB :P`)
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 100 Gcash. Please DM <@&${excutive}> please do your JOB :P**`}})
             return;
             }
@@ -108,6 +114,7 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= one_month_nitro;
             data.save().catch(err => console.log(err));
+            dblogs.send(`${message.author} buy's 1 Month discord nitro <@&${excutive}> please do your JOB :P`)
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month discord nitro. Please DM <@&${excutive}> please do your JOB :P**`}});
             return;
             }
@@ -119,6 +126,7 @@ module.exports.run = async (bot, message, args) =>{
             }else {
                 data.money -= one_month_boost;
                 data.save().catch(err => console.log(err));
+                dblogs.send(`${message.author} buy's 1 Month Nitro Boost <@&${excutive}> please do your JOB :P`)
                 message.channel.send({embed:{color:'a20a28', description:`**Congratulations you have 1 Month Nitro Boost. Please DM <@&${excutive}> please do your JOB :P**`}})
                 return;
                 }
