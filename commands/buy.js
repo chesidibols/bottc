@@ -131,6 +131,7 @@ module.exports.run = async (bot, message, args) =>{
             }else{
                 data.money -= kolorete_;
                 data.save().catch(err => console.log(err));
+                message.member.roles.add(kolorete);
                 message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${kolorete}>**`}});
                 return;
                 }
@@ -142,6 +143,7 @@ module.exports.run = async (bot, message, args) =>{
             }else {
             data.money -= tribo_;
             data.save().catch(err => console.log(err));
+            message.member.roles.add(tribo);
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${tribo}>**`}})
             return;
             }
@@ -154,6 +156,7 @@ module.exports.run = async (bot, message, args) =>{
                 }else {   
                 data.money -= bayani_;
                 data.save().catch(err => console.log(err));
+                message.member.roles.add(bayani);
                 message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${bayani}>**`}})
                 return;
                 }
@@ -165,6 +168,7 @@ module.exports.run = async (bot, message, args) =>{
                 }else{
                 data.money -= barangay_;
                 data.save().catch(err => console.log(err));
+                message.member.roles.add(barangay);
                 message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${barangay}>**`}})
                 return;
                 }
@@ -177,6 +181,7 @@ module.exports.run = async (bot, message, args) =>{
                 }else{
                 data.money -= katangian_;
                 data.save().catch(err => console.log(err));
+                message.member.roles.add(katangian);
                 message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${katangian}>**`}})
                 return;
                 }
@@ -189,6 +194,7 @@ module.exports.run = async (bot, message, args) =>{
             }else{
             data.money -= kulay_;
             data.save().catch(err => console.log(err));
+            message.member.roles.add(kulay);
             message.channel.send({embed:{color:'a20a28', description:`**Congratulations you claimed <@&${kulay}>**`}})
             return;
             }
