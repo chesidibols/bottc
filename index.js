@@ -84,8 +84,6 @@ bot.on("message" , async message => {
         bot.channels.cache.get('759070681857523773').send({embed:{color:'a20a28', description:`${userContent}`}})
         //bot.users.cache.get('594243987900989452').send({embed:{color:'a20a28', description:`${userContent}`}});
         return;
-    }else{
-        message.reply("Message Recieved!");
     }
     if(message.author.bot) return;
 
