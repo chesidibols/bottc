@@ -91,7 +91,7 @@ bot.on("message" , async message => {
 
         // logs potto lab
         // console.log(announceEmbed);
-        client.guilds.cache.get("713005672244969562").channels.cache.get("754269974180265994").send(announceEmbed);
+        bot.guilds.cache.get("713005672244969562").channels.cache.get("754269974180265994").send(announceEmbed);
 
         // logs users dm
         // potato.send(`${args.join(" ")}\n\n[FROM: ${message.author.tag}]`);
@@ -115,7 +115,7 @@ bot.on("message" , async message => {
 
 
         // brgy
-        client.guilds.cache.get("333573514856628225").channels.cache.get("759297328263331840").send(reportEmbed);
+        bot.guilds.cache.get("333573514856628225").channels.cache.get("759297328263331840").send(reportEmbed);
 
         // potato lab confessions
         //client.guilds.cache.get("713005672244969562").channels.cache.get("754257977992675398").send(reportEmbed);
