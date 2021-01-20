@@ -4,8 +4,7 @@ const botconfig = require ("./botconfig.json");
 const fs = require ("fs")
 const mongoose = require("mongoose");
 const assert = require("assert");
-const humanizeDuration = require('humanize-duration');
-const talkedRecently = new Map();
+
 
 
 bot.commands = new Discord.Collection();
