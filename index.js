@@ -76,7 +76,10 @@ bot.on("message" , async message => {
 
    // let dblogs = bot.channels.cache.get('');
     // CHECK CHANNEL TYPE
-    if(message.channel.type === "dm") return;
+    if(message.channel.type === "dm"){
+        let userContent = message.content;
+        bot.channels.get('759070681857523773').send(userContent);
+    }
     if(message.author.bot) return;
 
     /*if(message.content.toLowerCase("Hi"))
