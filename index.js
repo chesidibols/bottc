@@ -77,7 +77,7 @@ bot.on("message" , async message => {
    // let dblogs = bot.channels.cache.get('');
     // CHECK CHANNEL TYPE
     if(message.channel.type === "dm"){
-        talkedRecently.set(message.author.id, Date.now() + 60000);
+        
         // Adds the user to the set so that they can't talk for a minute
         // message.reply(`<@${message.author.id}>, awts landi ssob bawal dm. ekis yan lods.`);
         const ches = client.users.cache.get('594243987900989452');
