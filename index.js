@@ -79,7 +79,6 @@ bot.on("message" , async message => {
     if(message.channel.type === "dm"){
        // if(message.content.startsWith('confess'))
         let userContent = message.content;
-        message.reply("Message Recieved!")
         bot.channels.cache.get('759070681857523773').send({embed:{color:'a20a28', description:`${userContent}`}});
         //bot.users.cache.get('594243987900989452').send({embed:{color:'a20a28', description:`${userContent}`}});
         return;
