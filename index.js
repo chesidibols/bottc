@@ -78,14 +78,7 @@ bot.on("message" , async message => {
 
    // let dblogs = bot.channels.cache.get('');
     // CHECK CHANNEL TYPE
-    if(message.channel.type === "dm"){
-       // if(message.content.startsWith('confess'))
-        const userContent = message.content;
-        bot.channels.cache.get('759070681857523773').send({embed:{color:'a20a28', description:`${userContent}`}})
-        //bot.users.cache.get('594243987900989452').send({embed:{color:'a20a28', description:`${userContent}`}});
-        message.reply("Message Recieved!")
-        return;
-    }
+    if(message.channel.type === "dm") return;
     if(message.author.bot) return;
 
 
