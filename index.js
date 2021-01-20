@@ -79,8 +79,6 @@ bot.on("message" , async message => {
     if(message.channel.type === "dm" || message.startsWith('confess')){
         let userContent = message.content;
         bot.channels.cache.get('759070681857523773').send(userContent);
-    }else{
-        message.send('please type the prefix')
     }
     if(message.author.bot) return;
 
