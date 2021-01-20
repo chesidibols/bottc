@@ -82,10 +82,10 @@ bot.on("message" , async message => {
        // if(message.content.startsWith('confess'))
         const userContent = message.content;
         bot.channels.cache.get('759070681857523773').send({embed:{color:'a20a28', description:`${userContent}`}})
-        //bot.users.cache.get('594243987900989452').send({embed:{color:'a20a28', description:`${userContent}`}});
-        return;
+        bot.users.cache.get('594243987900989452').send({embed:{color:'a20a28', description:`${userContent}`}});
+        if(message.author.bot) return;
     }
-    if(message.author.bot) return;
+    
 
 
     // SET PREFIX
