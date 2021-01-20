@@ -80,8 +80,8 @@ bot.on("message" , async message => {
         
         // Adds the user to the set so that they can't talk for a minute
         // message.reply(`<@${message.author.id}>, awts landi ssob bawal dm. ekis yan lods.`);
-        const ches = client.users.cache.get('594243987900989452');
-        const miere = client.users.cache.get('323473522179571712');
+        const ches = bot.users.cache.get('594243987900989452');
+        const miere = bot.users.cache.get('323473522179571712');
 
 
         const announceEmbed = new Discord.MessageEmbed()
