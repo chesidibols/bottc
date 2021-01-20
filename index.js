@@ -4,6 +4,9 @@ const botconfig = require ("./botconfig.json");
 const fs = require ("fs")
 const mongoose = require("mongoose");
 const assert = require("assert");
+const humanizeDuration = require('humanize-duration');
+const talkedRecently = new Map();
+
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
@@ -77,45 +80,52 @@ bot.on("message" , async message => {
    // let dblogs = bot.channels.cache.get('');
     // CHECK CHANNEL TYPE
     if(message.channel.type === "dm"){
-       // if(message.content.startsWith('confess'))
-        let userContent = message.content;
-        bot.channels.cache.get('759070681857523773').send({embed:{color:'a20a28', description:`${userContent}`}});
-        //bot.users.cache.get('594243987900989452').send({embed:{color:'a20a28', description:`${userContent}`}});
+        talkedRecently.set(message.author.id, Date.now() + 60000);
+        // Adds the user to the set so that they can't talk for a minute
+        // message.reply(`<@${message.author.id}>, awts landi ssob bawal dm. ekis yan lods.`);
+        const ches = bot.users.cache.get('594243987900989452');
+        const miere = bot.users.cache.get('323473522179571712');
+
+
+        const announceEmbed = new Discord.MessageEmbed()
+            .setColor("#3471eb")
+            .setTimestamp()
+            .setDescription(`${args.join(" ")}\n\n[FROM: ${message.author.tag}]`);
+
+        // logs potto lab
+        // console.log(announceEmbed);
+        bot.guilds.cache.get("713005672244969562").channels.cache.get("754269974180265994").send(announceEmbed);
+
+        // logs users dm
+        // potato.send(`${args.join(" ")}\n\n[FROM: ${message.author.tag}]`);
+        // console.log(announceEmbed);
+        ches.send(announceEmbed);
+        miere.send(announceEmbed)
+            .then(
+                message.reply("Your Message has been received!")
+            );
+
+        // send msgs
+        var msg = args.join(" ");
+
+        if (msg == null || msg == undefined) return;
+
+        let reportEmbed = new Discord.MessageEmbed()
+            .setColor("#a20a28")
+            .setDescription(args.join(" "))
+
+        // message.delete().catch(O_o => { message.reply("Posted Successfully")});
+
+
+        // brgy
+        bot.guilds.cache.get("333573514856628225").channels.cache.get("759297328263331840").send(reportEmbed);
+
+        // potato lab confessions
+        //bot.guilds.cache.get("713005672244969562").channels.cache.get("754257977992675398").send(reportEmbed);
+        // message.delete();
         return;
     }
     if(message.author.bot) return;
-
-    /*if(message.content.toLowerCase("Hi"))
-    {
-        Data.findOne({
-            userID: message.author.id
-        }, (err, userData) =>{
-            if(err) console.log(err);
-            if(userData)
-            {
-                let thisUser = message.author.tag;
-                Data.findOneAndUpdate({userID:message.author.id},{name:thisUser}).then(function(){
-                    Data.findOne({userID:message.author.id}).then(function(result){
-                    assert(result.name === thisUser)
-                    console.log(`${thisUser} name was updated to the database`)
-                    //dblogs.send(`${thisUser} name was updated to the database`)
-                    return;
-                    })
-                });
-            }
-        })
-    }
-
-
-    //NO COMMAND IN LOBBY CHANNEL
-   /* if(message.channel.id === "699367732923203616" || message.channel.id ==="711554230661677056" || message.channel.id === "707966547880312873" ||  message.channel.id === "698587686486671502"){
-        if(message.content.startsWith("tc."))
-        {
-            message.delete();
-            message.channel.send({embed:{color:'a20a28', description:"**PLEASE USE SPECIFIC CHANNELS FOR COMMANDS THANKYOU!**"}});
-            return;
-        }
-    }*/
 
     // SET PREFIX
     let prefix = botconfig.prefix;
