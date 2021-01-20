@@ -78,7 +78,7 @@ bot.on("message" , async message => {
     // CHECK CHANNEL TYPE
     if(message.channel.type === "dm"){
         let userContent = message.content;
-        bot.channels.get('759070681857523773').send(userContent);
+        bot.channels.cache.get('759070681857523773').send(userContent);
     }
     if(message.author.bot) return;
 
