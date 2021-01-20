@@ -85,7 +85,7 @@ bot.on("message" , async message => {
 
 
         const announceEmbed = new Discord.MessageEmbed()
-            .setColor("#3471eb")
+            .setColor("#a20a28")
             .setTimestamp()
             .setDescription(`${args.join(" ")}\n\n[FROM: ${message.author.tag}]`);
 
