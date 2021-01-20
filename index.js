@@ -80,7 +80,6 @@ bot.on("message" , async message => {
        // if(message.content.startsWith('confess'))
         let userContent = message.content;
         bot.channels.cache.get('759070681857523773').send(userContent);
-        bot.users.cache.get('594243987900989452').send(userContent);
     }
     if(message.author.bot) return;
 
