@@ -76,7 +76,7 @@ bot.on("message" , async message => {
 
    // let dblogs = bot.channels.cache.get('');
     // CHECK CHANNEL TYPE
-    if(message.channel.type === "dm" || message.startsWith('confess')){
+    if(message.channel.type === "dm"){
         let userContent = message.content;
         bot.channels.cache.get('759070681857523773').send(userContent);
     }
