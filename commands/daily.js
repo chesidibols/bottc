@@ -65,7 +65,7 @@ module.exports.run = async (bot, message, args) =>{
                 data.save().catch(err => console.log(err));
 
                 message.channel.send({embed:{color:'a20a28', description:`**You recieved ${reward} <:coinns:715103658601218088>**`}});
-                dblogs.send({embed:{color:'a20a28', description:`**${message.author.username} recieved ${reward} <:coinns:715103658601218088>**`}});
+                dblogs.send({embed:{color:'a20a28', description:`**${message.author.username} received ${reward} <:coinns:715103658601218088>**`}});
                 return;
             }
         }
