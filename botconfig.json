@@ -1,5 +1,5 @@
 {
-    "token":"NzAxNTgzMzA1NTY0NDg3NzUx.XpzmXg.DPhvG2D9SAqKeyltWwjPcSx1cEU",
+    "token":"bottoken",
     "prefix":"c.",
-    "mongoPass":"mongodb+srv://bottc:hEHxUdzzAq0KKbzg@bot-tc-g5ocp.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoPass":"mongodb"
 }
